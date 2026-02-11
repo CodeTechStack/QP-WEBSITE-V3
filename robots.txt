@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://quantumpulse.ltd/sitemap.xml

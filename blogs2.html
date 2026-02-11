@@ -1,0 +1,2962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=0.5, user-scalable=yes">
+    <title>Elevating the Future of Home Mobility: The Intelligent Elevator Controller | QuantumPulse Technologies</title>
+    <meta name="description" content="Discover how QuantumPulse's intelligent elevator controller board is redefining residential mobility with smart, safe, and versatile technology for modern homes.">
+    <meta name="keywords" content="elevator controller board, home elevators, residential mobility, smart home technology, elevator safety, QuantumPulse Technologies, intelligent control systems">
+    <meta name="author" content="QuantumPulse Technologies">
+    <meta name="robots" content="index, follow">
+    
+    <!-- SEO & Social Media Meta Tags -->
+    <meta property="og:title" content="Elevating the Future of Home Mobility: The Intelligent Elevator Controller">
+    <meta property="og:description" content="How intelligent elevator controller boards are revolutionizing residential mobility for modern vertical living.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://quantumpulse.ltd/blog-elevating-future-home-mobility">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:site_name" content="QuantumPulse Technologies">
+    <meta property="og:locale" content="en_US">
+    <meta property="article:published_time" content="2024-01-10T10:00:00+05:30">
+    <meta property="article:modified_time" content="2024-01-10T10:00:00+05:30">
+    <meta property="article:section" content="Smart Home Technology">
+    <meta property="article:tag" content="Elevator Controller">
+    <meta property="article:tag" content="Home Mobility">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Elevating the Future of Home Mobility: The Intelligent Elevator Controller">
+    <meta name="twitter:description" content="How intelligent elevator controller boards are revolutionizing residential mobility for modern vertical living.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80">
+    <meta name="twitter:site" content="@Qptechy">
+    <meta name="twitter:creator" content="@Qptechy">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://quantumpulse.ltd/blog-elevating-future-home-mobility">
+    
+    <!-- Structured Data for Blog Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Elevating the Future of Home Mobility: The Intelligent Elevator Controller",
+        "description": "How QuantumPulse's intelligent elevator controller board is revolutionizing residential mobility with smart, safe technology for modern vertical living",
+        "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+        "author": {
+            "@type": "Organization",
+            "name": "QuantumPulse Technologies",
+            "url": "https://quantumpulse.ltd"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "QuantumPulse Technologies",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://quantumpulse.ltd/images/Quantum-pulse-Technologies-logo.png"
+            }
+        },
+        "datePublished": "2024-01-10",
+        "dateModified": "2024-01-10",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://quantumpulse.ltd/blog-elevating-future-home-mobility"
+        },
+        "articleSection": "Smart Home Technology",
+        "keywords": "elevator controller board, home elevators, residential mobility, smart home technology, QuantumPulse"
+    }
+    </script>
+    
+    <!-- Font Awesome with Preconnect -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts with Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Modern CSS Reset with Variables */
+        :root {
+            /* Color Palette */
+            --primary-blue: #0a2463;
+            --secondary-blue: #1e3a8a;
+            --accent-teal: #14b8a6;
+            --accent-emerald: #10b981;
+            --accent-amber: #f59e0b;
+            --accent-violet: #8b5cf6;
+            --dark-navy: #0f172a;
+            --light-cyan: #e0f2fe;
+            --white: #ffffff;
+            --gray-50: #f8fafc;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            
+            /* Gradients */
+            --gradient-primary: linear-gradient(135deg, #0a2463 0%, #1e3a8a 100%);
+            --gradient-accent: linear-gradient(135deg, #14b8a6 0%, #10b981 100%);
+            --gradient-sunset: linear-gradient(135deg, #f59e0b 0%, #ec4899 100%);
+            --gradient-violet: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+            --gradient-dark: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            
+            /* Shadows */
+            --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.15);
+            --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.2);
+            --shadow-hover: 0 30px 80px rgba(0, 0, 0, 0.25);
+            
+            /* Transitions */
+            --transition-smooth: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-fast: all 0.3s ease;
+            
+            /* Spacing */
+            --header-height: 130px;
+            --radius-sm: 12px;
+            --radius-md: 20px;
+            --radius-lg: 30px;
+            --radius-xl: 40px;
+        }
+
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: #334155;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            padding-top: var(--header-height);
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(10, 36, 99, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(20, 184, 166, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(139, 92, 246, 0.03) 0%, transparent 50%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--dark-navy);
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #475569;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-fast);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* ===== HEADER & NAVIGATION ===== */
+        .main-header {
+            padding: 25px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 10999;
+            transition: all 0.3s ease;
+            background: linear-gradient(90deg, rgba(5,75,133,1) 0%, rgba(1,50,100,1) 100%);
+            box-shadow: var(--shadow-md);
+            height: var(--header-height);
+        }
+
+        /* HEADER CONTAINER */
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+            padding: 0 40px;
+            max-width: 1900px;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Logo Styles */
+        .logo-wrapper {
+            background-color: var(--white);
+            width: 170px;
+            height: 100px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            height: 100px;
+            width: 180px;
+            margin-left: 16px;
+        }
+
+        .logo-img {
+            height: 90px;
+            width: 140px;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .quantumpulse {
+            font-size: 25px;
+            font-weight: 700;
+            color: white;
+            line-height: 1.5;
+            margin-left: 60px;
+        }
+
+        .technologies {
+            font-size: 23px;
+            font-weight: 500;
+            color: white;
+            margin-left: 80px;
+        }
+
+        /* MAIN NAVIGATION */
+        .main-nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            margin: 0 20px;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            width: 100%;
+            margin-left: 260px;
+        }
+
+        .nav-list li {
+            position: relative;
+        }
+
+        .nav-list li a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 8px 12px;
+            display: inline-flex;
+            gap: 5px;
+            align-items: center;
+            transition: transform 0.3s ease, color 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-list li a:hover {
+            color: #70aae9;
+            transform: translateY(-2px);
+        }
+
+        /* Dropdown Menu Styles */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            padding: 15px 0;
+            width: 225px;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            list-style: none;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li a {
+            display: flex;
+            padding: 10px 20px;
+            color: #333;
+            gap: 15px;
+            font-size: 15px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .dropdown-menu li a:hover {
+            background: rgba(5, 75, 133, 0.05);
+            color: #0056b3;
+            padding-left: 25px;
+        }
+
+        .dropdown > a i {
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .dropdown:hover > a i {
+            transform: rotate(180deg);
+        }
+
+        /* Social Icons in Nav */
+        .nav-social {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-shrink: 0;
+        }
+
+        .nav-social a {
+            font-size: 18px;
+            transition: transform 0.3s ease, color 0.3s ease;
+            color: white;
+        }
+
+        .nav-social a:hover {
+            color: #70aae9;
+            transform: translateY(-3px);
+        }
+
+        /* QP Logo */
+        .qp-logo {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-left: 15px;
+        }
+
+        .qp {
+            color: #0056b3;
+            font-weight: 800;
+            font-size: 22px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1002;
+            transition: all 0.3s ease;
+        }
+
+        /* ===== MOBILE SIDEBAR MENU (FIXED) ===== */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 85%;
+            max-width: 400px;
+            height: 100vh;
+            background: linear-gradient(135deg, rgba(5,75,133,0.98) 0%, rgba(1,50,100,0.98) 100%);
+            backdrop-filter: blur(15px);
+            z-index: 11000;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow-y: auto;
+            box-shadow: -10px 0 40px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mobile-menu-overlay.active {
+            right: 0;
+        }
+
+        /* Mobile Menu Header */
+        .mobile-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 25px 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .mobile-menu-logo {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mobile-menu-logo img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+
+        .mobile-menu-close {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            font-size: 24px;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: rotate(90deg);
+        }
+
+        /* Mobile Menu Content */
+        .mobile-menu-content {
+            padding: 25px;
+            flex: 1;
+        }
+
+        .mobile-nav-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .mobile-nav-list > li {
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 15px;
+        }
+
+        .mobile-nav-list > li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .mobile-nav-list > li > a {
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            text-decoration: none;
+        }
+
+        .mobile-dropdown-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 14px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-dropdown-toggle:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .mobile-dropdown-toggle.active {
+            transform: rotate(180deg);
+        }
+
+        .mobile-dropdown-menu {
+            list-style: none;
+            padding-left: 15px;
+            margin-top: 10px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .mobile-dropdown-menu.active {
+            max-height: 500px;
+        }
+
+        .mobile-dropdown-menu li {
+            margin-bottom: 8px;
+        }
+
+        .mobile-dropdown-menu li:last-child {
+            margin-bottom: 0;
+        }
+
+        .mobile-dropdown-menu li a {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 16px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-dropdown-menu li a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding-left: 20px;
+        }
+
+        .mobile-dropdown-menu li a i {
+            width: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* Mobile Menu Social */
+        .mobile-menu-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .mobile-menu-social a {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .mobile-menu-social a:hover {
+            background: #0056b3;
+            transform: translateY(-3px);
+        }
+
+        /* Mobile Menu Backdrop */
+        .mobile-menu-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            z-index: 10999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-backdrop.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Hero Section - Parallax Effect */
+        .blog-hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: linear-gradient(rgba(5, 75, 133, 0.85), rgba(1, 50, 100, 0.9)), 
+                        url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover fixed;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            margin-bottom: 5rem;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 900px;
+            padding: 4rem 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .blog-category {
+            display: inline-block;
+            background: var(--accent-teal);
+            color: var(--white);
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition-smooth);
+            backdrop-filter: blur(10px);
+        }
+
+        .blog-category:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .blog-title {
+            font-size: 3.5rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .title-highlight {
+            background: linear-gradient(135deg, #ffffff 0%, #e0f2fe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            display: inline-block;
+        }
+
+        .blog-subtitle {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Floating Particles Background */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(-1000px) rotate(360deg); }
+        }
+
+        /* Content Blocks */
+        .blog-content {
+            position: relative;
+            padding: 5rem 0;
+        }
+
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .content-block {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: 4rem;
+            margin-bottom: 4rem;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition-smooth);
+            opacity: 0;
+            transform: translateY(50px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content-block::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-accent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 1s ease;
+        }
+
+        .content-block.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .content-block.visible::before {
+            transform: scaleX(1);
+        }
+
+        .content-block:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        /* Section Titles with Animation */
+        .section-title {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-accent);
+            border-radius: 2px;
+            transition: width 0.6s ease;
+        }
+
+        .section-title:hover::after {
+            width: 120px;
+        }
+
+        .title-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.8rem;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition-smooth);
+        }
+
+        .section-title:hover .title-icon {
+            transform: rotate(15deg) scale(1.1);
+            background: var(--gradient-violet);
+        }
+
+        /* Cards with 3D Effect */
+        .key-points-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .key-point-card {
+            background: linear-gradient(135deg, var(--white) 0%, var(--gray-50) 100%);
+            border-radius: var(--radius-lg);
+            padding: 3rem 2rem;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .key-point-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-primary);
+            opacity: 0;
+            transition: var(--transition-smooth);
+            z-index: -1;
+        }
+
+        .key-point-card:hover {
+            transform: translateY(-20px) rotateX(10deg);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .key-point-card:hover::before {
+            opacity: 0.05;
+        }
+
+        .card-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition-smooth);
+        }
+
+        .key-point-card:hover .card-icon {
+            transform: rotate(360deg) scale(1.2);
+        }
+
+        /* Feature Showcase */
+        .feature-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-item {
+            background: linear-gradient(135deg, var(--white) 0%, var(--gray-50) 100%);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: var(--white);
+            font-size: 1.8rem;
+            transition: var(--transition-smooth);
+        }
+
+        .feature-item:hover .feature-icon {
+            transform: rotate(15deg) scale(1.1);
+            background: var(--gradient-accent);
+        }
+
+        /* Safety Badges */
+        .safety-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .safety-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(20, 184, 166, 0.1);
+            color: var(--accent-teal);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition-fast);
+        }
+
+        .safety-badge:hover {
+            background: rgba(20, 184, 166, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .safety-badge i {
+            font-size: 1.2rem;
+        }
+
+        /* Image Gallery - Masonry Layout */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            cursor: pointer;
+            aspect-ratio: 4/3;
+            transition: var(--transition-smooth);
+        }
+
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            z-index: 1;
+            opacity: 0;
+            transition: var(--transition-smooth);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .gallery-item:hover::before {
+            opacity: 1;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 2rem;
+            color: var(--white);
+            z-index: 2;
+            transform: translateY(100%);
+            transition: var(--transition-smooth);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        /* Stats Counter */
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-primary);
+            opacity: 0;
+            transition: var(--transition-smooth);
+            z-index: 0;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .stat-item:hover::before {
+            opacity: 0.05;
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: #64748b;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Comparison Table */
+        .comparison-container {
+            background: linear-gradient(135deg, var(--white) 0%, var(--gray-50) 100%);
+            border-radius: var(--radius-xl);
+            padding: 4rem;
+            margin: 4rem 0;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            position: relative;
+            z-index: 1;
+        }
+
+        .comparison-table th {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 1.5rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .comparison-table td {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--gray-200);
+            transition: var(--transition-fast);
+        }
+
+        .comparison-table tr:hover td {
+            background: rgba(10, 36, 99, 0.05);
+            transform: translateX(5px);
+        }
+
+        /* ===== UP BUTTON ===== */
+        #upBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 25px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #0056b3;
+            color: white;
+            cursor: pointer;
+            padding: 12px 16px;
+            border-radius: 50%;
+            display: none;
+            transition: all 0.3s ease;
+            width: 50px;
+            height: 50px;
+            opacity: 0;
+            visibility: hidden;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #upBtn.show {
+            display: flex;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #upBtn:hover {
+            background-color: #05549e;
+            transform: scale(1.1);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #022a57;
+            color: var(--white);
+            padding: 10px 0 10px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            padding-top: 50px;
+            max-width: 1900px;
+            margin: 0 auto;
+            padding: 50px 40px 0;
+        }
+
+        .footer-about {
+            padding-top: 10px;
+        }
+
+        .footer-about p {
+            color: rgba(255, 255, 255, 0.7);
+            margin: 15px 0;
+            line-height: 1.6;
+            font-size: 13px;
+        }
+
+        .footer-logo img {
+            display: block;
+            margin-bottom: 15px;
+            height: 150px;
+            margin-left: 30px;
+            object-fit: contain;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 55px;
+            margin-top: 15px;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            transform: translateY(-5px) scale(1.1);
+            background: #0056b3;
+        }
+
+        .footer-links h3 {
+            color: var(--white);
+            font-size: 1.4rem;
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .footer-links h3:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background: #28a745;
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+            font-size: 15px;
+            line-height: 2rem;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            display: inline-block;
+            transition: all 0.3s ease-out;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+            padding-left: 8px;
+        }
+
+        .footer-contact {
+            padding-top: 0;
+        }
+
+        .footer-contact h3 {
+            color: var(--white);
+            font-size: 1.4rem;
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .footer-contact h3:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background: #28a745;
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-contact p {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .footer-contact i {
+            font-size: 18px;
+            min-width: 25px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: white;
+            font-size: 0.85rem;
+            margin-top: 30px;
+            padding-top: 15px;
+            max-width: 1400px;
+            margin: 30px auto 0;
+            padding: 15px 40px 0;
+        }
+
+        .footer-bottom a {
+            color: white;
+            opacity: 1;
+            margin: 0 8px;
+            transition: all 0.3s ease;
+        }
+
+        .footer-bottom p {
+            color: white !important;
+            opacity: 1 !important;
+        }
+
+        .footer-bottom a:hover {
+            color: #eff1f0;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--gray-100);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient-primary);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary-blue);
+        }
+
+        /* Animation Classes */
+        .fade-in {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .slide-up {
+            animation: slideUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Reading Progress Bar */
+        .reading-progress {
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: var(--gradient-accent);
+            z-index: 1000;
+            transition: width 0.1s ease;
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        
+        /* Large Desktop: 1920px+ */
+        @media screen and (min-width: 1920px) {
+            .container {
+                max-width: 1800px;
+            }
+            
+            .header-container {
+                max-width: 2200px;
+            }
+            
+            .nav-list {
+                margin-left: 400px;
+                gap: 25px;
+            }
+            
+            .nav-list li a {
+                font-size: 22px;
+            }
+            
+            .logo-wrapper {
+                width: 200px;
+                height: 120px;
+            }
+            
+            .logo {
+                height: 120px;
+                width: 210px;
+            }
+            
+            .logo-img {
+                height: 110px;
+                width: 170px;
+            }
+            
+            .quantumpulse {
+                font-size: 28px;
+                margin-left: 70px;
+            }
+            
+            .technologies {
+                font-size: 26px;
+                margin-left: 90px;
+            }
+        }
+
+        /* Standard Desktop: 1400px - 1919px */
+        @media (max-width: 1400px) {
+            .nav-list {
+                margin-left: 200px;
+            }
+            
+            .logo-wrapper {
+                width: 160px;
+                height: 95px;
+            }
+            
+            .logo {
+                height: 95px;
+                width: 170px;
+            }
+            
+            .logo-img {
+                height: 85px;
+                width: 130px;
+            }
+            
+            .quantumpulse {
+                font-size: 23px;
+                margin-left: 55px;
+            }
+            
+            .technologies {
+                font-size: 21px;
+                margin-left: 75px;
+            }
+        }
+
+        /* Medium Desktop: 1200px - 1399px */
+        @media (max-width: 1200px) {
+            .header-container {
+                padding: 0 30px;
+            }
+            
+            .nav-list {
+                gap: 12px;
+                margin-left: 150px;
+            }
+            
+            .nav-list li a {
+                font-size: 18px;
+                padding: 6px 10px;
+            }
+            
+            .qp-logo {
+                margin-left: 10px;
+            }
+            
+            .nav-social {
+                gap: 10px;
+            }
+            
+            .nav-social a {
+                font-size: 16px;
+            }
+            
+            .quantumpulse {
+                font-size: 22px;
+                margin-left: 50px;
+            }
+            
+            .technologies {
+                font-size: 20px;
+                margin-left: 70px;
+            }
+            
+            .blog-title {
+                font-size: 2.8rem;
+            }
+            
+            .content-block {
+                padding: 3rem;
+            }
+            
+            .key-points-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+
+        /* Small Desktop: 992px - 1199px */
+        @media (max-width: 992px) {
+            .header-container {
+                padding: 0 20px;
+            }
+            
+            .nav-list {
+                gap: 8px;
+                margin-left: 100px;
+            }
+            
+            .nav-list li a {
+                font-size: 16px;
+                padding: 5px 8px;
+            }
+            
+            .qp-logo {
+                width: 50px;
+                height: 50px;
+                margin-left: 8px;
+            }
+            
+            .qp {
+                font-size: 18px;
+            }
+            
+            .nav-social {
+                gap: 8px;
+            }
+            
+            .nav-social a {
+                font-size: 15px;
+            }
+            
+            .quantumpulse {
+                font-size: 20px;
+                margin-left: 40px;
+            }
+            
+            .technologies {
+                font-size: 18px;
+                margin-left: 60px;
+            }
+            
+            .logo-wrapper {
+                width: 150px;
+                height: 90px;
+            }
+            
+            .logo {
+                height: 90px;
+                width: 160px;
+            }
+            
+            .logo-img {
+                height: 80px;
+                width: 120px;
+            }
+            
+            .blog-title {
+                font-size: 2.4rem;
+            }
+            
+            .blog-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .content-block {
+                padding: 2.5rem;
+            }
+            
+            .key-points-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5rem;
+            }
+            
+            .feature-showcase {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Tablet: 768px - 991px */
+        @media (max-width: 768px) {
+            :root {
+                --header-height: 85px;
+            }
+            
+            body {
+                padding-top: var(--header-height);
+            }
+            
+            .main-header {
+                height: var(--header-height);
+                padding: 15px 0;
+            }
+            
+            .header-container {
+                padding: 0 15px;
+            }
+            
+            .logo-wrapper {
+                width: 140px;
+                height: 80px;
+            }
+            
+            .logo {
+                height: 80px;
+                width: 150px;
+                margin-left: 10px;
+            }
+            
+            .logo-img {
+                height: 70px;
+                width: 110px;
+            }
+            
+            .quantumpulse {
+                font-size: 18px;
+                margin-left: 30px;
+            }
+            
+            .technologies {
+                font-size: 16px;
+                margin-left: 45px;
+            }
+            
+            /* Hide desktop navigation */
+            .main-nav, .nav-social, .qp-logo {
+                display: none;
+            }
+            
+            /* Show mobile menu button */
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .blog-hero {
+                min-height: 80vh;
+            }
+            
+            .hero-content {
+                padding: 3rem 1.5rem;
+            }
+            
+            .blog-title {
+                font-size: 2.1rem;
+            }
+            
+            .blog-subtitle {
+                font-size: 1.1rem;
+                margin-bottom: 2rem;
+            }
+            
+            .blog-category {
+                padding: 0.6rem 1.5rem;
+                font-size: 0.85rem;
+            }
+            
+            .content-block {
+                padding: 2rem;
+                margin-bottom: 2.5rem;
+            }
+            
+            .key-points-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .feature-showcase {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .section-title {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            
+            .title-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+            
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            
+            .stat-item {
+                padding: 2rem 1rem;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+            
+            .image-gallery {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            .comparison-container {
+                padding: 2rem;
+            }
+            
+            .comparison-table th,
+            .comparison-table td {
+                padding: 1rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+                padding: 40px 20px 0;
+            }
+        }
+
+        /* Large Mobile: 576px - 767px */
+        @media (max-width: 576px) {
+            .header-container {
+                padding: 0 15px;
+            }
+            
+            .logo-wrapper {
+                width: 130px;
+                height: 75px;
+            }
+            
+            .logo {
+                height: 75px;
+                width: 140px;
+                margin-left: 5px;
+            }
+            
+            .logo-img {
+                height: 65px;
+                width: 100px;
+            }
+            
+            .quantumpulse {
+                font-size: 16px;
+                margin-left: 25px;
+            }
+            
+            .technologies {
+                font-size: 14px;
+                margin-left: 40px;
+            }
+            
+            .blog-hero {
+                min-height: 70vh;
+                clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+            }
+            
+            .hero-content {
+                padding: 2rem 1rem;
+            }
+            
+            .blog-title {
+                font-size: 1.9rem;
+                line-height: 1.3;
+            }
+            
+            .title-highlight {
+                display: block;
+                margin-top: 0.5rem;
+            }
+            
+            .blog-subtitle {
+                font-size: 1rem;
+            }
+            
+            .blog-category {
+                padding: 0.5rem 1.2rem;
+                font-size: 0.8rem;
+                letter-spacing: 1px;
+            }
+            
+            .content-wrapper {
+                padding: 0 1rem;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .mobile-menu-overlay {
+                width: 90%;
+            }
+            
+            .footer-social {
+                gap: 30px;
+            }
+        }
+
+        /* Medium Mobile: 480px - 575px */
+        @media (max-width: 480px) {
+            :root {
+                --header-height: 80px;
+            }
+            
+            .main-header {
+                padding: 10px 0;
+            }
+            
+            .logo-wrapper {
+                width: 120px;
+                height: 70px;
+            }
+            
+            .logo {
+                height: 70px;
+                width: 130px;
+                margin-left: 5px;
+            }
+            
+            .logo-img {
+                height: 60px;
+                width: 90px;
+            }
+            
+            .quantumpulse {
+                font-size: 15px;
+                margin-left: 20px;
+            }
+            
+            .technologies {
+                font-size: 13px;
+                margin-left: 30px;
+            }
+            
+            .mobile-menu-btn {
+                font-size: 20px;
+                padding: 8px;
+            }
+            
+            .blog-title {
+                font-size: 1.7rem;
+            }
+            
+            .blog-subtitle {
+                font-size: 0.95rem;
+            }
+            
+            .content-block {
+                padding: 1.5rem;
+                border-radius: var(--radius-lg);
+            }
+            
+            .stat-item {
+                padding: 1.5rem 1rem;
+            }
+            
+            .stat-number {
+                font-size: 2.2rem;
+            }
+            
+            .image-gallery {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .comparison-container {
+                padding: 1.5rem;
+            }
+            
+            .comparison-table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .comparison-table th,
+            .comparison-table td {
+                min-width: 150px;
+                padding: 0.8rem;
+            }
+            
+            .mobile-menu-overlay {
+                width: 95%;
+            }
+            
+            .mobile-nav-list > li > a {
+                font-size: 16px;
+                padding: 10px 0;
+            }
+            
+            .mobile-dropdown-menu li a {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .footer-links h3:after,
+            .footer-contact h3:after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .footer-links a:hover {
+                padding-left: 0;
+                transform: translateX(5px);
+            }
+            
+            .footer-social {
+                justify-content: center;
+                gap: 20px;
+            }
+            
+            .footer-logo img {
+                margin-left: 0;
+            }
+        }
+
+        /* Small Mobile: 375px - 479px */
+        @media (max-width: 375px) {
+            :root {
+                --header-height: 75px;
+            }
+            
+            .logo-wrapper {
+                width: 110px;
+                height: 65px;
+            }
+            
+            .logo {
+                height: 65px;
+                width: 120px;
+                margin-left: 5px;
+            }
+            
+            .logo-img {
+                height: 55px;
+                width: 80px;
+            }
+            
+            .quantumpulse {
+                font-size: 14px;
+                margin-left: 15px;
+            }
+            
+            .technologies {
+                font-size: 12px;
+                margin-left: 25px;
+            }
+            
+            .mobile-menu-btn {
+                font-size: 18px;
+                padding: 6px;
+            }
+            
+            .blog-title {
+                font-size: 1.5rem;
+            }
+            
+            .blog-subtitle {
+                font-size: 0.9rem;
+            }
+            
+            .blog-category {
+                padding: 0.4rem 1rem;
+                font-size: 0.75rem;
+            }
+            
+            .content-block {
+                padding: 1.2rem;
+            }
+            
+            .mobile-menu-overlay {
+                width: 100%;
+            }
+        }
+
+        /* Extra Small Mobile: 320px - 374px */
+        @media (max-width: 320px) {
+            :root {
+                --header-height: 70px;
+            }
+            
+            .logo-wrapper {
+                width: 100px;
+                height: 60px;
+            }
+            
+            .logo {
+                height: 60px;
+                width: 110px;
+                margin-left: 5px;
+            }
+            
+            .logo-img {
+                height: 50px;
+                width: 70px;
+            }
+            
+            .quantumpulse {
+                font-size: 13px;
+                margin-left: 10px;
+            }
+            
+            .technologies {
+                font-size: 11px;
+                margin-left: 20px;
+            }
+            
+            .blog-title {
+                font-size: 1.3rem;
+            }
+            
+            .blog-subtitle {
+                font-size: 0.85rem;
+            }
+            
+            .content-block {
+                padding: 1rem;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .main-header,
+            .mobile-menu-btn,
+            .reading-progress,
+            #upBtn,
+            .footer-social,
+            .blog-hero .particles,
+            .mobile-menu-overlay,
+            .mobile-menu-backdrop {
+                display: none !important;
+            }
+            
+            body {
+                padding-top: 0;
+                background: white;
+                color: black;
+            }
+            
+            .content-block {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+                margin-bottom: 20px;
+            }
+            
+            .blog-hero {
+                background: white !important;
+                color: black;
+            }
+            
+            .blog-title,
+            .blog-subtitle,
+            .section-title h2 {
+                color: black !important;
+            }
+            
+            a[href]::after {
+                content: " (" attr(href) ")";
+                font-size: 0.9em;
+                font-weight: normal;
+            }
+            
+            .image-gallery {
+                display: block !important;
+            }
+            
+            .gallery-item {
+                margin-bottom: 20px;
+                page-break-inside: avoid;
+            }
+            
+            .comparison-table {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress"></div>
+
+    <!-- Mobile Menu Backdrop -->
+    <div class="mobile-menu-backdrop" id="mobileBackdrop"></div>
+
+    <!-- Mobile Menu Overlay (Right Side) -->
+    <div class="mobile-menu-overlay" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="mobile-menu-logo">
+                <img src="/images/Quantum-pulse-Technologies-logo.png" alt="QuantumPulse Technologies Logo">
+            </div>
+            <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="mobile-menu-content">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html">Home</a></li>
+                
+                <li>
+                    <a href="javascript:void(0)" class="mobile-dropdown-header">
+                        Services 
+                        <button class="mobile-dropdown-toggle" aria-expanded="false">
+                            <i class="fas fa-caret-down"></i>
+                        </button>
+                    </a>
+                    <ul class="mobile-dropdown-menu">
+                        <li><a href="rpo-services.html"><i class="fas fa-user-tie"></i> RPO Services</a></li>
+                        <li><a href="design-services.html"><i class="fas fa-paint-brush"></i> Design Services</a></li>
+                        <li><a href="ai-services.html"><i class="fas fa-robot"></i> AI Services</a></li>
+                        <li><a href="iot-services.html"><i class="fas fa-wifi"></i> IoT Services</a></li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a href="javascript:void(0)" class="mobile-dropdown-header">
+                        Our Company 
+                        <button class="mobile-dropdown-toggle" aria-expanded="false">
+                            <i class="fas fa-caret-down"></i>
+                        </button>
+                    </a>
+                    <ul class="mobile-dropdown-menu">
+                        <li><a href="about.html"><i class="fas fa-building"></i> About Us</a></li>
+                        <li><a href="leadership.html"><i class="fas fa-users"></i> Leadership</a></li>
+                        <li><a href="infra.html"><i class="fas fa-server"></i> Infrastructure</a></li>
+                        <li><a href="qpcustomers.html"><i class="fas fa-user-tie"></i> QP Customers</a></li>
+                        <li><a href="life.html"><i class="fas fa-heart"></i> Culture @QP</a></li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a href="jobopportunities.html" class="mobile-dropdown-header">
+                        Careers 
+                        <button class="mobile-dropdown-toggle" aria-expanded="false">
+                            <i class="fas fa-caret-down"></i>
+                        </button>
+                    </a>
+                    <ul class="mobile-dropdown-menu">
+                        <li><a href="jobs.html"><i class="fas fa-briefcase"></i> Jobs</a></li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a href="javascript:void(0)" class="mobile-dropdown-header">
+                        Insights 
+                        <button class="mobile-dropdown-toggle" aria-expanded="false">
+                            <i class="fas fa-caret-down"></i>
+                        </button>
+                    </a>
+                    <ul class="mobile-dropdown-menu">
+                        <li><a href="underprocess.html"><i class="fas fa-search"></i> Research</a></li>
+                        <li><a href="Corporate_Overview_QP_V11.1.pdf" target="_blank"><i class="fas fa-users"></i>Corporate Presentation</a></li>
+                        <li><a href="digitalbroucher.pdf" target="_blank"><i class="fas fa-file-alt"></i>Digital Brochure</a></li>
+                        <li><a href="news.html"><i class="fas fa-newspaper"></i>News</a></li>
+                        <li><a href="underprocess.html"><i class="fas fa-blog"></i>Blogs</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="enquiry.html">Get Quote<i class="fas fa-file-invoice"></i></a></li>
+            </ul>
+        </div>
+        
+        <div class="mobile-menu-social">
+            <a href="https://www.linkedin.com/company/quantum-pulse-technologies/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://x.com/Qptechy" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.facebook.com/share/16a5NKbh7w/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://web.whatsapp.com/+919500124242" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="/images/Quantum-pulse-Technologies-logo.png" alt="QuantumPulse Technologies Logo - Elevator Controller Technology" class="logo-img">
+                    <div class="logo-text">
+                        <span class="quantumpulse">QUANTUMPULSE</span>
+                        <span class="technologies">TECHNOLOGIES</span>
+                    </div>
+                </a>
+            </div>
+            
+            <nav class="main-nav" aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Services <i class="fas fa-caret-down" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="rpo-services.html"><i class="fas fa-user-tie" aria-hidden="true"></i> RPO Services</a></li>
+                            <li><a href="design-services.html"><i class="fas fa-paint-brush" aria-hidden="true"></i> Design Services</a></li>
+                            <li><a href="ai-services.html"><i class="fas fa-robot" aria-hidden="true"></i> AI Services</a></li>
+                            <li><a href="iot-services.html"><i class="fas fa-wifi" aria-hidden="true"></i> IoT Services</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Our Company <i class="fas fa-caret-down" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="about.html"><i class="fas fa-building" aria-hidden="true"></i> About Us</a></li>
+                            <li><a href="leadership.html"><i class="fas fa-users" aria-hidden="true"></i> Leadership</a></li>
+                            <li><a href="infra.html"><i class="fas fa-server" aria-hidden="true"></i> Infrastructure</a></li>
+                            <li><a href="qpcustomers.html"><i class="fas fa-user-tie" aria-hidden="true"></i> QP Customers</a></li>
+                            <li><a href="life.html"><i class="fas fa-heart" aria-hidden="true"></i> Culture @QP</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="dropdown">
+                        <a href="jobopportunities.html" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Careers <i class="fas fa-caret-down" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="jobs.html"><i class="fas fa-briefcase" aria-hidden="true"></i> Jobs</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Insights <i class="fas fa-caret-down" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="underprocess.html"><i class="fas fa-search" aria-hidden="true"></i> Research</a></li>
+                            <li><a href="Corporate_Overview_QP_V11.1.pdf" target="_blank"><i class="fas fa-users" aria-hidden="true"></i>Corporate Presentation</a></li>
+                            <li><a href="digitalbroucher.pdf" target="_blank"><i class="fas fa-file-alt" aria-hidden="true"></i>Digital Brochure</a></li>
+                            <li><a href="news.html"><i class="fas fa-newspaper" aria-hidden="true"></i>News</a></li>
+                            <li><a href="underprocess.html"><i class="fas fa-blog" aria-hidden="true"></i>Blogs</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="enquiry.html">Get Quote</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-social">
+                <a href="https://www.linkedin.com/company/quantum-pulse-technologies/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://x.com/Qptechy" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.facebook.com/share/16a5NKbh7w/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://web.whatsapp.com/+919500124242" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <div class="qp-logo">
+                    <span class="qp">QP</span>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open mobile menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="blog-hero" id="blog-hero">
+        <div class="particles" id="particles"></div>
+        <div class="hero-content">
+            <span class="blog-category">Smart Home Technology</span>
+            <h1 class="blog-title">
+                Elevating the Future of Home Mobility: 
+                <span class="title-highlight">The Intelligent Elevator Controller</span>
+            </h1>
+            <p class="blog-subtitle">
+                Discover how QuantumPulse's innovative elevator controller board technology 
+                is revolutionizing residential mobility for modern vertical living.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="blog-content">
+        <div class="content-wrapper">
+            <!-- Introduction -->
+            <section class="content-block fade-in" id="introduction">
+                <div class="section-title">
+                    <div class="title-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h2>The New Era of Vertical Living</h2>
+                </div>
+                <p>
+                    As urban spaces become more compact and multi-story homes become the norm, 
+                    residential elevators have transformed from luxury items to essential mobility 
+                    solutions. At the heart of this transformation lies intelligent elevator controller 
+                    technology—the brain behind safe, efficient, and smart vertical transportation.
+                </p>
+                <p>
+                    QuantumPulse Technologies is at the forefront of this revolution, developing 
+                    advanced controller boards that combine cutting-edge electronics with intelligent 
+                    software to create seamless home elevator experiences.
+                </p>
+            </section>
+
+            <!-- Key Technology Points -->
+            <section class="content-block slide-up" id="technology">
+                <div class="section-title">
+                    <div class="title-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h2>Intelligent Control System Architecture</h2>
+                </div>
+                <div class="key-points-grid">
+                    <div class="key-point-card">
+                        <div class="card-icon" style="background: var(--gradient-primary);">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>AI-Powered Optimization</h3>
+                        <p>Machine learning algorithms that predict usage patterns and optimize energy consumption and travel times.</p>
+                    </div>
+                    <div class="key-point-card">
+                        <div class="card-icon" style="background: var(--gradient-accent);">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Multi-Layer Safety Systems</h3>
+                        <p>Redundant safety circuits, emergency protocols, and real-time monitoring for fail-safe operation.</p>
+                    </div>
+                    <div class="key-point-card">
+                        <div class="card-icon" style="background: var(--gradient-violet);">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <h3>IoT Connectivity</h3>
+                        <p>Seamless integration with smart home ecosystems and remote monitoring capabilities.</p>
+                    </div>
+                    <div class="key-point-card">
+                        <div class="card-icon" style="background: var(--gradient-sunset);">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Energy Efficiency</h3>
+                        <p>Smart power management that reduces energy consumption by up to 40% compared to conventional systems.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Feature Showcase -->
+            <section class="content-block" id="features">
+                <div class="section-title">
+                    <div class="title-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h2>Innovative Features</h2>
+                </div>
+                <div class="feature-showcase">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>Voice Control Integration</h3>
+                        <p>Compatible with Alexa, Google Assistant, and Siri for hands-free operation</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile App Control</h3>
+                        <p>Full control and monitoring through dedicated smartphone applications</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Predictive Maintenance</h3>
+                        <p>AI-driven alerts for maintenance needs before issues occur</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Multi-User Profiles</h3>
+                        <p>Custom settings for different family members and accessibility needs</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Safety Standards -->
+            <section class="content-block" id="safety">
+                <div class="section-title">
+                    <div class="title-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h2>Safety & Compliance Standards</h2>
+                </div>
+                <div class="safety-badges">
+                    <span class="safety-badge"><i class="fas fa-check-circle"></i> EN 81-20/50 Certified</span>
+                    <span class="safety-badge"><i class="fas fa-check-circle"></i> UL Listed</span>
+                    <span class="safety-badge"><i class="fas fa-check-circle"></i> CE Marked</span>
+                    <span class="safety-badge"><i class="fas fa-check-circle"></i> ISO 9001:2015</span>
+                    <span class="safety-badge"><i class="fas fa-check-circle"></i> IEC 61508 SIL 2</span>
+                </div>
+                <p>
+                    QuantumPulse elevator controllers incorporate comprehensive safety features including:
+                </p>
+                <ul style="list-style: none; padding-left: 20px; margin: 20px 0;">
+                    <li style="margin-bottom: 10px; padding-left: 30px; position: relative;">
+                        <i class="fas fa-shield-alt" style="position: absolute; left: 0; color: var(--accent-teal);"></i>
+                        <strong>Emergency Power Operation:</strong> Battery backup for power outage situations
+                    </li>
+                    <li style="margin-bottom: 10px; padding-left: 30px; position: relative;">
+                        <i class="fas fa-shield-alt" style="position: absolute; left: 0; color: var(--accent-teal);"></i>
+                        <strong>Door Safety Sensors:</strong> Infrared and mechanical safety edges
+                    </li>
+                    <li style="margin-bottom: 10px; padding-left: 30px; position: relative;">
+                        <i class="fas fa-shield-alt" style="position: absolute; left: 0; color: var(--accent-teal);"></i>
+                        <strong>Overload Protection:</strong> Automatic detection and prevention
+                    </li>
+                    <li style="margin-bottom: 10px; padding-left: 30px; position: relative;">
+                        <i class="fas fa-shield-alt" style="position: absolute; left: 0; color: var(--accent-teal);"></i>
+                        <strong>Emergency Stop:</strong> Multiple redundant emergency stop systems
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Image Gallery -->
+            <section class="content-block" id="gallery">
+                <div class="section-title">
+                    <div class="title-icon">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <h2>Technology in Action</h2>
+                </div>
+                <div class="image-gallery">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Modern home elevator installation" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4>Sleek Modern Design</h4>
+                            <p>Contemporary residential elevator</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Elevator control panel close-up" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4>Intuitive Control Panel</h4>
+                            <p>User-friendly interface design</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Elevator controller board electronics" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4>Advanced Electronics</h4>
+                            <p>High-quality controller board components</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Performance Stats -->
+            <section class="content-block" id="stats">
+                <div class="section-title">
+                    <div class="title-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h2>Performance Metrics</h2>
+                </div>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="99.9">99.9%</div>
+                        <div class="stat-label">System Reliability</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="40">40%</div>
+                        <div class="stat-label">Energy Savings</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="50">50%</div>
+                        <div class="stat-label">Faster Installation</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="24">24/7</div>
+                        <div class="stat-label">Remote Monitoring</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Comparison Table -->
+            <section class="content-block" id="comparison">
+                <div class="section-title">
+                    <div class="title-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h2>Traditional vs Intelligent Controllers</h2>
+                </div>
+                <div class="comparison-container">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Traditional Controllers</th>
+                                <th>QuantumPulse Intelligent Controllers</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Energy Efficiency</strong></td>
+                                <td>Standard consumption</td>
+                                <td>Smart power management (Up to 40% savings)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Connectivity</strong></td>
+                                <td>Standalone operation</td>
+                                <td>IoT enabled with smart home integration</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Maintenance</strong></td>
+                                <td>Scheduled maintenance</td>
+                                <td>Predictive maintenance with AI alerts</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Safety Features</strong></td>
+                                <td>Basic safety systems</td>
+                                <td>Multi-layer redundant safety with real-time monitoring</td>
+                            </tr>
+                            <tr>
+                                <td><strong>User Experience</strong></td>
+                                <td>Basic controls</td>
+                                <td>Voice control, mobile app, customizable profiles</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Future Outlook -->
+            <section class="content-block" id="future">
+                <div class="section-title">
+                    <div class="title-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h2>The Future of Home Elevator Technology</h2>
+                </div>
+                <p>
+                    As smart home technology continues to evolve, QuantumPulse is pioneering 
+                    next-generation elevator controller solutions that will redefine residential 
+                    mobility. Our roadmap includes:
+                </p>
+                <div class="key-points-grid">
+                    <div class="key-point-card">
+                        <div class="card-icon" style="background: var(--gradient-dark);">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>Fully Autonomous Operation</h3>
+                        <p>Self-learning systems that adapt to household patterns and needs</p>
+                    </div>
+                    <div class="key-point-card">
+                        <div class="card-icon" style="background: var(--gradient-violet);">
+                            <i class="fas fa-solar-panel"></i>
+                        </div>
+                        <h3>Sustainable Energy Integration</h3>
+                        <p>Seamless connection with home solar and battery storage systems</p>
+                    </div>
+                    <div class="key-point-card">
+                        <div class="card-icon" style="background: var(--gradient-sunset);">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3>Health Monitoring Integration</h3>
+                        <p>Integration with health devices for assisted living applications</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Up Button -->
+    <button onclick="topFunction()" id="upBtn" title="Go to top" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <img src="/images/Quantum-pulse-Technologies-logo.png" alt="QuantumPulse Technologies Logo" style="height: 150px;">
+                </div>
+                <p>
+                    Pioneering intelligent elevator controller technology for modern homes. 
+                    QuantumPulse delivers innovative, safe, and smart mobility solutions 
+                    for residential and commercial applications.
+                </p>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/company/quantum-pulse-technologies/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://x.com/Qptechy" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/16a5NKbh7w/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://web.whatsapp.com/+919500124242" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="iot-services.html">IoT Services</a></li>
+                    <li><a href="ai-services.html">AI Services</a></li>
+                    <li><a href="design-services.html">Design Services</a></li>
+                    <li><a href="jobs.html">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="rpo-services.html">RPO Services</a></li>
+                    <li><a href="design-services.html">PCB Design</a></li>
+                    <li><a href="ai-services.html">AI Solutions</a></li>
+                    <li><a href="iot-services.html">IoT Development</a></li>
+                    <li><a href="iot-services.html">Elevator Controllers</a></li>
+                    <li><a href="ai-services.html">Machine Learning</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i>
+                    QuantumPulse Technologies Pvt Ltd<br>
+                    Hyderabad, Telangana 500081
+                </p>
+                <p>
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:+919500124242">+91 9500124242</a>
+                </p>
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:contact@quantumpulse.ltd">contact@quantumpulse.ltd</a>
+                </p>
+                <p>
+                    <i class="fas fa-clock"></i>
+                    Mon - Fri: 9:00 AM - 6:00 PM
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 QuantumPulse Technologies Pvt Ltd. All Rights Reserved. 
+                <a href="privacy.html">Privacy Policy</a> | 
+                <a href="terms.html">Terms of Service</a> | 
+                <a href="sitemap.html">Sitemap</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Functionality
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileBackdrop = document.getElementById('mobileBackdrop');
+        const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+
+        // Toggle mobile menu
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            mobileBackdrop.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        // Close mobile menu
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('active');
+            mobileBackdrop.classList.remove('active');
+            document.body.style.overflow = '';
+            // Close all dropdowns
+            mobileDropdownToggles.forEach(toggle => {
+                toggle.classList.remove('active');
+                toggle.setAttribute('aria-expanded', 'false');
+                const dropdownMenu = toggle.parentElement.nextElementSibling;
+                if (dropdownMenu) {
+                    dropdownMenu.classList.remove('active');
+                }
+            });
+        }
+
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+        mobileBackdrop.addEventListener('click', closeMobileMenu);
+
+        // Mobile dropdown functionality
+        mobileDropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+                toggle.classList.toggle('active');
+                toggle.setAttribute('aria-expanded', !isExpanded);
+                
+                const dropdownMenu = toggle.parentElement.nextElementSibling;
+                if (dropdownMenu) {
+                    dropdownMenu.classList.toggle('active');
+                }
+            });
+        });
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.mobile-dropdown-header')) {
+                mobileDropdownToggles.forEach(toggle => {
+                    toggle.classList.remove('active');
+                    toggle.setAttribute('aria-expanded', 'false');
+                    const dropdownMenu = toggle.parentElement.nextElementSibling;
+                    if (dropdownMenu) {
+                        dropdownMenu.classList.remove('active');
+                    }
+                });
+            }
+        });
+
+        // Scroll to top button
+        const upBtn = document.getElementById('upBtn');
+
+        window.onscroll = function() {
+            scrollFunction();
+            updateReadingProgress();
+            animateOnScroll();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+                upBtn.classList.add('show');
+            } else {
+                upBtn.classList.remove('show');
+            }
+        }
+
+        function topFunction() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Reading progress bar
+        function updateReadingProgress() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.querySelector('.reading-progress').style.width = scrolled + "%";
+        }
+
+        // Animate elements on scroll
+        function animateOnScroll() {
+            const contentBlocks = document.querySelectorAll('.content-block');
+            
+            contentBlocks.forEach(block => {
+                const blockTop = block.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (blockTop < windowHeight - 100) {
+                    block.classList.add('visible');
+                }
+            });
+        }
+
+        // Animate stats counters
+        function animateStats() {
+            const statNumbers = document.querySelectorAll('.stat-number');
+            
+            statNumbers.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-count'));
+                const duration = 2000; // 2 seconds
+                const increment = target / (duration / 16); // 60fps
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    stat.textContent = Math.round(current) + (stat.textContent.includes('%') ? '%' : '');
+                }, 16);
+            });
+        }
+
+        // Initialize stats animation when in view
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateStats();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const statsSection = document.getElementById('stats');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+
+        // Create floating particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random properties
+                const size = Math.random() * 10 + 2;
+                const left = Math.random() * 100;
+                const animationDelay = Math.random() * 20;
+                const animationDuration = Math.random() * 30 + 20;
+                
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${left}%`;
+                particle.style.animationDelay = `${animationDelay}s`;
+                particle.style.animationDuration = `${animationDuration}s`;
+                particle.style.opacity = Math.random() * 0.5 + 0.1;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Image gallery lightbox
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const imgSrc = this.querySelector('img').src;
+                const imgAlt = this.querySelector('img').alt;
+                
+                // Create lightbox
+                const lightbox = document.createElement('div');
+                lightbox.className = 'lightbox';
+                lightbox.style.cssText = `
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.95);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 2000;
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                `;
+                lightbox.innerHTML = `
+                    <div style="position: relative; max-width: 90%; max-height: 90%;">
+                        <img src="${imgSrc}" alt="${imgAlt}" style="width: 100%; height: auto; border-radius: 15px;">
+                        <button style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; width: 40px; height: 40px; font-size: 20px; cursor: pointer;">×</button>
+                    </div>
+                `;
+                
+                document.body.appendChild(lightbox);
+                setTimeout(() => lightbox.style.opacity = '1', 10);
+                
+                // Close lightbox
+                lightbox.querySelector('button').addEventListener('click', () => {
+                    lightbox.style.opacity = '0';
+                    setTimeout(() => lightbox.remove(), 300);
+                });
+                
+                lightbox.addEventListener('click', (e) => {
+                    if (e.target === lightbox) {
+                        lightbox.style.opacity = '0';
+                        setTimeout(() => lightbox.remove(), 300);
+                    }
+                });
+            });
+        });
+
+        // Initialize on DOM load
+        document.addEventListener('DOMContentLoaded', function() {
+            createParticles();
+            animateOnScroll(); // Initial check
+            
+            // Add click handlers for smooth scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    if (this.getAttribute('href') === '#') return;
+                    
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Close mobile menu if open
+                        if (mobileMenu.classList.contains('active')) {
+                            closeMobileMenu();
+                        }
+                    }
+                });
+            });
+        });
+
+        // Keyboard navigation for accessibility
+        document.addEventListener('keydown', (e) => {
+            // Escape key closes mobile menu
+            if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+            
+            // Tab key trapping in mobile menu
+            if (mobileMenu.classList.contains('active')) {
+                const focusableElements = mobileMenu.querySelectorAll('a[href], button, input, textarea, select');
+                const firstElement = focusableElements[0];
+                const lastElement = focusableElements[focusableElements.length - 1];
+                
+                if (e.key === 'Tab') {
+                    if (e.shiftKey) {
+                        if (document.activeElement === firstElement) {
+                            e.preventDefault();
+                            lastElement.focus();
+                        }
+                    } else {
+                        if (document.activeElement === lastElement) {
+                            e.preventDefault();
+                            firstElement.focus();
+                        }
+                    }
+                }
+            }
+        });
+
+        // Detect screen size for debugging
+        function detectScreenSize() {
+            const width = window.innerWidth;
+            let size = '';
+            
+            if (width >= 1920) size = 'Large Desktop (1920px+)';
+            else if (width >= 1400) size = 'Standard Desktop (1400px-1919px)';
+            else if (width >= 1200) size = 'Medium Desktop (1200px-1399px)';
+            else if (width >= 992) size = 'Small Desktop (992px-1199px)';
+            else if (width >= 768) size = 'Tablet (768px-991px)';
+            else if (width >= 576) size = 'Large Mobile (576px-767px)';
+            else if (width >= 480) size = 'Medium Mobile (480px-575px)';
+            else if (width >= 375) size = 'Small Mobile (375px-479px)';
+            else size = 'Extra Small Mobile (<375px)';
+            
+            console.log(`Screen Size: ${size} (${width}px)`);
+            return size;
+        }
+
+        // Log screen size on load and resize
+        window.addEventListener('load', detectScreenSize);
+        window.addEventListener('resize', detectScreenSize);
+    </script>
+</body>
+</html>

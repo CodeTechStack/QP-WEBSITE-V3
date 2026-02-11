@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="QuantumPulse Technologies - Explore our upcoming AI services designed to transform businesses through intelligent automation and data-driven solutions." />
+  <meta name="keywords" content="AI services, machine learning, artificial intelligence, business automation, predictive analytics" />
+  <title>AI Services | QuantumPulse Technologies</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    :root {
+      --primary: #054b85;
+      --accent-color: #70aae9;
+      --text-main: #1f2937;
+      --radius: 10px;
+      --dark-bg: rgba(2, 10, 23, 0.6);
+      --white: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #f6f8fb;
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    /* ===== HEADER STYLES ===== */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 2000;
+      background: linear-gradient(90deg, rgba(5,75,133,1) 0%, rgba(1,50,100,1) 100%);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      padding: 15px 0;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 2000px;
+      margin: 0 auto;
+      padding: 0 clamp(15px, 3vw, 40px);
+    }
+
+    .brand {
+      background-color: white;
+      width: 180px;
+      height: 90px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .brand img {
+      height: 180px;
+      width: auto;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      margin-left: 30px;
+    }
+
+    .quantumpulse {
+      font-size: 25px;
+      font-weight: 700;
+      color: white;
+      line-height: 1.2;
+    }
+
+    .technologies {
+      font-size: 23px;
+      font-weight: 500;
+      color: white;
+      margin-left: 20px;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .nav-list {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+      gap: 70px;
+      margin-left: 70px;
+    }
+
+    .nav-list li {
+      position: relative;
+    }
+
+    .nav-list > li > a {
+      color: white;
+      font-size: 21px;
+      font-weight: 600;
+      padding: 10px 0;
+      display: inline-flex;
+      gap: 5px;
+      align-items: center;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .nav-list > li > a:hover {
+      color: #70aae9;
+      transform: translateY(-2px);
+    }
+
+    .nav-list > li > a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #70aae9;
+      transition: width 0.3s ease;
+    }
+
+    .nav-list > li > a:hover::after {
+      width: 100%;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      border-radius: var(--radius);
+      padding: 15px 0;
+      width: 220px;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+      list-style: none;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .dropdown-menu li a {
+      display: flex;
+      align-items: center;
+      padding: 10px 25px;
+      color: var(--text-main);
+      font-size: 15px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .dropdown-menu li a i {
+      margin-right: 10px;
+      width: 18px;
+      text-align: center;
+    }
+
+    .dropdown-menu li a:hover {
+      background: rgba(66, 153, 225, 0.05);
+      color: var(--accent-color);
+      padding-left: 30px;
+    }
+
+    .dropdown > a i.fa-caret-down {
+      margin-left: 5px;
+      transition: transform 0.3s ease;
+      font-size: 14px;
+    }
+
+    .dropdown:hover > a i.fa-caret-down {
+      transform: rotate(180deg);
+    }
+
+    .nav-social {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-left: 50px;
+    }
+
+    .nav-social a {
+      font-size: 18px;
+      transition: transform 0.3s ease, color 0.3s ease;
+      color: white;
+      text-decoration: none;
+    }
+
+    .nav-social a:hover {
+      color: #70aae9;
+      transform: translateY(-2px);
+    }
+
+    .qp-logo {
+      width: 60px;
+      height: 60px;
+      background: white;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 50px;
+      color: #054b85;
+      font-weight: 800;
+      font-size: 22px;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    @media (max-width: 980px) {
+      .nav-list {
+        display: none;
+        flex-direction: column;
+        background: #04396d;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 20px 0;
+        gap: 0;
+      }
+
+      .nav-list.active {
+        display: flex;
+      }
+
+      .nav-list li {
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+      }
+
+      .nav-list > li > a {
+        justify-content: center;
+        padding: 15px 0;
+      }
+
+      .nav-list > li > a::after {
+        display: none;
+      }
+
+      .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+        width: auto;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+
+      .dropdown.active .dropdown-menu {
+        max-height: 300px;
+      }
+
+      .dropdown-menu li a {
+        color: white;
+        padding: 8px 0;
+        justify-content: center;
+      }
+
+      .dropdown-menu li a:hover {
+        background: none;
+        color: #70aae9;
+        padding-left: 0;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .nav-social, .qp-logo {
+        display: none;
+      }
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero-section-ai {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 100px 5%;
+      background: linear-gradient(90deg, rgba(6, 45, 95, 1) 0%, rgba(1, 33, 70, 1) 100%);
+      color: white;
+      flex-wrap: wrap;
+      min-height: 80vh;
+    }
+
+    .hero-text {
+      flex: 1 1 50%;
+      max-width: 600px;
+      margin-left: 250px;
+    }
+
+    .hero-text h1 {
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .hero-text a {
+      background: white;
+      color: #054b85;
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .hero-text a:hover {
+      background: #70aae9;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-image {
+      flex: 1 1 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    /* ===== AI CONTENT SECTIONS ===== */
+    section {
+      padding: 80px 5%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      color: #054b85;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      width: 80px;
+      height: 3px;
+      background: #70aae9;
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .section-subtitle {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 40px;
+      font-size: 18px;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    /* Coming Soon Banner */
+    .coming-soon-banner {
+      background: linear-gradient(90deg, #054b85, #70aae9);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(5, 75, 133, 0.3);
+    }
+
+    .coming-soon-banner h3 {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    .coming-soon-banner p {
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    /* AI Services Grid */
+    .ai-services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .ai-service-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .ai-service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .ai-service-icon {
+      background: linear-gradient(135deg, #054b85, #70aae9);
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .ai-service-icon i {
+      font-size: 36px;
+      color: white;
+    }
+
+    .ai-service-content {
+      padding: 25px;
+    }
+
+    .ai-service-content h3 {
+      font-size: 22px;
+      color: #054b85;
+      margin-bottom: 15px;
+    }
+
+    .ai-service-content p {
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .ai-service-status {
+      display: inline-block;
+      padding: 5px 12px;
+      background: #f0f7ff;
+      color: #054b85;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    /* Process Steps */
+    .process-steps {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 50px;
+    }
+
+    .process-step {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+      transition: 0.3s;
+      position: relative;
+    }
+
+    .process-step:hover {
+      transform: translateY(-5px);
+    }
+
+    .process-step-number {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 30px;
+      height: 30px;
+      background: #054b85;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .process-step i {
+      font-size: 40px;
+      color: #054b85;
+      margin-bottom: 15px;
+    }
+
+    /* Benefits Section */
+    .benefits-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 50px;
+    }
+
+    .benefit-item {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .benefit-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .benefit-item i {
+      font-size: 36px;
+      color: #054b85;
+      margin-bottom: 15px;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(90deg, rgba(6, 45, 95, 1) 0%, rgba(1, 33, 70, 1) 100%);
+      color: white;
+      text-align: center;
+      padding: 80px 5%;
+      border-radius: 15px;
+      margin: 50px auto;
+      max-width: 1200px;
+    }
+
+    .cta-section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .cta-section p {
+      max-width: 700px;
+      margin: 0 auto 30px;
+      font-size: 18px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .cta-button {
+      padding: 12px 30px;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .cta-button.primary {
+      background: white;
+      color: #054b85;
+    }
+
+    .cta-button.primary:hover {
+      background: #70aae9;
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    .cta-button.secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .cta-button.secondary:hover {
+      background: white;
+      color: #054b85;
+      transform: translateY(-3px);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #062d5f;
+      color: white;
+      padding: 60px 5% 20px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-column h3 {
+      font-size: 20px;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .footer-column h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: #70aae9;
+    }
+
+    .footer-column p, .footer-column a {
+      color: #ccc;
+      margin-bottom: 10px;
+      display: block;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .footer-column a:hover {
+      color: #70aae9;
+      padding-left: 5px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .social-links a {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      background: #70aae9;
+      transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: #ccc;
+    }
+
+    @media (max-width: 768px) {
+      .hero-section-ai {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+      }
+
+      .hero-text, .hero-image {
+        flex: 1 1 100%;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .cta-button {
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="nav-container">
+      <div class="brand">
+        <img src="images/logo2.png" alt="QuantumPulse Technologies Logo" />
+      </div>
+      <div class="logo-text">
+        <span class="quantumpulse">QUANTUMPULSE</span>
+        <span class="technologies">TECHNOLOGIES</span>
+      </div>
+      <nav class="main-nav">
+        <button class="mobile-menu-btn" id="menu-btn"><i class="fas fa-bars"></i></button>
+        <ul class="nav-list" id="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown" id="services-dropdown">
+            <a href="#">Services <i class="fa fa-caret-down"></i></a>
+            <ul class="dropdown-menu">
+               <li><a href="about.html"><i class="fas fa-building"></i> About Us</a></li>
+              <li><a href="leadership.html"><i class="fas fa-users"></i> Leadership</a></li>
+              <li><a href="infra.html"><i class="fas fa-server"></i> Infrastructure</a></li>
+              <li><a href="qpcustomers.html"><i class="fas fa-user-tie"></i> QP Customers</a></li>
+              <li><a href="life.html"><i class="fas fa-heart"></i> Culture @QP</a></li>
+            </ul>
+          </li>
+          <li><a href="jobs.html"><i class="fas fa-briefcase"></i> Jobs</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-social">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+      <div class="qp-logo">QP</div>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero-section-ai">
+    <div class="hero-text">
+      <h1>Revolutionizing Business with Artificial Intelligence</h1>
+      <p>We're developing cutting-edge AI solutions that will transform how businesses operate, make decisions, and innovate. Our upcoming AI services will help you harness the power of intelligent automation and data-driven insights.</p>
+      <a href="contact.html">Get Early Access</a>
+    </div>
+
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="AI Technology Visualization" />
+    </div>
+  </section>
+
+  <!-- ===== COMING SOON BANNER ===== -->
+  <section>
+    <div class="coming-soon-banner">
+      <h3>AI Services Coming Soon</h3>
+      <p>We're currently developing our comprehensive AI service offerings. Stay tuned for updates!</p>
+    </div>
+  </section>
+
+  <!-- ===== AI OVERVIEW ===== -->
+  <section>
+    <h2 class="section-title">Our AI Vision</h2>
+    <p class="section-subtitle">We're building a comprehensive suite of AI services designed to help businesses leverage artificial intelligence for competitive advantage, operational efficiency, and innovation.</p>
+
+    <div class="ai-services-grid">
+      <div class="ai-service-card">
+        <div class="ai-service-icon">
+          <i class="fa-solid fa-brain"></i>
+        </div>
+        <div class="ai-service-content">
+          <h3>Machine Learning Solutions</h3>
+          <p>Custom ML models that learn from your data to predict outcomes, identify patterns, and automate complex decision-making processes.</p>
+          <span class="ai-service-status">In Development</span>
+        </div>
+      </div>
+
+      <div class="ai-service-card">
+        <div class="ai-service-icon">
+          <i class="fa-solid fa-chart-line"></i>
+        </div>
+        <div class="ai-service-content">
+          <h3>Predictive Analytics</h3>
+          <p>Advanced analytics solutions that forecast trends, customer behavior, and business outcomes with remarkable accuracy.</p>
+          <span class="ai-service-status">In Development</span>
+        </div>
+      </div>
+
+      <div class="ai-service-card">
+        <div class="ai-service-icon">
+          <i class="fa-solid fa-robot"></i>
+        </div>
+        <div class="ai-service-content">
+          <h3>Process Automation</h3>
+          <p>Intelligent automation systems that streamline repetitive tasks, reduce errors, and free up your team for higher-value work.</p>
+          <span class="ai-service-status">In Development</span>
+        </div>
+      </div>
+
+      <div class="ai-service-card">
+        <div class="ai-service-icon">
+          <i class="fa-solid fa-eye"></i>
+        </div>
+        <div class="ai-service-content">
+          <h3>Computer Vision</h3>
+          <p>Visual recognition systems that can identify objects, analyze images, and extract meaningful information from visual data.</p>
+          <span class="ai-service-status">In Development</span>
+        </div>
+      </div>
+
+      <div class="ai-service-card">
+        <div class="ai-service-icon">
+          <i class="fa-solid fa-shield-alt"></i>
+        </div>
+        <div class="ai-service-content">
+          <h3>AI Security Solutions</h3>
+          <p>Intelligent security systems that detect anomalies, prevent threats, and protect your digital assets with advanced algorithms.</p>
+          <span class="ai-service-status">In Development</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS SECTION ===== -->
+  <section>
+    <h2 class="section-title">Our Development Approach</h2>
+    <p class="section-subtitle">We follow a rigorous methodology to ensure our AI solutions deliver maximum value and align perfectly with your business objectives.</p>
+
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="process-step-number">1</div>
+        <i class="fa-solid fa-lightbulb"></i>
+        <h3>Research & Planning</h3>
+        <p>Deep analysis of your business needs and identification of AI opportunities that align with your strategic goals.</p>
+      </div>
+
+      <div class="process-step">
+        <div class="process-step-number">2</div>
+        <i class="fa-solid fa-cogs"></i>
+        <h3>Solution Design</h3>
+        <p>Architecting AI systems tailored to your specific requirements, data environment, and operational constraints.</p>
+      </div>
+
+      <div class="process-step">
+        <div class="process-step-number">3</div>
+        <i class="fa-solid fa-rocket"></i>
+        <h3>Development & Testing</h3>
+        <p>Building robust AI models with rigorous testing to ensure accuracy, reliability, and performance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BENEFITS SECTION ===== -->
+  <section>
+    <h2 class="section-title">Benefits of Our AI Solutions</h2>
+    <p class="section-subtitle">Our upcoming AI services will deliver transformative advantages across your organization.</p>
+
+    <div class="benefits-container">
+      <div class="benefit-item">
+        <i class="fa-solid fa-bolt"></i>
+        <h3>Increased Efficiency</h3>
+        <p>Automate routine tasks and streamline operations to boost productivity.</p>
+      </div>
+
+      <div class="benefit-item">
+        <i class="fa-solid fa-chart-pie"></i>
+        <h3>Data-Driven Insights</h3>
+        <p>Uncover hidden patterns and opportunities in your data for better decisions.</p>
+      </div>
+
+      <div class="benefit-item">
+        <i class="fa-solid fa-user-check"></i>
+        <h3>Enhanced Customer Experience</h3>
+        <p>Deliver personalized interactions and proactive support with AI-powered systems.</p>
+      </div>
+
+      <div class="benefit-item">
+        <i class="fa-solid fa-hand-holding-usd"></i>
+        <h3>Cost Reduction</h3>
+        <p>Optimize resources and reduce operational expenses through intelligent automation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="cta-section">
+    <h2>Ready to Explore AI Possibilities?</h2>
+    <p>Join our waiting list to be among the first to experience our AI services when they launch. Let's discuss how AI can transform your business.</p>
+    <div class="cta-buttons">
+      <a href="contact.html" class="cta-button primary">Get Early Access</a>
+      <a href="contact.html" class="cta-button secondary">Schedule a Consultation</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>QuantumPulse Technologies</h3>
+        <p>Innovating intelligent solutions for a smarter tomorrow. We deliver cutting-edge services that transform businesses through technology.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Our Services</h3>
+        <a href="rpo-services.html">RPO Services</a>
+        <a href="design-services.html">Embedded Services</a>
+        <a href="ai-services.html">AI Services</a>
+        <a href="iot-services.html">IOT Services</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Contact Info</h3>
+        <p><i class="fas fa-map-marker-alt"></i> 6th & 7th Floor, Kochar Globe, Ambedkar Nagar, SIDCO Industrial Estate, Guindy, Chennai - 600032</p>
+        <p><i class="fas fa-phone"></i> +91 99522 29211</p>
+        <p><i class="fas fa-envelope"></i> info@quantumpulse.com</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 QuantumPulse Technologies. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const navList = document.getElementById('nav-list');
+    const servicesDropdown = document.getElementById('services-dropdown');
+
+    menuBtn.addEventListener('click', () => {
+      navList.classList.toggle('active');
+    });
+
+    // Mobile dropdown functionality
+    if (window.innerWidth <= 980) {
+      servicesDropdown.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A') {
+          e.preventDefault();
+          servicesDropdown.classList.toggle('active');
+        }
+      });
+    }
+  </script>
+</body>
+</html>

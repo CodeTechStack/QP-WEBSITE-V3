@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - QuantumPulse Technologies</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #016dfb;
+            --secondary-color: #0056b3;
+            --accent-color: #70aae9;
+            --dark-bg: #0b1a3a;
+            --white: #ffffff;
+            --text-main: #0d1a2d;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --radius: 12px;
+            --transition: all 0.25s ease;
+            --shadow-soft: 0 5px 15px rgba(0, 0, 0, 0.08);
+            --shadow-float: 0 10px 25px rgba(0, 0, 0, 0.12);
+            --page-max: 1000px;
+            --container-pad: clamp(16px, 3vw, 40px);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            padding: 40px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--page-max);
+            background: var(--white);
+            border-radius: 18px;
+            padding: 40px;
+            box-shadow: var(--shadow-float);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        }
+
+        header {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .logo {
+            width: 70px;
+            height: 70px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: white;
+            font-size: 24px;
+            box-shadow: var(--shadow-soft);
+            flex-shrink: 0;
+        }
+
+        .header-content {
+            flex: 1;
+        }
+
+        h1 {
+            margin: 0 0 8px 0;
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--dark-bg);
+            letter-spacing: -0.5px;
+        }
+
+        .lead {
+            margin: 0;
+            color: var(--text-light);
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .meta {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+            flex-wrap: wrap;
+        }
+
+        .chip {
+            background: var(--bg-light);
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 14px;
+            color: var(--text-light);
+            border: 1px solid #e2e8f0;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chip i {
+            color: var(--primary-color);
+        }
+
+        main {
+            margin-top: 30px;
+        }
+
+        section.card {
+            background: var(--white);
+            padding: 24px;
+            border-radius: var(--radius);
+            border: 1px solid #e2e8f0;
+            margin-bottom: 20px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        section.card:hover {
+            box-shadow: var(--shadow-soft);
+            transform: translateY(-2px);
+        }
+
+        section.card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+            border-radius: 4px 0 0 4px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin: 0 0 16px 0;
+            color: var(--dark-bg);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2 i {
+            color: var(--primary-color);
+            width: 24px;
+            text-align: center;
+        }
+
+        ul {
+            margin: 0 0 0 20px;
+            padding: 0;
+        }
+
+        li {
+            margin: 12px 0;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        li::marker {
+            color: var(--primary-color);
+        }
+
+        .muted {
+            color: var(--text-light);
+            margin-bottom: 16px;
+        }
+
+        .contact {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            background: var(--bg-light);
+            border-radius: var(--radius);
+            transition: var(--transition);
+        }
+
+        .contact-item:hover {
+            background: #f1f5f9;
+            transform: translateX(5px);
+        }
+
+        .contact-item i {
+            width: 20px;
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 18px;
+        }
+
+        .contact-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .contact-item a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            color: var(--text-light);
+            font-size: 14px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Back to Home Button */
+        .back-home {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: var(--radius);
+            padding: 10px 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            font-size: 14px;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .back-home:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-float);
+        }
+
+        /* Section numbering */
+        .section-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: 700;
+            margin-right: 8px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 16px;
+            }
+            
+            .container {
+                padding: 30px 24px;
+            }
+            
+            header {
+                flex-direction: column;
+                text-align: center;
+                gap: 16px;
+            }
+            
+            .meta {
+                justify-content: center;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .back-home {
+                position: relative;
+                top: auto;
+                right: auto;
+                margin-bottom: 20px;
+                align-self: flex-end;
+            }
+            
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-links {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 24px 20px;
+            }
+            
+            h1 {
+                font-size: 22px;
+            }
+            
+            h2 {
+                font-size: 18px;
+            }
+            
+            .chip {
+                font-size: 13px;
+                padding: 6px 12px;
+            }
+            
+            .section-number {
+                width: 24px;
+                height: 24px;
+                font-size: 12px;
+            }
+        }
+
+        /* Print-friendly */
+        @media print {
+            body {
+                background: white;
+                color: black;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                padding: 20px;
+            }
+            
+            .back-home {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container" role="main">
+        <a href="index.html" class="back-home">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+        
+        <header>
+            <div class="logo">QP</div>
+            <div class="header-content">
+                <h1>QuantumPulse Technologies — Privacy Policy</h1>
+                <p class="lead">Effective date: <strong>October 2024</strong></p>
+                <div class="meta">
+                    <div class="chip"><i class="fas fa-building"></i> QuantumPulse Technologies</div>
+                    <div class="chip"><i class="fas fa-map-marker-alt"></i> Chennai, India</div>
+                    <div class="chip"><i class="fas fa-shield-alt"></i> Your Privacy Matters</div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Section 1 -->
+            <section class="card" aria-labelledby="what-we-collect">
+                <h2 id="what-we-collect">
+                    <span class="section-number">1</span>
+                    <i class="fas fa-database"></i> Information We Collect
+                </h2>
+                <p class="muted">We collect two kinds of information to provide and improve our services:</p>
+                <ul>
+                    <li><strong>Personal Information:</strong> Name, email, phone number, resume details (submitted via forms).</li>
+                    <li><strong>Non-Personal Information:</strong> IP address, cookies, browsing data, analytics data.</li>
+                </ul>
+            </section>
+
+            <!-- Section 2 -->
+            <section class="card" aria-labelledby="how-we-use">
+                <h2 id="how-we-use">
+                    <span class="section-number">2</span>
+                    <i class="fas fa-cogs"></i> How We Use Your Information
+                </h2>
+                <p>We use the information you provide to:</p>
+                <ul>
+                    <li>Provide RPO recruitment services, design solutions, and AI-driven services.</li>
+                    <li>Respond to inquiries, proposals, and client requests.</li>
+                    <li>Improve website performance, user experience, and service delivery.</li>
+                    <li>Comply with legal and regulatory obligations where required.</li>
+                </ul>
+            </section>
+
+            <!-- Section 3 -->
+            <section class="card" aria-labelledby="sharing">
+                <h2 id="sharing">
+                    <span class="section-number">3</span>
+                    <i class="fas fa-share-alt"></i> Data Sharing &amp; Disclosure
+                </h2>
+                <ul>
+                    <li>We do not sell or rent your personal information to third parties.</li>
+                    <li>Data may be shared with trusted service providers (e.g., hosting, analytics, communication tools) under strict confidentiality arrangements.</li>
+                    <li>We may disclose information if required by law or regulatory authorities.</li>
+                </ul>
+            </section>
+
+            <!-- Section 4 -->
+            <section class="card" aria-labelledby="cookies">
+                <h2 id="cookies">
+                    <span class="section-number">4</span>
+                    <i class="fas fa-cookie-bite"></i> Cookies &amp; Tracking Technologies
+                </h2>
+                <p class="muted">Our website may use cookies and similar technologies to improve user experience and analyze traffic. You can disable cookies in your browser, but some features may not function properly.</p>
+            </section>
+
+            <!-- Section 5 -->
+            <section class="card" aria-labelledby="security">
+                <h2 id="security">
+                    <span class="section-number">5</span>
+                    <i class="fas fa-lock"></i> Data Security
+                </h2>
+                <p>We implement reasonable security measures to safeguard your personal data. However, no method of online transmission or storage is 100% secure, and we cannot guarantee absolute security.</p>
+            </section>
+
+            <!-- Section 6 -->
+            <section class="card" aria-labelledby="rights">
+                <h2 id="rights">
+                    <span class="section-number">6</span>
+                    <i class="fas fa-user-shield"></i> Your Rights
+                </h2>
+                <p class="muted">Depending on your jurisdiction, you may have the right to:</p>
+                <ul>
+                    <li>Request access to your personal data.</li>
+                    <li>Request correction or deletion of data.</li>
+                    <li>Opt-out of marketing communications.</li>
+                    <li>Withdraw consent to data processing.</li>
+                </ul>
+            </section>
+
+            <!-- Section 7 -->
+            <section class="card" aria-labelledby="transfer">
+                <h2 id="transfer">
+                    <span class="section-number">7</span>
+                    <i class="fas fa-globe"></i> International Data Transfer
+                </h2>
+                <p>If data is transferred outside your country, we ensure appropriate safeguards are in place in compliance with applicable laws.</p>
+            </section>
+
+            <!-- Section 8 -->
+            <section class="card" aria-labelledby="changes">
+                <h2 id="changes">
+                    <span class="section-number">8</span>
+                    <i class="fas fa-sync-alt"></i> Changes to This Privacy Policy
+                </h2>
+                <p>QuantumPulse may update this Privacy Policy from time to time. Updated policies will be posted on this page with a revised effective date.</p>
+            </section>
+
+            <!-- Section 9 -->
+            <section class="card" aria-labelledby="contact">
+                <h2 id="contact">
+                    <span class="section-number">9</span>
+                    <i class="fas fa-envelope"></i> Contact Us
+                </h2>
+                <p class="muted">For questions regarding this Privacy Policy, please contact us at:</p>
+                <div class="contact">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@quantumpulse.ltd">info@quantumpulse.ltd</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>6th,7th Floor, Kochar Globe, Ambedkar Nagar, SIDCO Industrial Estate, Guindy, Chennai - 600032</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+919500124242">+91 9500124242</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div>© 2024 QuantumPulse Technologies Pvt. Ltd. All rights reserved.</div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

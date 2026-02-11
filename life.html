@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Life at QuantumPulse - Innovative Work Culture & Career Opportunities</title>
+    <meta name="description" content="Discover QuantumPulse's dynamic work culture, flexible work environment, career growth opportunities, and innovative workplace culture. Join our team today." />
+    <meta name="keywords" content="QuantumPulse careers, work culture, tech jobs, employee benefits, innovative workplace, career growth, flexible work, company culture" />
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+    <style>
+        :root {
+            --primary-blue: #053b74;
+            --accent-blue: #2d91fd;
+            --accent-orange: #e67e22;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-white: #ffffff;
+            --bg-light: #f8fafc;
+            --border-radius: 18px;
+            --shadow-soft: 0 6px 20px rgba(12, 24, 40, 0.06);
+            --shadow-medium: 0 12px 36px rgba(12, 24, 40, 0.10);
+            --transition: all 0.3s cubic-bezier(0.2,0.9,0.3,1);
+            --radius: 12px;
+            --accent-color: #70aae9;
+            --text-main: #254049;
+        }
+
+        * { 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding: 0; 
+        }
+        
+        html { 
+            scroll-behavior: smooth; 
+        }
+        
+        body {
+            font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            color: var(--text-dark);
+            background: var(--bg-white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container { 
+            max-width: 1900px; 
+            margin: 0 auto; 
+            padding: 0 20px; 
+        }
+
+        /* Header Styles */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 2000;
+            background: linear-gradient(90deg, rgba(5,75,133,1) 0%, rgba(1,50,100,1) 100%);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            padding: 15px 0;
+            transition: padding 0.3s ease;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 2000px;
+            margin: 0 auto;
+            padding: 0 clamp(15px, 3vw, 40px);
+        }
+
+        .brand {
+            background-color: white;
+            width: 180px;
+            height: 90px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .brand img { 
+            height: 80px; 
+            width: auto; 
+            display: block; 
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            margin-left: 30px;
+        }
+
+        .quantumpulse {
+            font-size: 25px;
+            font-weight: 700;
+            color: white;
+            line-height: 1.2;
+        }
+
+        .technologies {
+            font-size: 23px;
+            font-weight: 500;
+            color: white;
+            margin-left: 20px;
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            gap: 40px;
+            margin-left: 70px;
+        }
+
+        .nav-list li { 
+            position: relative; 
+        }
+
+        .nav-list > li > a {
+            color: white;
+            font-size: 21px;
+            font-weight: 600;
+            padding: 10px 0;
+            display: inline-flex;
+            gap: 5px;
+            align-items: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .nav-list > li > a:hover {
+            color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-radius: var(--radius);
+            padding: 15px 0;
+            width: 220px;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            list-style: none;
+        }
+
+        .dropdown:hover .dropdown-menu,
+        .dropdown:focus-within .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li a {
+            display: flex;
+            align-items: center;
+            padding: 10px 25px;
+            color: var(--text-main);
+            font-size: 17px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .dropdown-menu li a i {
+            margin-right: 10px;
+            width: 18px;
+            text-align: center;
+        }
+
+        .dropdown-menu li a:hover {
+            background: rgba(66,153,225,0.05);
+            color: var(--accent-color);
+            padding-left: 30px;
+        }
+
+        /* ensure caret icon is visible (fixes cases where CSS parsing or FA fails) */
+        .dropdown > a i.fa-caret-down {
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+            font-size: 14px;
+            display: inline-block !important;
+            color: white !important;
+            opacity: 1 !important;
+            line-height: 1;
+            vertical-align: middle;
+        }
+
+        .dropdown:hover > a i.fa-caret-down {
+            transform: rotate(180deg);
+        }
+
+        .nav-social {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-left: 50px;
+        }
+
+        .nav-social a {
+            font-size: 18px;
+            transition: transform 0.3s ease, color 0.3s ease;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-social a:hover {
+            color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        .qp-logo {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 50px;
+            color: #054b85;
+            font-weight: 800;
+            font-size: 22px;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            min-height: 92vh;
+            background: linear-gradient(135deg, #032b52, #08172c);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            padding: 40px 20px;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0; 
+            left: 0; 
+            right: 0; 
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+            opacity: 0.35;
+            z-index: 0;
+        }
+
+        .particles-container, .bubbles-container {
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            overflow: hidden; 
+            z-index: 1; 
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255,255,255,0.18);
+            border-radius: 50%;
+            animation: particleFloat linear infinite;
+            z-index: 1;
+        }
+        
+        @keyframes particleFloat {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.6; }
+            90% { opacity: 0.6; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+        }
+
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.12;
+            background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.9), rgba(255,255,255,0.5) 20%, rgba(255,255,255,0.15) 40%, rgba(255,255,255,0.05) 60%, rgba(255,255,255,0) 100%);
+            animation: bubbleRise linear infinite;
+            z-index: 1;
+        }
+        
+        @keyframes bubbleRise {
+            0% { transform: translateY(110vh) scale(0.8); opacity: 0; }
+            10% { opacity: 0.12; }
+            80% { opacity: 0.12; }
+            100% { transform: translateY(-20vh) scale(1.1); opacity: 0; }
+        }
+
+        .hero-content { 
+            position: relative; 
+            z-index: 2; 
+            max-width: 1000px; 
+            padding: 40px; 
+        }
+
+        .hero-title { 
+            font-size: 3rem; 
+            font-weight: 700; 
+            display: flex; 
+            gap: 12px; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 4.2rem; 
+        }
+
+        .sentence { 
+            display: inline-block; 
+            opacity: 0; 
+            transform: translateY(10px); 
+        }
+        
+        .sentence.show { 
+            animation: sentenceInOut 4s ease forwards; 
+        }
+
+        @keyframes sentenceInOut {
+            0% { opacity: 0; transform: translateY(12px); }
+            10% { opacity: 1; transform: translateY(0); }
+            75% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(-12px); }
+        }
+
+        .hero-description { 
+            font-size: 1.15rem; 
+            margin: 20px auto 30px; 
+            opacity: 0.95; 
+            max-width: 780px; 
+        }
+
+        .hero-buttons { 
+            display: flex; 
+            gap: 16px; 
+            justify-content: center; 
+            flex-wrap: wrap; 
+            margin-top: 16px; 
+        }
+        
+        .custom-btn { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 10px; 
+            padding: 12px 20px; 
+            border-radius: 40px; 
+            font-weight: 700; 
+            text-decoration: none; 
+            transition: var(--transition); 
+            border: none; 
+            cursor: pointer; 
+            font-size: 1rem; 
+        }
+        
+        .btn-primary { 
+            background: linear-gradient(90deg, var(--accent-blue), #1b6dd2); 
+            color: white; 
+            box-shadow: 0 12px 34px rgba(45,145,253,0.14); 
+        }
+        
+        .btn-primary:hover { 
+            transform: translateY(-4px); 
+            box-shadow: 0 20px 40px rgba(45,145,253,0.30); 
+        }
+        
+        .btn-secondary { 
+            background: transparent; 
+            border: 2px solid rgba(255,255,255,0.22); 
+            color: white; 
+        }
+        
+        .btn-secondary:hover { 
+            background: rgba(255,255,255,0.06); 
+            transform: translateY(-4px); 
+        }
+
+        /* Culture Section */
+        .culture-section { 
+            padding: 30px 0; 
+        }
+        
+        .culture-title { 
+            text-align: center; 
+            font-size: 2.6rem; 
+            margin-bottom: 30px; 
+        }
+        
+        .culture-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+            gap: 24px; 
+            padding: 80px; 
+        }
+        
+        .culture-card { 
+            position: relative; 
+            border-radius: 14px; 
+            overflow: hidden; 
+            cursor: pointer; 
+            min-height: 200px; 
+            box-shadow: 0 8px 22px rgba(0,0,0,0.1); 
+            transition: transform .35s ease; 
+        }
+        
+        .culture-card img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            transition: transform .4s ease-in-out, filter .4s ease; 
+            display: block; 
+        }
+        
+        .culture-overlay { 
+            position: absolute; 
+            bottom: 0; 
+            width: 100%; 
+            padding: 14px; 
+            background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); 
+            color: white; 
+        }
+        
+        .culture-card:hover { 
+            transform: translateY(-6px); 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12); 
+        }
+        
+        .culture-modal { 
+            position: fixed; 
+            inset: 0; 
+            background: rgba(0,0,0,0.55); 
+            display: none; 
+            justify-content: center; 
+            align-items: center; 
+            z-index: 99999; 
+        }
+        
+        .culture-modal.active { 
+            display: flex; 
+        }
+        
+        .culture-modal-box { 
+            background: white; 
+            padding: 25px; 
+            width: min(640px,92%); 
+            border-radius: 12px; 
+            position: relative; 
+            animation: pop .22s ease; 
+        }
+        
+        .culture-close { 
+            position: absolute; 
+            right: 12px; 
+            top: 8px; 
+            font-size: 28px; 
+            background: transparent; 
+            border: 0; 
+            cursor: pointer; 
+        }
+        
+        @keyframes pop { 
+            from { transform: scale(.96); opacity: 0; } 
+            to { transform: scale(1); opacity: 1; } 
+        }
+
+        /* Celebrations Section */
+        .page-section { 
+            padding: 80px 0; 
+        }
+        
+        .section-title { 
+            text-align: center; 
+            font-size: 2.2rem; 
+            font-weight: 800; 
+            margin-bottom: 18px; 
+            color: var(--text-dark); 
+        }
+        
+        .section-description { 
+            text-align: center; 
+            color: var(--text-light); 
+            max-width: 720px; 
+            margin: 0 auto 40px; 
+            font-size: 1.05rem; 
+        }
+        
+        .celebrations-section { 
+            background: linear-gradient(135deg,#f8fafc,#e2e8f0); 
+            padding: 60px 0; 
+        }
+        
+        .celebrations-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px,1fr)); 
+            gap: 20px; 
+            margin-top: 10px; 
+        }
+        
+        .celebration-card { 
+            background: white; 
+            border-radius: var(--border-radius); 
+            overflow: hidden; 
+            box-shadow: var(--shadow-medium); 
+            transition: transform .35s ease; 
+        }
+        
+        .celebration-card:hover { 
+            transform: translateY(-8px); 
+        }
+        
+        .celebration-image { 
+            width: 100%; 
+            height: 220px; 
+            background-size: cover; 
+            background-position: center; 
+            position: relative; 
+        }
+        
+        .celebration-overlay { 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            background: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.4)); 
+            display: flex; 
+            align-items: flex-end; 
+            padding: 20px; 
+        }
+        
+        .celebration-title { 
+            color: white; 
+            font-size: 1.25rem; 
+            font-weight: 700; 
+            text-shadow: 0 2px 6px rgba(0,0,0,0.45); 
+        }
+
+        /* Footer */
+        .main-footer { 
+            background: rgb(1, 53, 102); 
+            color: white; 
+            padding: 50px 0 30px; 
+        }
+        
+        .footer-grid { 
+            display: grid; 
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 24px; 
+            margin-bottom: 30px; 
+            align-items: start; 
+        }
+        
+        .footer-logo { 
+            width: 160px; 
+            margin-bottom: 15px; 
+        }
+        
+        .footer-description { 
+            color: rgba(255,255,255,0.9); 
+            margin-bottom: 20px; 
+            line-height: 1.5; 
+            max-width: 375px; 
+            text-align: left; 
+        }
+        
+        .footer-social { 
+            display: flex; 
+            gap: 80px; 
+            font-size: 20px;
+        }
+        
+        .footer-heading { 
+            color: white; 
+            font-size: 1.1rem; 
+            font-weight: 700; 
+            margin-bottom: 12px; 
+        }
+        
+        .footer-links { 
+            list-style: none; 
+            margin: 0; 
+            padding: 0; 
+        }
+        
+        .footer-links li { 
+            margin-bottom: 8px; 
+        }
+        
+        .footer-links a { 
+            color: rgba(255,255,255,0.95); 
+            text-decoration: none; 
+            transition: all 0.3s ease; 
+        }
+        
+        .footer-links a:hover { 
+            color: var(--accent-color); 
+        }
+        
+        .footer-contact p { 
+            color: rgba(255,255,255,0.95); 
+            margin-bottom: 10px; 
+            display: flex; 
+            align-items: center; 
+            gap: 8px; 
+        }
+
+        .back-to-top { 
+            position: fixed; 
+            bottom: 30px; 
+            right: 30px; 
+            width: 50px; 
+            height: 50px; 
+            background: var(--primary-blue); 
+            color: white; 
+            border: none; 
+            border-radius: 50%; 
+            display: none; 
+            align-items: center; 
+            justify-content: center; 
+            cursor: pointer; 
+            transition: var(--transition); 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+            z-index: 1000; 
+        }
+        
+        .back-to-top:hover { 
+            background: var(--accent-blue); 
+            transform: translateY(-3px); 
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .nav-list { 
+                gap: 22px; 
+                margin-left: 40px; 
+            }
+            
+            .hero-title { 
+                font-size: 2.6rem; 
+            }
+            
+            .footer-grid { 
+                grid-template-columns: repeat(2,1fr); 
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .main-nav { 
+                display: none; 
+                position: absolute; 
+                top: 100%; 
+                left: 0; /* Changed from right: 20px */
+                right: 0; /* Added to span full width */
+                width: 100%; /* Changed from min(360px, 94%) */
+                background: linear-gradient(180deg,#063a6a,#0d4e86); 
+                border-radius: 0; /* Changed from 12px for full width */
+                box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
+                padding: 20px; /* Increased padding */
+            }
+            
+            .main-nav.active { 
+                display: flex; /* Changed from block */
+                flex-direction: column;
+            }
+            
+            .nav-list { 
+                flex-direction: column; 
+                gap: 15px; /* Increased gap */
+                margin-left: 0; 
+                width: 100%;
+            }
+            
+            .nav-list > li > a { 
+                font-size: 18px; 
+                padding: 12px 15px; 
+                width: 100%;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+            
+            .dropdown-menu { 
+                position: static; 
+                transform: none; 
+                opacity: 1; 
+                visibility: visible; 
+                background: rgba(255,255,255,0.05); 
+                box-shadow: none; 
+                padding: 0; 
+                width: 100%; 
+                display: none;
+                margin-top: 10px;
+                border-radius: 8px;
+            }
+            
+            .dropdown.open > .dropdown-menu { 
+                display: block; 
+            }
+            
+            .dropdown-menu li a {
+                padding: 10px 20px;
+                color: rgba(255,255,255,0.9);
+            }
+            
+            .dropdown-menu li a:hover {
+                background: rgba(255,255,255,0.1);
+                color: white;
+            }
+            
+            .mobile-menu-btn { 
+                display: block; 
+                z-index: 2001;
+            }
+            
+            .nav-social { 
+                margin-left: 0; 
+                gap: 15px; 
+                justify-content: center; 
+                margin-top: 20px;
+                width: 100%;
+            }
+            
+            .qp-logo { 
+                display: none; 
+            }
+            
+            /* Add smooth transition */
+            .main-nav {
+                transition: all 0.3s ease;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .brand { 
+                width: 140px; 
+                height: 70px; 
+            }
+            
+            .brand img { 
+                height: 60px; 
+            }
+            
+            .quantumpulse { 
+                font-size: 20px; 
+            }
+            
+            .technologies { 
+                font-size: 18px; 
+            }
+            
+            .nav-container { 
+                padding: 0 12px; 
+            }
+            
+            .hero-title { 
+                font-size: 1.8rem; 
+            }
+            
+            .footer-grid { 
+                grid-template-columns: 1fr; 
+            }
+        }
+
+        /* fallback caret style (in case font-awesome doesn't load or icon is missing) */
+        .qp-caret-fallback { vertical-align: middle; display:inline-block; margin-left:6px; font-size:14px; color:white; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <div style="display:flex; align-items:center;">
+                <div class="brand">
+                    <a href="index.html" aria-label="QuantumPulse home">
+                        <img src="/images/Quantum-pulse-Technologies-logo.png" alt="QuantumPulse logo">
+                    </a>
+                </div>
+
+                <div class="logo-text" aria-hidden="false">
+                    <div class="quantumpulse">QUANTUMPULSE</div>
+                    <div class="technologies">TECHNOLOGIES</div>
+                </div>
+            </div>
+
+            <nav class="main-nav" aria-label="Main Navigation">
+                <ul class="nav-list" role="menubar">
+                    <li role="none"><a role="menuitem" href="index.html">Home</a></li>
+
+                    <li class="dropdown" role="none">
+                        <a role="menuitem" class="dropdown-toggle" href="javascript:void(0)">Services <i class="fas fa-caret-down" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu" role="menu" aria-label="Services">
+                            <li role="none"><a role="menuitem" href="rpo-services.html"><i class="fas fa-user-tie"></i> RPO Services</a></li>
+                            <li role="none"><a role="menuitem" href="design-services.html"><i class="fas fa-paint-brush"></i> Design Services</a></li>
+                            <li><a href="ai-services.html"><i class="fas fa-robot"></i> AI Services</a></li>
+                            <li><a href="iot-services.html"><i class="fas fa-wifi"></i> IOT Services</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown" role="none">
+                        <a role="menuitem" class="dropdown-toggle" href="javascript:void(0)">Our Company <i class="fas fa-caret-down" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu" role="menu" aria-label="Our Company">
+                             <li><a href="about.html"><i class="fas fa-building"></i> About Us</a></li>
+                            <li><a href="leadership.html"><i class="fas fa-users"></i> Leadership</a></li>
+                            <li><a href="infra.html"><i class="fas fa-server"></i> Infrastructure</a></li>
+                            <li><a href="qpcustomers.html"><i class="fas fa-user-tie"></i> QP Customers</a></li>
+                            <li><a href="life.html"><i class="fas fa-heart"></i> Culture @QP</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown" role="none">
+                        <a role="menuitem" class="dropdown-toggle" href="jobopportunities.html">Careers <i class="fas fa-caret-down" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu" role="menu" aria-label="Careers">
+                            <li><a href="jobs.html"><i class="fas fa-briefcase"></i> Jobs</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown" role="none">
+                        <a role="menuitem" class="dropdown-toggle" href="javascript:void(0)">Insights <i class="fas fa-caret-down" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu" role="menu" aria-label="Insights">
+                            <li role="none"><a role="menuitem" href="research.html"><i class="fas fa-search"></i> Research</a></li>
+                            <li role="none"><a role="menuitem" href="case-studies.html"><i class="fas fa-briefcase"></i> Case Studies</a></li>
+                            <li role="none"><a role="menuitem" href="QP- Company Presentation _ V 4 (1).pdf" target="_blank"><i class="fas fa-chalkboard-teacher"></i> Corporate Presentation</a></li>
+                            <li role="none"><a role="menuitem" href="digitalbroucher.pdf" target="_blank"><i class="fas fa-book"></i> Digital Brochure</a></li>
+                            <li role="none"><a role="menuitem" href="news.html"><i class="fas fa-newspaper"></i> News</a></li>
+                            <li role="none"><a role="menuitem" href="blogs.html"><i class="fas fa-blog"></i> Blogs</a></li>
+                        </ul>
+                    </li>
+
+                    <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+                    <li role="none"><a role="menuitem" href="enquiry.html">Get Quote</a></li>
+                </ul>
+
+                <div class="nav-social" aria-hidden="false">
+                    <a href="https://www.linkedin.com/company/quantum-pulse-technologies/" target="_blank" aria-label="QuantumPulse on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://x.com/Qptechy" target="_blank" aria-label="QuantumPulse on X (Twitter)"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/share/16a5NKbh7w/" target="_blank" aria-label="QuantumPulse on Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://web.whatsapp.com/+919176439425" target="_blank" aria-label="Contact via WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/quantumpulse/" target="_blank" aria-label="QuantumPulse on Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+
+                <div class="qp-logo" aria-hidden="true"><span class="qp">QP</span></div>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation"><i class="fas fa-bars" aria-hidden="true"></i></button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" aria-labelledby="heroHeading">
+        <div class="hero-background" aria-hidden="true"></div>
+        <div class="particles-container" id="particlesContainer" aria-hidden="true"></div>
+        <div class="bubbles-container" id="bubblesContainer" aria-hidden="true"></div>
+
+        <div class="hero-content container">
+            <h1 id="heroHeading" class="hero-title" aria-live="polite" aria-atomic="true">
+                <span class="sentence" id="heroSentence"></span>
+            </h1>
+
+            <p class="hero-description">
+                QuantumPulse is defined by trust, flexibility, and relentless innovation.
+                We empower our team to drive impactful work while prioritizing personal well-being and growth.
+            </p>
+
+            <div class="hero-buttons" role="group" aria-label="Hero actions">
+                <a href="jobopportunities.html" class="custom-btn btn-primary">View Open Positions <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                <a href="#culture" class="custom-btn btn-secondary">Explore Our Culture <i class="fas fa-heart" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culture Section -->
+    <section class="culture-section" id="culture">
+        <h2 class="culture-title">Our Work Culture</h2>
+
+        <div class="culture-grid container">
+            <div class="culture-card" data-title="Innovation First" data-desc="We encourage new ideas and modern solutions every day.">
+                <img src="https://images.unsplash.com/photo-1702047063975-0841a0621b5a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGNvbXBhbnl8ZW58MHwxfDB8fHww" alt="Innovation First">
+                <div class="culture-overlay"><h3>Innovation First</h3></div>
+            </div>
+
+            <div class="culture-card" data-title="Transparent Communication" data-desc="We speak openly and honestly with our team and clients.">
+                <img src="https://media.istockphoto.com/id/1365436662/photo/successful-partnership.webp?a=1&b=1&s=612x612&w=0&k=20&c=kIUYPv3BrdyWA_3NQKtzjfCoCCGsm3mN55gmzvU2Kiw=" alt="Transparent Communication">
+                <div class="culture-overlay"><h3>Transparent Communication</h3></div>
+            </div>
+
+            <div class="culture-card" data-title="Respect for Everyone" data-desc="Every voice matters, every person is valued.">
+                <img src="https://plus.unsplash.com/premium_photo-1663957895829-9035a42fea40?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNvbXBhbnklMjBhY2hpZXZlbWVudHxlbnwwfDF8MHx8fDA%3D" alt="Respect for Everyone">
+                <div class="culture-overlay"><h3>Respect for Everyone</h3></div>
+            </div>
+
+            <div class="culture-card" data-title="Customer Commitment" data-desc="We deliver quality work and long-term support to our clients.">
+                <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y29tcGFueXxlbnwwfDF8MHx8fDA%3D" alt="Customer Commitment">
+                <div class="culture-overlay"><h3>Customer Commitment</h3></div>
+            </div>
+
+            <div class="culture-card" data-title="Continuous Learning" data-desc="We upskill through training, workshops, and real-time projects.">
+                <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0" alt="Continuous Learning">
+                <div class="culture-overlay"><h3>Continuous Learning</h3></div>
+            </div>
+
+            <div class="culture-card" data-title="Teamwork & Collaboration" data-desc="We solve problems together, not alone.">
+                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692" alt="Teamwork & Collaboration">
+                <div class="culture-overlay"><h3>Teamwork & Collaboration</h3></div>
+            </div>
+
+            <div class="culture-card" data-title="Work–Life Balance" data-desc="We support balanced schedules and flexible policies.">
+                <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe" alt="Work Life Balance">
+                <div class="culture-overlay"><h3>Work–Life Balance</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culture Modal -->
+    <div id="cultureModal" class="culture-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="cultureModalTitle">
+        <div class="culture-modal-box">
+            <button class="culture-close" aria-label="Close">&times;</button>
+            <h2 id="cultureModalTitle"></h2>
+            <p id="cultureModalDesc"></p>
+        </div>
+    </div>
+
+    <!-- Celebrations Section -->
+    <section class="page-section celebrations-section" id="celebrations">
+        <div class="container">
+            <h2 class="section-title">Work Space Events</h2>
+            <p class="section-description">We believe in celebrating achievements, milestones, and creating memorable experiences together</p>
+
+            <div class="celebrations-grid">
+                <div class="celebration-card">
+                    <div class="celebration-image" style="background-image: url('https://th.bing.com/th/id/OIP.SOXn8nUGy22N8vatMFi0FAHaEK?w=281&h=180&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1')">
+                        <div class="celebration-overlay"><h3 class="celebration-title">Best Employee Award</h3></div>
+                    </div>
+                </div>
+
+                <div class="celebration-card">
+                    <div class="celebration-image" style="background-image: url('https://th.bing.com/th/id/OIP.ee__A69yCiySN1S5UueXfQHaE8?w=174&h=182&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1')">
+                        <div class="celebration-overlay"><h3 class="celebration-title">Festival Celebrations</h3></div>
+                    </div>
+                </div>
+
+                <div class="celebration-card">
+                    <div class="celebration-image" style="background-image: url('https://th.bing.com/th/id/OIP.0755eLBLGi_tS_NqhM443wHaE8?w=260&h=180&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1')">
+                        <div class="celebration-overlay"><h3 class="celebration-title">Fun Friday</h3></div>
+                    </div>
+                </div>
+
+                <div class="celebration-card">
+                    <div class="celebration-image" style="background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+                        <div class="celebration-overlay"><h3 class="celebration-title">Innovation Hackathons</h3></div>
+                    </div>
+                </div>
+
+                <div class="celebration-card">
+                    <div class="celebration-image" style="background-image: url('https://th.bing.com/th/id/OIP.--2SRqSneWwnTFvWBuM82wHaE8?w=301&h=201&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1')">
+                        <div class="celebration-overlay"><h3 class="celebration-title">Birthday Celebrations</h3></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ayudha Poojai 2025 Gallery -->
+    <section class="culture-section">
+        <h2 class="culture-title">Ayudha Poojai Celebrations 2025</h2>
+        <div class="culture-grid container">
+            <div class="culture-card" data-title="Pooja Setup" data-desc="Traditional Ayudha Poojai setup with decorated tools and workplace items.">
+                <img src="/images/celebrations19.jpg" alt="">
+                <div class="culture-overlay"></div>
+            </div>
+            <div class="culture-card" data-title="Team Rituals" data-desc="Team performing the ritual together and offering prayers.">
+                <img src="/images/celebrations4.jpg" alt="">
+                <div class="culture-overlay"></div>
+            </div>
+            <div class="culture-card" data-title="Decoration" data-desc="Flower decorations, rangoli, and traditional festive setup.">
+                <img src="/images/celebrations2.jpg" alt="">
+                <div class="culture-overlay"></div>
+            </div>
+            <div class="culture-card" data-title="Traditional Snacks" data-desc="Distribution of sweets and traditional festive snacks.">
+                <img src="/images/celebrations8.jpg" alt="">
+                <div class="culture-overlay"></div>
+            </div>
+            <div class="culture-card" data-title="Blessing the Tools" data-desc="Tools, laptops, and office equipment being blessed.">
+                <img src="/images/celebrations9.jpg" alt="">
+                <div class="culture-overlay"></div>
+            </div>
+            <div class="culture-card" data-title="Team Photo" data-desc="Employees taking group pictures during the celebration.">
+                <img src="/images/celebrations12.jpg" alt="">
+                <div class="culture-overlay"></div>
+            </div>
+
+            <div class="culture-card" data-title="Team Photo" data-desc="Employees taking group pictures during the celebration.">
+                <img src="/images/celebrations13.jpg" alt="">
+                <div class="culture-overlay"></div>
+            </div>
+            <div class="culture-card" data-title="Team Photo" data-desc="Employees taking group pictures during the celebration.">
+                <img src="/images/celebrations1.jpg" alt="">
+                <div class="culture-overlay"></div>
+            </div>
+            <div class="culture-card" data-title="Team Photo" data-desc="Employees taking group pictures during the celebration.">
+                <img src="/images/celebrations20.jpg" alt="">
+                <div class="culture-overlay"></div>
+            </div>
+            <div class="culture-card" data-title="Team Photo" data-desc="Employees taking group pictures during the celebration.">
+                <img src="/images/celebrations21.jpg.jpg" alt="">
+                <div class="culture-overlay"></div>
+            </div>
+            <div class="culture-card" data-title="Team Photo" data-desc="Employees taking group pictures during the celebration.">
+                <img src="/images/celebrations14.jpg" alt="">
+                <div class="culture-overlay"></div>
+            </div>
+            <div class="culture-card" data-title="Team Photo" data-desc="Employees taking group pictures during the celebration.">
+                <img src="/images/celebrations7.jpg" alt="">
+                <div class="culture-overlay"></div>
+            </div>
+            <div class="culture-card" data-title="Team Photo" data-desc="Employees taking group pictures during the celebration.">
+                <img src="/images/celebrations5.jpg" alt="">
+                <div class="culture-overlay"></div>
+            </div>
+            <div class="culture-card" data-title="Team Photo" data-desc="Employees taking group pictures during the celebration.">
+                <img src="/images/celebrations22.jpg" alt="">
+                <div class="culture-overlay"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <img src="/images/Quantum-pulse-Technologies-logo.png" alt="QuantumPulse" class="footer-logo">
+                    <p class="footer-description">
+                        Unlock Talent, Accelerate Innovation. QuantumPulse Technologies delivers cutting-edge
+                        solutions at the intersection of technology and human potential.
+                    </p>
+                    <div class="footer-social" aria-hidden="false">
+                        <a href="https://www.linkedin.com/company/quantum-pulse-technologies/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/Qptechy" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/share/16a5NKbh7w/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/quantumpulse/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="rpo-services.html">RPO Services</a></li>
+                        <li><a href="design-services.html">Design Services</a></li>
+                        <li><a href="iot.html">IoT Services</a></li>
+                        <li><a href="ai.html">AI Services</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="life.html">Culture @QP</a></li>
+                        <li><a href="jobopportunities.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Contact Info</h3>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> 6th & 7th Floor, Kochar Globe, Chennai - 600032</p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:+919176439425" style="color: inherit;">+91 91764 39425</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:info@quantumpulse.ltd" style="color: inherit;">info@quantumpulse.ltd</a></p>
+                        <p><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Quantum Pulse Technologies Pvt. Ltd. All rights reserved.
+                   <a href="/privacy-policy.html" style="color: rgba(255,255,255,0.9);">Privacy Policy</a> •
+                   <a href="/terms.html" style="color: rgba(255,255,255,0.9);">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Scripts -->
+   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Mobile menu toggle - UPDATED VERSION
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.querySelector('.main-nav');
+
+        if (mobileBtn && mainNav) {
+            mobileBtn.addEventListener('click', function(e) {
+                e.stopPropagation(); // Prevent event bubbling
+                const isActive = mainNav.classList.contains('active');
+                mainNav.classList.toggle('active');
+                
+                // animate icon
+                const icon = this.querySelector('i');
+                if (icon) {
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-times');
+                }
+            });
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (mainNav && mainNav.classList.contains('active') && 
+                !mainNav.contains(e.target) && 
+                e.target !== mobileBtn) {
+                mainNav.classList.remove('active');
+                const icon = mobileBtn.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            }
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-list a').forEach(link => {
+            link.addEventListener('click', function() {
+                if (mainNav && mainNav.classList.contains('active')) {
+                    mainNav.classList.remove('active');
+                    const icon = mobileBtn.querySelector('i');
+                    if (icon) {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                }
+            });
+        });
+
+        // Dropdown toggle behavior for touch/mobile
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(dd => {
+            const toggle = dd.querySelector('.dropdown-toggle');
+            // guard if toggle not found
+            if (!toggle) return;
+
+            toggle.addEventListener('click', function(e) {
+                // if mainNav is active (mobile), toggle open/close of this dropdown
+                const isMobileNav = window.getComputedStyle(mainNav).display === 'flex' || mainNav.classList.contains('active');
+                if (isMobileNav) {
+                    e.preventDefault();
+                    const isOpen = dd.classList.contains('open');
+                    // close others
+                    dropdowns.forEach(d => d.classList.remove('open'));
+                    if (!isOpen) {
+                        dd.classList.add('open');
+                    } else {
+                        dd.classList.remove('open');
+                    }
+                } else {
+                    // desktop: if href is javascript:void(0), prevent jump; otherwise let it navigate
+                    if (toggle.getAttribute('href') === 'javascript:void(0)') e.preventDefault();
+                }
+            });
+
+            // keyboard accessibility
+            toggle.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    this.click();
+                }
+            });
+        });
+
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) backToTop.style.display = 'flex';
+            else backToTop.style.display = 'none';
+        });
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Header shrink effect (subtle)
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 80) {
+                header.style.padding = '8px 0';
+            } else {
+                header.style.padding = '15px 0';
+            }
+        });
+
+        // Particles (small)
+        (function createParticles() {
+            const container = document.getElementById('particlesContainer');
+            if (!container) return;
+            const count = 18;
+            for (let i=0;i<count;i++){
+                const el = document.createElement('div');
+                el.className = 'particle';
+                const size = Math.random()*8 + 4;
+                el.style.width = `${size}px`;
+                el.style.height = `${size}px`;
+                el.style.left = `${Math.random()*100}%`;
+                el.style.bottom = `-${Math.random()*120 + 20}px`;
+                el.style.animationDelay = `${Math.random()*8}s`;
+                el.style.animationDuration = `${Math.random()*12 + 12}s`;
+                container.appendChild(el);
+            }
+        })();
+
+        // Bubbles (large soft bubbles)
+        (function createBubbles() {
+            const container = document.getElementById('bubblesContainer');
+            if (!container) return;
+            const count = 12;
+            for (let i=0;i<count;i++){
+                const b = document.createElement('div');
+                b.className = 'bubble';
+                const size = Math.random()*120 + 40;
+                b.style.width = `${size}px`;
+                b.style.height = `${size}px`;
+                b.style.left = `${Math.random()*100}%`;
+                b.style.bottom = `-${Math.random()*120 + 40}px`;
+                b.style.animationDelay = `${Math.random()*8}s`;
+                b.style.animationDuration = `${Math.random()*18 + 18}s`;
+                b.style.filter = `blur(${Math.random()*6}px)`;
+                b.style.opacity = (Math.random()*0.12 + 0.04).toString();
+                container.appendChild(b);
+            }
+        })();
+
+        // Scroll reveal for cards
+        function revealOnScroll(){
+            const els = document.querySelectorAll('.feature-card, .stat-item, .celebration-card, .culture-card');
+            els.forEach(el=>{
+                const r = el.getBoundingClientRect();
+                if (r.top < window.innerHeight - 140) el.classList.add('visible');
+            });
+        }
+        revealOnScroll();
+        window.addEventListener('scroll', revealOnScroll);
+
+        // Culture modal logic
+        const cultureCards = document.querySelectorAll('.culture-card');
+        const modal = document.getElementById('cultureModal');
+        const modalTitle = document.getElementById('cultureModalTitle');
+        const modalDesc = document.getElementById('cultureModalDesc');
+        const modalClose = document.querySelector('.culture-close');
+
+        cultureCards.forEach(card => {
+            card.addEventListener('click', function() {
+                modalTitle.textContent = card.dataset.title || 'QuantumPulse';
+                modalDesc.textContent = card.dataset.desc || '';
+                modal.classList.add('active');
+                modal.setAttribute('aria-hidden','false');
+            });
+        });
+        if (modalClose) modalClose.addEventListener('click', function(){ modal.classList.remove('active'); modal.setAttribute('aria-hidden','true'); });
+        modal.addEventListener('click', function(e){ if (e.target === modal) { modal.classList.remove('active'); modal.setAttribute('aria-hidden','true'); } });
+
+        // Hero: sentence rotator (full sentence shows slowly)
+        (function sentenceRotator(){
+            const el = document.getElementById('heroSentence');
+            if (!el) return;
+            const sentences = [
+                'Work That Fits Your Life',
+                'Innovate. Grow. Thrive.',
+                'Your Career, Reimagined.',
+                'Join Our Team Today'
+            ];
+            let idx = 0;
+            const cycle = 4200; // ms (matches CSS animation 4s)
+            function show(i){
+                el.classList.remove('show');
+                void el.offsetWidth; // reflow to restart
+                el.textContent = sentences[i];
+                setTimeout(()=> el.classList.add('show'), 40);
+            }
+            show(idx);
+            setInterval(()=>{
+                idx = (idx + 1) % sentences.length;
+                show(idx);
+            }, cycle);
+        })();
+
+        // Accessibility: close menus/modals with ESC
+        document.addEventListener('keydown', function(e){
+            if (e.key === 'Escape') {
+                // close all dropdowns on mobile
+                document.querySelectorAll('.dropdown.open').forEach(d=> d.classList.remove('open'));
+                // close nav if open
+                if (mainNav && mainNav.classList.contains('active')) {
+                    mainNav.classList.remove('active');
+                    const btnIcon = document.querySelector('#mobileMenuBtn i');
+                    if (btnIcon) { btnIcon.classList.remove('fa-times'); btnIcon.classList.add('fa-bars'); }
+                }
+                // close modal
+                if (modal && modal.classList.contains('active')) {
+                    modal.classList.remove('active');
+                    modal.setAttribute('aria-hidden','true');
+                }
+            }
+        });
+
+        // If for some reason the FA caret doesn't render, inject a simple text caret (fallback).
+        document.querySelectorAll('.dropdown > a.dropdown-toggle').forEach(a=>{
+            if (!a.querySelector('i.fa-caret-down')) {
+                const span = document.createElement('span');
+                span.className = 'qp-caret-fallback';
+                span.textContent = '▾';
+                a.appendChild(span);
+            }
+        });
+
+    });
+
+    // Keep layout clean on resize
+    window.addEventListener('resize', function(){
+        const mainNav = document.querySelector('.main-nav');
+        if (mainNav && window.innerWidth > 768) {
+            mainNav.classList.remove('active');
+            document.querySelectorAll('.dropdown.open').forEach(d=> d.classList.remove('open'));
+            const mobileIcon = document.querySelector('#mobileMenuBtn i');
+            if (mobileIcon) { mobileIcon.classList.remove('fa-times'); mobileIcon.classList.add('fa-bars'); }
+        }
+    });
+</script>
+</body>
+</html>

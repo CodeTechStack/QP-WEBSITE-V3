@@ -1,0 +1,2379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology Blog | QuantumPulse Technologies | AI, IoT & Innovation Insights</title>
+    <meta name="description" content="Latest technology insights, AI innovations, IoT solutions, and sustainable tech trends from QuantumPulse Technologies. Read expert blogs on emerging technologies.">
+    <meta name="keywords" content="technology blog, AI insights, IoT solutions, sustainable technology, innovation blog, QuantumPulse, tech trends, AI articles, IoT applications, future technology">
+    <meta name="author" content="QuantumPulse Technologies">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0a2463">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Technology Blog | QuantumPulse Technologies | AI, IoT & Innovation Insights">
+    <meta property="og:description" content="Latest insights on technology, innovation, AI, IoT and sustainable solutions from industry experts">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quantumpulse.ltd/blog">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:site_name" content="QuantumPulse Technologies">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Technology Blog | QuantumPulse Technologies">
+    <meta name="twitter:description" content="Latest insights on technology, innovation, and sustainable solutions">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta name="twitter:site" content="@Qptechy">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://quantumpulse.ltd/blog">
+    
+    <!-- Structured Data for Blog -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "QuantumPulse Technologies Blog",
+        "description": "Technology insights, AI innovations, IoT solutions and sustainable tech trends",
+        "url": "https://quantumpulse.ltd/blog",
+        "publisher": {
+            "@type": "Organization",
+            "name": "QuantumPulse Technologies",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://quantumpulse.ltd/images/Quantum-pulse-Technologies-logo.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://quantumpulse.ltd/blog"
+        }
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts with preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Modern CSS Reset with Variables */
+        :root {
+            /* Color Palette */
+            --primary-blue: #0a2463;
+            --secondary-blue: #1e3a8a;
+            --accent-teal: #14b8a6;
+            --accent-emerald: #10b981;
+            --accent-amber: #f59e0b;
+            --accent-violet: #8b5cf6;
+            --dark-navy: #0f172a;
+            --light-cyan: #e0f2fe;
+            --white: #ffffff;
+            --gray-50: #f8fafc;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            
+            /* Gradients */
+            --gradient-primary: linear-gradient(135deg, #0a2463 0%, #1e3a8a 100%);
+            --gradient-accent: linear-gradient(135deg, #14b8a6 0%, #10b981 100%);
+            --gradient-sunset: linear-gradient(135deg, #f59e0b 0%, #ec4899 100%);
+            --gradient-violet: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+            --gradient-dark: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            
+            /* Glass Effect */
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            
+            /* Shadows */
+            --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.15);
+            --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.2);
+            --shadow-hover: 0 30px 80px rgba(0, 0, 0, 0.25);
+            
+            /* Transitions */
+            --transition-smooth: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-bounce: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            --transition-fast: all 0.3s ease;
+            
+            /* Spacing */
+            --header-height: 130px;
+            --radius-sm: 12px;
+            --radius-md: 20px;
+            --radius-lg: 30px;
+            --radius-xl: 40px;
+        }
+
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: #334155;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            padding-top: var(--header-height);
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(10, 36, 99, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(20, 184, 166, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(139, 92, 246, 0.03) 0%, transparent 50%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--dark-navy);
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #475569;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-fast);
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Skip to Main Content - Accessibility */
+        .skip-to-content {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-blue);
+            color: white;
+            padding: 8px 16px;
+            z-index: 99999;
+            text-decoration: none;
+        }
+
+        .skip-to-content:focus {
+            top: 10px;
+        }
+
+        /* ===== HEADER & NAVIGATION ===== */
+        .main-header {
+            padding: 25px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 10999;
+            transition: all 0.3s ease;
+            background: linear-gradient(90deg, rgba(5,75,133,1) 0%, rgba(1,50,100,1) 100%);
+            box-shadow: var(--shadow-md);
+            height: var(--header-height);
+        }
+
+        .main-header.scrolled {
+            height: 100px;
+            padding: 15px 0;
+        }
+
+        /* HEADER CONTAINER */
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+            padding: 0 40px;
+            max-width: 1900px;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Logo Styles */
+        .logo-wrapper {
+            background-color: var(--white);
+            width: 170px;
+            height: 100px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+
+        .main-header.scrolled .logo-wrapper {
+            width: 150px;
+            height: 85px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            height: 100px;
+            width: 180px;
+            margin-left: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .main-header.scrolled .logo {
+            height: 85px;
+            width: 160px;
+        }
+
+        .logo-img {
+            height: 90px;
+            width: 140px;
+            object-fit: contain;
+            transition: all 0.3s ease;
+        }
+
+        .main-header.scrolled .logo-img {
+            height: 80px;
+            width: 130px;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .quantumpulse {
+            font-size: 25px;
+            font-weight: 700;
+            color: white;
+            line-height: 1.5;
+            margin-left: 60px;
+            transition: all 0.3s ease;
+        }
+
+        .main-header.scrolled .quantumpulse {
+            font-size: 22px;
+            margin-left: 50px;
+        }
+
+        .technologies {
+            font-size: 23px;
+            font-weight: 500;
+            color: white;
+            margin-left: 80px;
+            transition: all 0.3s ease;
+        }
+
+        .main-header.scrolled .technologies {
+            font-size: 20px;
+            margin-left: 70px;
+        }
+
+        /* MAIN NAVIGATION */
+        .main-nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            margin: 0 20px;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            width: 100%;
+            margin-left: 260px;
+        }
+
+        .nav-list li {
+            position: relative;
+        }
+
+        .nav-list li a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 8px 12px;
+            display: inline-flex;
+            gap: 5px;
+            align-items: center;
+            transition: transform 0.3s ease, color 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .main-header.scrolled .nav-list li a {
+            font-size: 18px;
+        }
+
+        .nav-list li a:hover {
+            color: #70aae9;
+            transform: translateY(-2px);
+        }
+
+        /* Dropdown Menu Styles - Desktop */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            padding: 15px 0;
+            width: 225px;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            list-style: none;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li a {
+            display: flex;
+            padding: 10px 20px;
+            color: #333;
+            gap: 15px;
+            font-size: 15px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .dropdown-menu li a:hover {
+            background: rgba(5, 75, 133, 0.05);
+            color: #0056b3;
+            padding-left: 25px;
+        }
+
+        .dropdown > a i {
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .dropdown:hover > a i {
+            transform: rotate(180deg);
+        }
+
+        /* Social Icons in Nav */
+        .nav-social {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-shrink: 0;
+        }
+
+        .nav-social a {
+            font-size: 18px;
+            transition: transform 0.3s ease, color 0.3s ease;
+            color: white;
+        }
+
+        .nav-social a:hover {
+            color: #70aae9;
+            transform: translateY(-3px);
+        }
+
+        /* QP Logo */
+        .qp-logo {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-left: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .main-header.scrolled .qp-logo {
+            width: 50px;
+            height: 50px;
+        }
+
+        .qp {
+            color: #0056b3;
+            font-weight: 800;
+            font-size: 22px;
+            font-family: 'Arial', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .main-header.scrolled .qp {
+            font-size: 20px;
+        }
+
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1002;
+            transition: all 0.3s ease;
+        }
+
+        /* Mobile Menu Styles */
+        .mobile-menu {
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            width: 100%;
+            height: calc(100vh - var(--header-height));
+            background: linear-gradient(90deg, rgba(5,75,133,0.98) 0%, rgba(1,50,100,0.98) 100%);
+            backdrop-filter: blur(10px);
+            z-index: 10998;
+            padding: 2rem;
+            overflow-y: auto;
+            transform: translateX(-100%);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        .mobile-nav-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .mobile-nav-list li {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 1rem;
+        }
+
+        .mobile-nav-list li:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-nav-list li a {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 0;
+        }
+
+        .mobile-dropdown-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0 0.5rem;
+        }
+
+        .mobile-dropdown-menu {
+            list-style: none;
+            padding-left: 1.5rem;
+            margin-top: 0.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        .mobile-dropdown-menu.active {
+            max-height: 500px;
+        }
+
+        .mobile-dropdown-menu li {
+            margin-bottom: 0.5rem;
+            border-bottom: none;
+            padding-bottom: 0.5rem;
+        }
+
+        .mobile-dropdown-menu li a {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+            padding: 0.5rem 0;
+        }
+
+        .mobile-dropdown-menu li a i {
+            margin-right: 0.8rem;
+            width: 20px;
+            text-align: center;
+        }
+
+        .mobile-social {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .mobile-social a {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-social a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+
+        /* Blog Hero Section */
+        .blog-hero {
+            position: relative;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: linear-gradient(rgba(5, 75, 133, 0.9), rgba(1, 50, 100, 0.9)),
+                        url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            margin-bottom: 5rem;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 900px;
+            padding: 6rem 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Blog Grid Section */
+        .blog-grid-section {
+            padding: 5rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            color: var(--dark-navy);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--gradient-accent);
+            border-radius: 2px;
+        }
+
+        .section-description {
+            font-size: 1.2rem;
+            color: #64748b;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        /* Blog Grid */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .blog-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition-smooth);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .blog-card-image {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .blog-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .blog-card:hover .blog-card-image img {
+            transform: scale(1.1);
+        }
+
+        .blog-card-category {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--gradient-accent);
+            color: var(--white);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .blog-card-content {
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card-date {
+            font-size: 0.9rem;
+            color: var(--accent-teal);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-card-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .blog-card-excerpt {
+            color: #64748b;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .blog-card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .blog-card-readtime {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        .read-more-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-blue);
+            font-weight: 600;
+            margin-top: auto;
+            transition: var(--transition-fast);
+        }
+
+        .read-more-btn:hover {
+            color: var(--accent-teal);
+            gap: 1rem;
+        }
+
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 4rem;
+        }
+
+        .pagination-wrapper {
+            width: 100%;
+            display: block;
+            margin-top: 4rem;
+            clear: both;
+        }
+
+        .page-btn {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--white);
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            color: #475569;
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+
+        .page-btn:hover,
+        .page-btn.active {
+            background: var(--gradient-primary);
+            color: var(--white);
+            border-color: transparent;
+        }
+
+        .page-btn.prev,
+        .page-btn.next {
+            padding: 0 1.5rem;
+            width: auto;
+        }
+
+        /* Newsletter Section */
+        .newsletter-section {
+            background: var(--gradient-primary);
+            padding: 6rem 0;
+            margin: 5rem 0;
+            clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+        }
+
+        .newsletter-content {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .newsletter-title {
+            font-size: 2.5rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-description {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border: none;
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            backdrop-filter: blur(10px);
+        }
+
+        .newsletter-input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .newsletter-btn {
+            padding: 1rem 2.5rem;
+            background: var(--gradient-accent);
+            color: var(--white);
+            border: none;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+
+        .newsletter-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* ===== UP BUTTON ===== */
+        #upBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 25px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #0056b3;
+            color: white;
+            cursor: pointer;
+            padding: 12px 16px;
+            border-radius: 50%;
+            display: none;
+            transition: all 0.3s ease;
+            width: 50px;
+            height: 50px;
+            opacity: 0;
+            visibility: hidden;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #upBtn.show {
+            display: flex;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #upBtn:hover {
+            background-color: #05549e;
+            transform: scale(1.1);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #022a57;
+            color: var(--white);
+            padding: 10px 0 10px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            padding-top: 50px;
+            max-width: 1900px;
+            margin: 0 auto;
+            padding: 50px 40px 0;
+        }
+
+        .footer-about {
+            padding-top: 10px;
+        }
+
+        .footer-about p {
+            color: rgba(255, 255, 255, 0.7);
+            margin: 15px 0;
+            line-height: 1.6;
+            font-size: 13px;
+        }
+
+        .footer-logo img {
+            display: block;
+            margin-bottom: 15px;
+            height: 150px;
+            margin-left: 30px;
+            object-fit: contain;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 55px;
+            margin-top: 15px;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            transform: translateY(-5px) scale(1.1);
+            background: #0056b3;
+        }
+
+        .footer-links h3 {
+            color: var(--white);
+            font-size: 1.4rem;
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .footer-links h3:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background: #28a745;
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+            font-size: 15px;
+            line-height: 2rem;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            display: inline-block;
+            transition: all 0.3s ease-out;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+            padding-left: 8px;
+        }
+
+        .footer-contact {
+            padding-top: 0;
+        }
+
+        .footer-contact h3 {
+            color: var(--white);
+            font-size: 1.4rem;
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .footer-contact h3:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background: #28a745;
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-contact p {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .footer-contact i {
+            font-size: 18px;
+            min-width: 25px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: white;
+            font-size: 0.85rem;
+            margin-top: 30px;
+            padding-top: 15px;
+            max-width: 1400px;
+            margin: 30px auto 0;
+            padding: 15px 40px 0;
+        }
+
+        .footer-bottom a {
+            color: white;
+            opacity: 1;
+            margin: 0 8px;
+            transition: all 0.3s ease;
+        }
+
+        .footer-bottom p {
+            color: white !important;
+            opacity: 1 !important;
+        }
+
+        .footer-bottom a:hover {
+            color: #eff1f0;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--gray-100);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient-primary);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary-blue);
+        }
+
+        /* Animation Classes */
+        .fade-in {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .slide-up {
+            animation: slideUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1400px) {
+            .nav-list {
+                margin-left: 200px;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .header-container {
+                padding: 0 30px;
+            }
+            
+            .nav-list {
+                gap: 12px;
+                margin-left: 150px;
+            }
+            
+            .nav-list li a {
+                font-size: 18px;
+                padding: 6px 10px;
+            }
+            
+            .qp-logo {
+                margin-left: 10px;
+            }
+            
+            .nav-social {
+                gap: 10px;
+            }
+            
+            .nav-social a {
+                font-size: 16px;
+            }
+            
+            .quantumpulse {
+                font-size: 22px;
+                margin-left: 50px;
+            }
+            
+            .technologies {
+                font-size: 20px;
+                margin-left: 70px;
+            }
+            
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .blog-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .header-container {
+                padding: 0 20px;
+            }
+            
+            .nav-list {
+                gap: 8px;
+                margin-left: 100px;
+            }
+            
+            .nav-list li a {
+                font-size: 16px;
+                padding: 5px 8px;
+            }
+            
+            .qp-logo {
+                width: 50px;
+                height: 50px;
+                margin-left: 8px;
+            }
+            
+            .qp {
+                font-size: 18px;
+            }
+            
+            .nav-social {
+                gap: 8px;
+            }
+            
+            .nav-social a {
+                font-size: 15px;
+            }
+            
+            .quantumpulse {
+                font-size: 20px;
+                margin-left: 40px;
+            }
+            
+            .technologies {
+                font-size: 18px;
+                margin-left: 60px;
+            }
+            
+            .logo-wrapper {
+                width: 150px;
+                height: 90px;
+            }
+            
+            .logo {
+                height: 90px;
+                width: 160px;
+            }
+            
+            .logo-img {
+                height: 80px;
+                width: 120px;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.3rem;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .blog-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --header-height: 85px;
+            }
+            
+            body {
+                padding-top: var(--header-height);
+            }
+            
+            .main-header {
+                height: var(--header-height);
+                padding: 15px 0;
+            }
+            
+            .header-container {
+                padding: 0 15px;
+            }
+            
+            .logo-wrapper {
+                width: 140px;
+                height: 80px;
+            }
+            
+            .logo {
+                height: 80px;
+                width: 150px;
+                margin-left: 10px;
+            }
+            
+            .logo-img {
+                height: 70px;
+                width: 110px;
+            }
+            
+            .quantumpulse {
+                font-size: 18px;
+                margin-left: 30px;
+            }
+            
+            .technologies {
+                font-size: 16px;
+                margin-left: 45px;
+            }
+            
+            .main-nav, .nav-social, .qp-logo {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .blog-hero {
+                min-height: 50vh;
+            }
+            
+            .hero-content {
+                padding: 4rem 1.5rem;
+            }
+            
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .category-filter {
+                gap: 0.5rem;
+            }
+            
+            .category-btn {
+                padding: 0.6rem 1.5rem;
+                font-size: 0.9rem;
+            }
+            
+            .blog-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .newsletter-input,
+            .newsletter-btn {
+                width: 100%;
+            }
+            
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+                padding: 40px 20px 0;
+            }
+            
+            .footer-social {
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .header-container {
+                padding: 0 15px;
+            }
+            
+            .logo-wrapper {
+                width: 130px;
+                height: 75px;
+            }
+            
+            .logo {
+                height: 75px;
+                width: 140px;
+                margin-left: 5px;
+            }
+            
+            .logo-img {
+                height: 65px;
+                width: 100px;
+            }
+            
+            .quantumpulse {
+                font-size: 16px;
+                margin-left: 25px;
+            }
+            
+            .technologies {
+                font-size: 14px;
+                margin-left: 40px;
+            }
+            
+            .blog-hero {
+                min-height: 40vh;
+                clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+            }
+            
+            .hero-content {
+                padding: 3rem 1rem;
+            }
+            
+            .hero-title {
+                font-size: 1.8rem;
+                line-height: 1.3;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .section-description {
+                font-size: 1rem;
+            }
+            
+            .blog-card-content {
+                padding: 1.5rem;
+            }
+            
+            .blog-card-title {
+                font-size: 1.3rem;
+            }
+            
+            .newsletter-section {
+                padding: 4rem 0;
+            }
+            
+            .newsletter-title {
+                font-size: 2rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .footer-links h3:after,
+            .footer-contact h3:after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .footer-links a:hover {
+                padding-left: 0;
+                transform: translateX(5px);
+            }
+            
+            .footer-social {
+                justify-content: center;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            :root {
+                --header-height: 80px;
+            }
+            
+            .main-header {
+                padding: 10px 0;
+            }
+            
+            .logo-wrapper {
+                width: 120px;
+                height: 70px;
+            }
+            
+            .logo {
+                height: 70px;
+                width: 130px;
+                margin-left: 5px;
+            }
+            
+            .logo-img {
+                height: 60px;
+                width: 90px;
+            }
+            
+            .quantumpulse {
+                font-size: 15px;
+                margin-left: 20px;
+            }
+            
+            .technologies {
+                font-size: 13px;
+                margin-left: 30px;
+            }
+            
+            .mobile-menu-btn {
+                font-size: 20px;
+                padding: 8px;
+            }
+            
+            .hero-title {
+                font-size: 1.6rem;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .category-filter {
+                justify-content: flex-start;
+                overflow-x: auto;
+                padding-bottom: 1rem;
+            }
+            
+            .category-btn {
+                flex-shrink: 0;
+            }
+            
+            .blog-card-image {
+                height: 200px;
+            }
+            
+            .blog-card-content {
+                padding: 1.2rem;
+            }
+            
+            .blog-card-title {
+                font-size: 1.2rem;
+            }
+            
+            .pagination {
+                flex-wrap: wrap;
+            }
+            
+            .footer-content {
+                padding: 30px 15px 0;
+            }
+            
+            .footer-logo img {
+                margin-left: 0;
+                height: 120px;
+            }
+            
+            .footer-about p {
+                font-size: 0.9rem;
+            }
+            
+            .footer-links h3,
+            .footer-contact h3 {
+                font-size: 1.2rem;
+            }
+            
+            .footer-bottom {
+                padding: 15px 15px 0;
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 375px) {
+            :root {
+                --header-height: 75px;
+            }
+            
+            .logo-wrapper {
+                width: 110px;
+                height: 65px;
+            }
+            
+            .logo {
+                height: 65px;
+                width: 120px;
+                margin-left: 5px;
+            }
+            
+            .logo-img {
+                height: 55px;
+                width: 80px;
+            }
+            
+            .quantumpulse {
+                font-size: 14px;
+                margin-left: 15px;
+            }
+            
+            .technologies {
+                font-size: 12px;
+                margin-left: 25px;
+            }
+            
+            .mobile-menu-btn {
+                font-size: 18px;
+                padding: 6px;
+            }
+            
+            .hero-title {
+                font-size: 1.4rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 0.9rem;
+            }
+            
+            .blog-grid {
+                gap: 1.5rem;
+            }
+            
+            .blog-card-image {
+                height: 180px;
+            }
+            
+            .blog-card-content {
+                padding: 1rem;
+            }
+            
+            .blog-card-title {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .main-header,
+            .mobile-menu-btn,
+            .mobile-menu,
+            .newsletter-section,
+            .footer,
+            #upBtn {
+                display: none !important;
+            }
+            
+            body {
+                padding-top: 0;
+                background: white;
+                color: black;
+            }
+            
+            .blog-card {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+            
+            a[href]::after {
+                content: " (" attr(href) ")";
+                font-size: 0.9em;
+                font-weight: normal;
+            }
+            
+            .read-more-btn::after {
+                content: "";
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to Main Content - Accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="/images/Quantum-pulse-Technologies-logo.png" alt="QuantumPulse Technologies Logo - Technology and Innovation Solutions" class="logo-img">
+                    <div class="logo-text">
+                        <span class="quantumpulse">QUANTUMPULSE</span>
+                        <span class="technologies">TECHNOLOGIES</span>
+                    </div>
+                </a>
+            </div>
+            
+            <nav class="main-nav" aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Services <i class="fas fa-caret-down" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="rpo-services.html"><i class="fas fa-user-tie" aria-hidden="true"></i> RPO Services</a></li>
+                            <li><a href="design-services.html"><i class="fas fa-paint-brush" aria-hidden="true"></i> Design Services</a></li>
+                            <li><a href="ai-services.html"><i class="fas fa-robot" aria-hidden="true"></i> AI Services</a></li>
+                            <li><a href="iot-services.html"><i class="fas fa-wifi" aria-hidden="true"></i> IoT Services</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Our Company <i class="fas fa-caret-down" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="about.html"><i class="fas fa-building" aria-hidden="true"></i> About Us</a></li>
+                            <li><a href="leadership.html"><i class="fas fa-users" aria-hidden="true"></i> Leadership</a></li>
+                            <li><a href="infra.html"><i class="fas fa-server" aria-hidden="true"></i> Infrastructure</a></li>
+                            <li><a href="qpcustomers.html"><i class="fas fa-user-tie" aria-hidden="true"></i> QP Customers</a></li>
+                            <li><a href="life.html"><i class="fas fa-heart" aria-hidden="true"></i> Culture @QP</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="dropdown">
+                        <a href="jobopportunities.html" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Careers <i class="fas fa-caret-down" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="jobs.html"><i class="fas fa-briefcase" aria-hidden="true"></i> Jobs</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Insights <i class="fas fa-caret-down" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="underprocess.html"><i class="fas fa-search" aria-hidden="true"></i> Research</a></li>
+                            <li><a href="Corporate_Overview_QP_V11.1.pdf" target="_blank"><i class="fas fa-users" aria-hidden="true"></i>Corporate Presentation</a></li>
+                            <li><a href="digitalbroucher.pdf" target="_blank"><i class="fas fa-file-alt" aria-hidden="true"></i>Digital Brochure</a></li>
+                            <li><a href="news.html"><i class="fas fa-newspaper" aria-hidden="true"></i>News</a></li>
+                            <li><a href="blog.html"><i class="fas fa-blog" aria-hidden="true"></i>Blogs</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="enquiry.html">Get Quote<i class="fas fa-file-invoice" aria-hidden="true"></i></a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-social" aria-label="Social Media Links">
+                <a href="https://www.linkedin.com/company/quantum-pulse-technologies/" target="_blank" rel="noopener nofollow" aria-label="Visit QuantumPulse Technologies LinkedIn page"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                <a href="https://x.com/Qptechy" target="_blank" rel="noopener nofollow" aria-label="Follow QuantumPulse Technologies on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/share/16a5NKbh7w/" target="_blank" rel="noopener nofollow" aria-label="Visit QuantumPulse Technologies Facebook page"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="https://web.whatsapp.com/+919500124242" target="_blank" rel="noopener nofollow" aria-label="Contact QuantumPulse Technologies on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                <a href="https://share.google.com/dTzo5yo4z7HFNEscr" target="_blank" rel="noopener nofollow" aria-label="Follow QuantumPulse Technologies on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            </div>
+            
+            <div class="qp-logo">
+                <span class="qp" aria-label="QuantumPulse Logo">QP</span>
+            </div>
+            
+            <button class="mobile-menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <ul class="mobile-nav-list">
+            <li><a href="index.html">Home</a></li>
+            
+            <li>
+                <a href="javascript:void(0)" class="mobile-dropdown-header">Services <button class="mobile-dropdown-toggle" aria-expanded="false"><i class="fas fa-caret-down"></i></button></a>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="rpo-services.html"><i class="fas fa-user-tie" aria-hidden="true"></i> RPO Services</a></li>
+                    <li><a href="design-services.html"><i class="fas fa-paint-brush" aria-hidden="true"></i> Design Services</a></li>
+                    <li><a href="ai-services.html"><i class="fas fa-robot" aria-hidden="true"></i> AI Services</a></li>
+                    <li><a href="iot-services.html"><i class="fas fa-wifi" aria-hidden="true"></i> IoT Services</a></li>
+                </ul>
+            </li>
+            
+            <li>
+                <a href="javascript:void(0)" class="mobile-dropdown-header">Our Company <button class="mobile-dropdown-toggle" aria-expanded="false"><i class="fas fa-caret-down"></i></button></a>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="about.html"><i class="fas fa-building" aria-hidden="true"></i> About Us</a></li>
+                    <li><a href="leadership.html"><i class="fas fa-users" aria-hidden="true"></i> Leadership</a></li>
+                    <li><a href="infra.html"><i class="fas fa-server" aria-hidden="true"></i> Infrastructure</a></li>
+                    <li><a href="qpcustomers.html"><i class="fas fa-user-tie" aria-hidden="true"></i> QP Customers</a></li>
+                    <li><a href="life.html"><i class="fas fa-heart" aria-hidden="true"></i> Culture @QP</a></li>
+                </ul>
+            </li>
+            
+            <li>
+                <a href="jobopportunities.html" class="mobile-dropdown-header">Careers <button class="mobile-dropdown-toggle" aria-expanded="false"><i class="fas fa-caret-down"></i></button></a>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="jobs.html"><i class="fas fa-briefcase" aria-hidden="true"></i> Jobs</a></li>
+                </ul>
+            </li>
+            
+            <li>
+                <a href="javascript:void(0)" class="mobile-dropdown-header">Insights <button class="mobile-dropdown-toggle" aria-expanded="false"><i class="fas fa-caret-down"></i></button></a>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="underprocess.html"><i class="fas fa-search" aria-hidden="true"></i> Research</a></li>
+                    <li><a href="Corporate_Overview_QP_V11.1.pdf" target="_blank"><i class="fas fa-users" aria-hidden="true"></i>Corporate Presentation</a></li>
+                    <li><a href="digitalbroucher.pdf" target="_blank"><i class="fas fa-file-alt" aria-hidden="true"></i>Digital Brochure</a></li>
+                    <li><a href="news.html"><i class="fas fa-newspaper" aria-hidden="true"></i>News</a></li>
+                    <li><a href="blog.html"><i class="fas fa-blog" aria-hidden="true"></i>Blogs</a></li>
+                </ul>
+            </li>
+
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="enquiry.html">Get Quote<i class="fas fa-file-invoice" aria-hidden="true"></i></a></li>
+        </ul>
+        
+        <div class="mobile-social" aria-label="Social Media Links">
+            <a href="https://www.linkedin.com/company/quantum-pulse-technologies/" target="_blank" rel="noopener nofollow" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://x.com/Qptechy" target="_blank" rel="noopener nofollow" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/share/16a5NKbh7w/" target="_blank" rel="noopener nofollow" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://web.whatsapp.com/+919500124242" target="_blank" rel="noopener nofollow" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Hero Section -->
+        <section class="blog-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title fade-in">QuantumPulse Technology Insights</h1>
+                    <p class="hero-subtitle slide-up">Explore our latest articles, research, and perspectives on AI, IoT, and innovative solutions shaping the future of technology</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Grid Section -->
+        <section class="blog-grid-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Latest Technology Blogs</h2>
+                    <p class="section-description">Stay updated with expert insights on emerging technologies, industry trends, and innovative solutions from QuantumPulse Technologies.</p>
+                </div>
+
+                <!-- Blog Grid -->
+                <div class="blog-grid" id="blog-grid">
+                    <!-- Blog Card 1 -->
+                    <article class="blog-card" data-category="innovation sustainability">
+                        <div class="blog-card-image">
+                            <img src="https://th.bing.com/th/id/OIP.vp9a90zK35k3D8GGweoxFQHaE8?w=278&h=185&c=7&r=0&o=7&pid=1.7&rm=3" alt="Automated Weeding Robots in Agriculture - BLDC motor controllers in farming technology" loading="lazy" width="350" height="250">
+                            <span class="blog-card-category">Innovation</span>
+                        </div>
+                        <div class="blog-card-content">
+                            <h3 class="blog-card-title">Feeding the World, One Machine at a Time</h3>
+                            <p class="blog-card-excerpt">Discover how BLDC motor controllers are revolutionizing automated weeding robots for sustainable agriculture. Explore the technology behind precision farming and smart agriculture solutions.</p>
+                            <a href="blogs1.html" class="read-more-btn" aria-label="Read more about Feeding the World, One Machine at a Time">
+                                Read More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 2 - Elevator Controller -->
+                    <article class="blog-card" data-category="iot innovation">
+                        <div class="blog-card-image">
+                            <img src="https://th.bing.com/th/id/OIP.rlHphfnBZhJo3F7rz2bsyQHaHa?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Modern Home Elevator with Intelligent Control - Smart vertical mobility solutions" loading="lazy" width="350" height="250">
+                            <span class="blog-card-category">Smart Home</span>
+                        </div>
+                        <div class="blog-card-content">
+                            <h3 class="blog-card-title">Elevating the Future of Home Mobility</h3>
+                            <p class="blog-card-excerpt">Explore how intelligent elevator controller boards are revolutionizing residential mobility with smart, safe, and versatile technology for modern vertical living and accessibility solutions.</p>
+                            <a href="blogs2.html" class="read-more-btn" aria-label="Read more about Elevating the Future of Home Mobility">
+                                Read More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 3 - AI Solutions -->
+                    <article class="blog-card" data-category="iot innovation">
+                        <div class="blog-card-image">
+                            <img src="https://cdn.optinmonster.com/wp-content/uploads/2019/03/how-to-create-a-coming-soon-page-in-wordpress.png" alt="Modern Home Elevator with Intelligent Control - Smart vertical mobility solutions" loading="lazy" width="350" height="250">
+                            <span class="blog-card-category">Smart Home</span>
+                        </div>
+                        <div class="blog-card-content">
+                            <h3 class="blog-card-title">Elevating the Future of Home Mobility</h3>
+                            <p class="blog-card-excerpt">We are preparing valuable content. Stay tuned.</p>
+                            <a href="#" class="read-more-btn" aria-label="Read more about Elevating the Future of Home Mobility">
+                                Read More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 4 - IoT Applications -->
+                    <article class="blog-card" data-category="iot innovation">
+                        <div class="blog-card-image">
+                            <img src="https://cdn.optinmonster.com/wp-content/uploads/2019/03/how-to-create-a-coming-soon-page-in-wordpress.png" alt="Modern Home Elevator with Intelligent Control - Smart vertical mobility solutions" loading="lazy" width="350" height="250">
+                            <span class="blog-card-category">Smart Home</span>
+                        </div>
+                        <div class="blog-card-content">
+                            <h3 class="blog-card-title">Elevating the Future of Home Mobility</h3>
+                            <p class="blog-card-excerpt">We are preparing valuable content. Stay tuned.</p>
+                            <a href="#" class="read-more-btn" aria-label="Read more about Elevating the Future of Home Mobility">
+                                Read More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 5 - Sustainable Tech -->
+                    <article class="blog-card" data-category="iot innovation">
+                        <div class="blog-card-image">
+                            <img src="https://cdn.optinmonster.com/wp-content/uploads/2019/03/how-to-create-a-coming-soon-page-in-wordpress.png" alt="Modern Home Elevator with Intelligent Control - Smart vertical mobility solutions" loading="lazy" width="350" height="250">
+                            <span class="blog-card-category">Smart Home</span>
+                        </div>
+                        <div class="blog-card-content">
+                            <h3 class="blog-card-title">Elevating the Future of Home Mobility</h3>
+                            <p class="blog-card-excerpt">We are preparing valuable content. Stay tuned.</p>
+                            <a href="#" class="read-more-btn" aria-label="Read more about Elevating the Future of Home Mobility">
+                                Read More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 6 - Future Tech -->
+                    <article class="blog-card" data-category="iot innovation">
+                        <div class="blog-card-image">
+                            <img src="https://cdn.optinmonster.com/wp-content/uploads/2019/03/how-to-create-a-coming-soon-page-in-wordpress.png" alt="Modern Home Elevator with Intelligent Control - Smart vertical mobility solutions" loading="lazy" width="350" height="250">
+                            <span class="blog-card-category">Smart Home</span>
+                        </div>
+                        <div class="blog-card-content">
+                            <h3 class="blog-card-title">Elevating the Future of Home Mobility</h3>
+                            <p class="blog-card-excerpt">We are preparing valuable content. Stay tuned.</p>
+                            <a href="#" class="read-more-btn" aria-label="Read more about Elevating the Future of Home Mobility">
+                                Read More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination-wrapper">
+                    <nav class="pagination" aria-label="Blog navigation">
+                        <button class="page-btn prev" aria-label="Previous page">Previous</button>
+                        <button class="page-btn active" aria-label="Page 1">1</button>
+                        <button class="page-btn" aria-label="Page 2">2</button>
+                        <button class="page-btn" aria-label="Page 3">3</button>
+                        <button class="page-btn" aria-label="Page 4">4</button>
+                        <button class="page-btn next" aria-label="Next page">Next</button>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2 class="newsletter-title">Stay Updated with Technology Insights</h2>
+                    <p class="newsletter-description">Subscribe to our newsletter to receive the latest technology insights, research papers, industry trends, and updates from QuantumPulse Technologies experts.</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Enter your email address" required aria-label="Email address for newsletter subscription">
+                        <button type="submit" class="newsletter-btn">Subscribe Now</button>
+                    </form>
+                    <p class="newsletter-disclaimer" style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-top: 1rem;">We respect your privacy. Unsubscribe at any time.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <img src="/images/Quantum-pulse-Technologies-logo.png" alt="QuantumPulse Technologies - Technology and Innovation Solutions" height="150">
+                </div>
+                <p>Unlock Talent, Accelerate Innovation. QuantumPulse Technologies delivers cutting-edge solutions at the intersection of technology and human potential.</p>
+                
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/company/quantum-pulse-technologies/" target="_blank" rel="noopener nofollow" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://x.com/Qptechy" target="_blank" rel="noopener nofollow" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/share/16a5NKbh7w/" target="_blank" rel="noopener nofollow" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://web.whatsapp.com/+919500124242" target="_blank" rel="noopener nofollow" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Technology Services</h3>
+                <ul>
+                    <li><a href="rpo-services.html">RPO Services</a></li>
+                    <li><a href="design-services.html">Design Services</a></li>
+                    <li><a href="iot-services.html">IoT Solutions</a></li>
+                    <li><a href="ai-services.html">AI & ML Services</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="about.html">About QuantumPulse</a></li>
+                    <li><a href="life.html">Culture @QP</a></li>
+                    <li><a href="jobopportunities.html">Tech Careers</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h3>Contact Information</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 6th,7th Floor, Kochar Globe, Ambedkar Nagar, SIDCO Industrial Estate, Guindy, Chennai - 600032</p>
+                <p><i class="fas fa-phone"></i>9500124242</p>
+                <p><i class="fas fa-envelope"></i> info@quantumpulse.ltd</p>
+                <p><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Quantum Pulse Technologies Pvt. Ltd. All Rights Reserved  | <a href="/FOOTER/privacypolicy.html">Privacy Policy</a> | <a href="terms&conditions.html">Terms & Conditions</a> | <a href="sitemap.xml">Sitemap</a></p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="upBtn" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize mobile menu
+            initMobileMenu();
+            
+            // Initialize category filter
+            initCategoryFilter();
+            
+            // Initialize pagination
+            initPagination();
+            
+            // Initialize newsletter form
+            initNewsletterForm();
+            
+            // Initialize scroll effects
+            initScrollEffects();
+            
+            // Initialize animations
+            initAnimations();
+            
+            // Initialize lazy loading
+            initLazyLoading();
+        });
+
+        // Mobile Menu Functionality
+        function initMobileMenu() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const dropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+            let isMobileMenuOpen = false;
+
+            if (!mobileMenuBtn) return;
+
+            // Toggle mobile menu
+            mobileMenuBtn.addEventListener('click', () => {
+                isMobileMenuOpen = !isMobileMenuOpen;
+                mobileMenuBtn.setAttribute('aria-expanded', isMobileMenuOpen);
+                mobileMenu.classList.toggle('active');
+                
+                // Change icon
+                const icon = mobileMenuBtn.querySelector('i');
+                if (isMobileMenuOpen) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Handle dropdown toggles in mobile menu
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const dropdownMenu = toggle.closest('li').querySelector('.mobile-dropdown-menu');
+                    const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+                    
+                    toggle.setAttribute('aria-expanded', !isExpanded);
+                    dropdownMenu.classList.toggle('active');
+                    
+                    // Rotate icon
+                    const icon = toggle.querySelector('i');
+                    icon.style.transform = isExpanded ? 'rotate(0deg)' : 'rotate(180deg)';
+                });
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (isMobileMenuOpen && 
+                    !mobileMenu.contains(e.target) && 
+                    !mobileMenuBtn.contains(e.target)) {
+                    mobileMenuBtn.click();
+                }
+            });
+
+            // Close mobile menu on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && isMobileMenuOpen) {
+                    mobileMenuBtn.click();
+                }
+            });
+        }
+
+        // Category Filter
+        function initCategoryFilter() {
+            const filterButtons = document.querySelectorAll('.category-btn');
+            const blogCards = document.querySelectorAll('.blog-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                        btn.setAttribute('aria-pressed', 'false');
+                    });
+                    
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    button.setAttribute('aria-pressed', 'true');
+                    
+                    const category = button.getAttribute('data-category');
+                    
+                    // Show/hide blog cards based on category
+                    blogCards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+                        
+                        if (category === 'all' || cardCategory.includes(category)) {
+                            card.style.display = 'flex';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 10);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                    
+                    // Update URL for better SEO (without page reload)
+                    const url = new URL(window.location);
+                    if (category === 'all') {
+                        url.searchParams.delete('category');
+                    } else {
+                        url.searchParams.set('category', category);
+                    }
+                    window.history.replaceState({}, '', url);
+                });
+            });
+        }
+
+        // Pagination
+        function initPagination() {
+            const pageButtons = document.querySelectorAll('.page-btn');
+            
+            pageButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    if (button.classList.contains('active')) return;
+                    
+                    // Remove active class from all buttons
+                    pageButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                        btn.removeAttribute('aria-current');
+                    });
+                    
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    button.setAttribute('aria-current', 'page');
+                    
+                    // Add animation to blog cards
+                    const blogCards = document.querySelectorAll('.blog-card');
+                    blogCards.forEach((card, index) => {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, index * 100);
+                    });
+                    
+                    // Scroll to top of blog section
+                    document.querySelector('.blog-grid-section').scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                });
+            });
+        }
+
+        // Newsletter Form
+        function initNewsletterForm() {
+            const newsletterForm = document.getElementById('newsletter-form');
+            
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const emailInput = this.querySelector('.newsletter-input');
+                    const submitBtn = this.querySelector('.newsletter-btn');
+                    
+                    if (!emailInput.value || !isValidEmail(emailInput.value)) {
+                        showFormError(emailInput, 'Please enter a valid email address');
+                        return;
+                    }
+                    
+                    // Simulate form submission
+                    const originalText = submitBtn.textContent;
+                    submitBtn.textContent = 'Subscribing...';
+                    submitBtn.disabled = true;
+                    
+                    // In a real application, this would be an AJAX call
+                    setTimeout(() => {
+                        submitBtn.textContent = 'Subscribed!';
+                        submitBtn.style.background = 'var(--accent-emerald)';
+                        
+                        // Show success message
+                        const successMessage = document.createElement('div');
+                        successMessage.textContent = 'Thank you for subscribing to our technology newsletter!';
+                        successMessage.style.cssText = `
+                            color: white;
+                            margin-top: 1rem;
+                            font-weight: 600;
+                            animation: fadeIn 0.5s ease;
+                            text-align: center;
+                        `;
+                        
+                        // Clear form
+                        emailInput.value = '';
+                        
+                        // Add message
+                        this.appendChild(successMessage);
+                        
+                        // Remove message after 5 seconds
+                        setTimeout(() => {
+                            submitBtn.textContent = originalText;
+                            submitBtn.disabled = false;
+                            submitBtn.style.background = '';
+                            successMessage.remove();
+                        }, 5000);
+                    }, 1500);
+                });
+                
+                // Reset error on input
+                const emailInput = newsletterForm.querySelector('.newsletter-input');
+                emailInput.addEventListener('input', () => {
+                    clearFormError(emailInput);
+                });
+            }
+        }
+
+        function isValidEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        function showFormError(input, message) {
+            clearFormError(input);
+            input.style.border = '2px solid #ff6b6b';
+            const error = document.createElement('div');
+            error.textContent = message;
+            error.style.cssText = 'color: #ff6b6b; font-size: 0.9rem; margin-top: 0.5rem;';
+            input.parentNode.insertBefore(error, input.nextSibling);
+        }
+
+        function clearFormError(input) {
+            input.style.border = 'none';
+            const error = input.parentNode.querySelector('div[style*="color: #ff6b6b"]');
+            if (error) error.remove();
+        }
+
+        // Scroll Effects
+        function initScrollEffects() {
+            const header = document.querySelector('.main-header');
+            const upBtn = document.getElementById('upBtn');
+
+            // Throttle scroll events for performance
+            let scrollTimeout;
+            window.addEventListener('scroll', () => {
+                if (!scrollTimeout) {
+                    scrollTimeout = setTimeout(() => {
+                        scrollTimeout = null;
+                        
+                        // Header scroll effect
+                        if (window.scrollY > 100) {
+                            header.classList.add('scrolled');
+                        } else {
+                            header.classList.remove('scrolled');
+                        }
+
+                        // Back to top button
+                        if (window.scrollY > 500) {
+                            upBtn.classList.add('show');
+                        } else {
+                            upBtn.classList.remove('show');
+                        }
+                    }, 10);
+                }
+            });
+
+            // Back to top functionality
+            upBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // Animations
+        function initAnimations() {
+            // Animate blog cards on load
+            const blogCards = document.querySelectorAll('.blog-card');
+            blogCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+            
+            // Add hover effects to cards
+            blogCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-10px)';
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // Intersection Observer for scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe elements for animation
+            document.querySelectorAll('.blog-card, .section-header, .newsletter-content').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Lazy Loading for images
+        function initLazyLoading() {
+            if ('loading' in HTMLImageElement.prototype) {
+                // Browser supports native lazy loading
+                const images = document.querySelectorAll('img[loading="lazy"]');
+                images.forEach(img => {
+                    if (img.complete) {
+                        img.classList.add('loaded');
+                    } else {
+                        img.addEventListener('load', () => {
+                            img.classList.add('loaded');
+                        });
+                    }
+                });
+            } else {
+                // Fallback for browsers without native lazy loading
+                const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+                const imageObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.src = img.dataset.src;
+                            img.classList.add('loaded');
+                            imageObserver.unobserve(img);
+                        }
+                    });
+                });
+                
+                lazyImages.forEach(img => {
+                    img.dataset.src = img.src;
+                    img.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzUwIiBoZWlnaHQ9IjI1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjFmNWY5Ii8+PC9zdmc+';
+                    imageObserver.observe(img);
+                });
+            }
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerHeight = document.querySelector('.main-header').offsetHeight;
+                    const targetPosition = targetElement.offsetTop - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Handle category from URL on page load
+        const urlParams = new URLSearchParams(window.location.search);
+        const categoryParam = urlParams.get('category');
+        if (categoryParam) {
+            const categoryBtn = document.querySelector(`.category-btn[data-category="${categoryParam}"]`);
+            if (categoryBtn) {
+                setTimeout(() => categoryBtn.click(), 100);
+            }
+        }
+    </script>
+</body>
+</html>

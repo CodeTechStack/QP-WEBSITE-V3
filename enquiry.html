@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry – QuantumPulse</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* ------------------------- GLOBAL ------------------------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f4f9ff 0%, #e6f2ff 100%);
+            color: #00315c;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ------------------------- HEADER ------------------------- */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 2000;
+            background: linear-gradient(90deg, rgba(5,75,133,1) 0%, rgba(1,50,100,1) 100%);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 2000px;
+            margin: 0 auto;
+            padding: 10px clamp(15px, 3vw, 40px);
+            gap: 40px;
+        }
+
+        .brand {
+            background-color: white;
+            width: 180px;
+            height: 90px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform .2s ease;
+            flex-shrink: 0;
+        }
+
+        .brand:hover,
+        .brand:focus-within {
+            transform: translateY(-1px);
+        }
+
+        .brand img {
+            height: 80px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            margin-left: 6px;
+            color: white;
+        }
+
+        .quantumpulse {
+            font-size: 25px;
+            font-weight: 700;
+            color: white;
+            line-height: 1.2;
+        }
+
+        .technologies {
+            font-size: 23px;
+            font-weight: 500;
+            color: white;
+            margin-left: 20px;
+        }
+
+        nav.main-nav {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            justify-content: center;
+            gap: 15px;
+            position: relative;
+        }
+
+        /* primary nav */
+        .nav-list {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            gap: 25px;
+            padding-left: 60px;
+        }
+
+        .nav-list > li {
+            position: relative;
+        }
+
+        .nav-list > li > a {
+            color: white;
+            text-decoration: none;
+            gap: 10px;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 10px 8px;
+            display: inline-flex;
+            align-items: center;
+            transition: opacity .2s ease;
+        }
+
+        .nav-list > li > a:hover,
+        .nav-list > li > a:focus {
+            opacity: .85;
+        }
+
+        /* dropdowns */
+        .dropdown .dropdown-toggle {
+            cursor: pointer;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            left: 0;
+            top: 120%;
+            min-width: 240px;
+            background: #fff;
+            color: #0f172a;
+            border-radius: 12px;
+            box-shadow: 0 12px 40px rgba(0,0,0,.12);
+            border: 1px solid rgba(7,40,80,0.08);
+            padding: 8px;
+            list-style: none;
+            margin: 0;
+            display: none;
+        }
+
+        .dropdown-menu li a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 12px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #0f172a;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .dropdown-menu li a i {
+            width: 18px;
+            text-align: center;
+            color: #054b85;
+        }
+
+        .dropdown-menu li a:hover, .dropdown-menu li a:focus {
+            background: #f6f9ff;
+        }
+
+        /* show on hover / when opened via JS for accessibility on mobile */
+        .dropdown.open .dropdown-menu {
+            display: block;
+        }
+
+        @media (hover:hover) {
+            .dropdown:hover .dropdown-menu {
+                display: block;
+            }
+        }
+
+        .nav-social {
+            display: flex;
+            align-items: center;
+            margin-left: 120px;
+            gap: 24px;
+        }
+
+        .nav-social a {
+            color: white;
+            opacity: .9;
+        }
+
+        .nav-social a:hover {
+            opacity: 1;
+        }
+
+        .qp-logo {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 6px;
+            color: #054b85;
+            font-weight: 800;
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: 2px solid rgba(255,255,255,.4);
+            border-radius: 10px;
+            font-size: 20px;
+            color: white;
+            cursor: pointer;
+            padding: 8px 10px;
+        }
+
+        .quote-btn {
+            border: 2px solid rgba(255,255,255,.35);
+            padding: 8px 12px;
+            border-radius: 10px;
+        }
+
+        .sr-only {
+            position: absolute !important;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(1px,1px,1px,1px);
+            white-space: nowrap;
+        }
+
+        /* ------------------------- PAGE CONTENT ------------------------- */
+        .page-content {
+            flex: 1;
+            padding-top: 40px; /* Account for fixed header */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 60px;
+        }
+
+        /* ------------------------- PAGE TITLE ------------------------- */
+        .page-title {
+            text-align: center;
+            padding: 40px 20px 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .page-title h1 {
+            font-size: 42px;
+            font-weight: 800;
+            color: #054b85;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 5px rgba(5, 75, 133, 0.1);
+        }
+
+        .page-title p {
+            font-size: 18px;
+            color: #054b85c2;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ------------------------- ENQUIRY BUTTONS ------------------------- */
+        .enquiry-section {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .enquiry-box {
+            background: #ffffff;
+            padding: 50px 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(5,75,133,0.15);
+            text-align: center;
+            max-width: 700px;
+            width: 100%;
+            border: 1px solid rgba(5, 75, 133, 0.1);
+        }
+
+        .enquiry-box h2 {
+            color: #054b85;
+            margin-bottom: 15px;
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .enquiry-box p {
+            color: #054b85b2;
+            margin-bottom: 40px;
+            font-size: 18px;
+        }
+
+        .enquiry-buttons {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .enquiry-btn {
+            background: linear-gradient(135deg, #054b85, #0a6cc9);
+            color: #fff;
+            padding: 20px 40px;
+            font-weight: 700;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 18px rgba(5,75,133,0.20);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .enquiry-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .enquiry-btn:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 18px 36px rgba(5,75,133,0.28);
+        }
+
+        .enquiry-btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-icon {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        /* ------------------------- FOOTER ------------------------- */
+        footer {
+            margin-top: 28px;
+            padding: 28px;
+            text-align: center;
+            font-size: 14px;
+            background-color: #1a365d;
+            color: white;
+            border-radius: 12px 12px 0 0;
+        }
+
+        /* ------------------------- RESPONSIVE ------------------------- */
+        @media (max-width:1250px) {
+            .nav-social {
+                display: none;
+            }
+        }
+
+        @media (max-width:860px) {
+            .nav-list {
+                display: none;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 100%;
+                background: rgba(255,255,255,.98);
+                padding: 12px;
+                border-radius: 0 0 12px 12px;
+                box-shadow: 0 10px 30px rgba(0,0,0,.08);
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .nav-list > li > a {
+                color: #0f172a;
+                padding: 10px 12px;
+            }
+
+            .dropdown-menu {
+                position: static;
+                top: auto;
+                left: auto;
+                box-shadow: none;
+                border: 0;
+                padding: 0 0 8px 12px;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .qp-logo {
+                display: none;
+            }
+
+            .page-content {
+                padding-top: 20px;
+            }
+
+            .page-title h1 {
+                font-size: 32px;
+            }
+
+            .page-title p {
+                font-size: 16px;
+            }
+
+            .enquiry-box {
+                padding: 40px 30px;
+            }
+
+            .enquiry-box h2 {
+                font-size: 28px;
+            }
+
+            .enquiry-btn {
+                min-width: 100%;
+                padding: 18px 30px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-title h1 {
+                font-size: 28px;
+            }
+
+            .page-title p {
+                font-size: 15px;
+            }
+
+            .enquiry-box {
+                padding: 30px 20px;
+            }
+
+            .enquiry-box h2 {
+                font-size: 24px;
+            }
+
+            .enquiry-box p {
+                font-size: 16px;
+                margin-bottom: 30px;
+            }
+
+            .enquiry-buttons {
+                gap: 15px;
+            }
+
+            .logo-text {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header role="banner">
+    <div class="nav-container">
+        <div class="brand">
+            <a href="index.html" aria-label="QuantumPulse Home">
+                <img src="images/Quantum-pulse-Technologies-logo.png" alt="QuantumPulse logo" loading="eager">
+            </a>
+        </div>
+
+        <div class="logo-text" aria-hidden="true">
+            <div class="quantumpulse">QUANTUMPULSE</div>
+            <div class="technologies">TECHNOLOGIES</div>
+        </div>
+
+        <nav class="main-nav" aria-label="Primary">
+            <button class="mobile-menu-btn" aria-controls="primary-menu" aria-expanded="false">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+                <span class="sr-only">Toggle menu</span>
+            </button>
+
+            <ul class="nav-list" id="primary-menu">
+                <li><a href="index.html">Home</a></li>
+
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                        Services <i class="fas fa-caret-down" aria-hidden="true"></i>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="rpo-services.html"><i class="fas fa-user-tie"></i> RPO Services</a></li>
+                        <li><a href="design-services.html"><i class="fas fa-paint-brush"></i> Design Services</a></li>
+                        <li><a href="ai-services.html"><i class="fas fa-robot"></i> AI Services</a></li>
+                        <li><a href="iot-services.html"><i class="fas fa-wifi"></i> IOT Services</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                        Our Company <i class="fas fa-caret-down" aria-hidden="true"></i>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="about.html"><i class="fas fa-building"></i> About Us</a></li>
+                        <li><a href="leadership.html"><i class="fas fa-users"></i> Leadership</a></li>
+                        <li><a href="infra.html"><i class="fas fa-server"></i> Infrastructure</a></li>
+                        <li><a href="qpcustomers.html"><i class="fas fa-user-tie"></i> QP Customers</a></li>
+                        <li><a href="life.html"><i class="fas fa-heart"></i> Culture @QP</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="jobs.html" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                        Careers <i class="fas fa-caret-down" aria-hidden="true"></i>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="jobs.html"><i class="fas fa-briefcase"></i> Jobs</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                        Insights <i class="fas fa-caret-down" aria-hidden="true"></i>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="research.html"><i class="fas fa-search"></i> Research</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-briefcase"></i> Case Studies</a></li>
+                        <li><a href="QP- Company Presentation _ V 4 (1).pdf" target="_blank"><i class="fas fa-book-open"></i> Corporate Presentation</a></li>
+                        <li><a href="digitalbroucher.pdf" target="_blank"><i class="fas fa-book"></i> Digital Brochure</a></li>
+                        <li><a href="news.html"><i class="fas fa-newspaper"></i> News</a></li>
+                        <li><a href="blogs.html"><i class="fas fa-blog"></i> Blogs</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="enquiry.html" class="quote-btn">Get Quote</a></li>
+            </ul>
+
+            <div class="nav-social" aria-label="social">
+                <a href="https://www.linkedin.com/company/quantum-pulse-technologies/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://x.com/Qptechy" target="_blank" aria-label="X/Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.facebook.com/share/16a5NKbh7w/" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://web.whatsapp.com/+919500124242" target="_blank" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://share.google.com/dTzo5yo4z7HFNEscr" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+
+            <div class="qp-logo" aria-hidden="true">
+                <span class="qp">QP</span>
+            </div>
+        </nav>
+    </div>
+</header>
+<!-- ========== END HEADER ========== -->
+
+<!-- PAGE CONTENT -->
+<main class="page-content">
+    <!-- PAGE TITLE -->
+    <div class="page-title">
+        <h1>Enquiry Forms</h1>
+    </div>
+
+    <!-- ENQUIRY BUTTONS SECTION -->
+    <section class="enquiry-section">
+        <div class="enquiry-box">
+            <h2>Choose Your Enquiry Type</h2>
+            <p>Click on the relevant button to access the enquiry form</p>
+
+            <div class="enquiry-buttons">
+                <a class="enquiry-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeG2nDLWKIm0OqJnc-sq4aucAESZpACR-XSffwB68RihrCfgg/viewform?usp=header" target="_blank">
+                    <i class="fas fa-microchip btn-icon"></i>
+                    ESDM / PCB Enquiry
+                </a>
+
+                <a class="enquiry-btn" href="https://docs.google.com/forms/d/e/1FAIpQLScGMjXfzgb3SXGEwdz0PrlQBP-qaPsu08wC5RF-PtK86m0zQQ/viewform?usp=header" target="_blank">
+                    <i class="fas fa-user-tie btn-icon"></i>
+                    RPO Enquiry
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+    <p>© 2024 QuantumPulse Technologies. All rights reserved.</p>
+    <p>Pioneering the future of technology through innovation and research</p>
+    <div style="margin-top:15px">
+        <a href="privacy.html" style="color:white; margin:0 10px">Privacy Policy</a> |
+        <a href="terms.html" style="color:white; margin:0 10px">Terms of Service</a> |
+        <a href="sitemap.html" style="color:white; margin:0 10px">Sitemap</a>
+    </div>
+</footer>
+
+<script>
+    // Mobile menu functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mainNav = document.querySelector('.main-nav');
+        const navList = document.getElementById('primary-menu');
+        
+        // Toggle mobile menu
+        mobileMenuBtn.addEventListener('click', function() {
+            const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+            mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+            
+            if (isExpanded) {
+                navList.style.display = 'none';
+            } else {
+                navList.style.display = 'flex';
+            }
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.main-nav') && navList.style.display === 'flex') {
+                navList.style.display = 'none';
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
+        
+        // Dropdown functionality
+        const dropdowns = document.querySelectorAll('.dropdown');
+        
+        dropdowns.forEach(dropdown => {
+            const toggle = dropdown.querySelector('.dropdown-toggle');
+            
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                const isOpen = dropdown.classList.contains('open');
+                
+                // Close all dropdowns first
+                dropdowns.forEach(d => {
+                    d.classList.remove('open');
+                    d.querySelector('.dropdown-toggle').setAttribute('aria-expanded', 'false');
+                });
+                
+                // Open current dropdown if it wasn't open
+                if (!isOpen) {
+                    dropdown.classList.add('open');
+                    toggle.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+        
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.dropdown')) {
+                dropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('open');
+                    dropdown.querySelector('.dropdown-toggle').setAttribute('aria-expanded', 'false');
+                });
+            }
+        });
+        
+        // Close mobile menu on resize to desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 860) {
+                navList.style.display = '';
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

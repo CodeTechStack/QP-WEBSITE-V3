@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leadership | QuantumPulse Technologies</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ===== VARIABLES ===== */
+    :root {
+      --primary-color: #1a365d;
+      --secondary-color: #2c5282;
+      --accent-color: #4299e1;
+      --bg-light: #f7fafc;
+      --bg-white: #ffffff;
+      --text-main: #2d3748;
+      --text-muted: #4a5568;
+      --border-color: #e2e8f0;
+      --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+      --radius: 8px;
+      --white: #ffffff;
+      --dark-blue: #0f2f4a;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 16px;
+    }
+
+    /* ===== BASE STYLES ===== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: linear-gradient(180deg, #053a77 0%, #f6f9fc 100%);
+      color: var(--text-main);
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ===== HEADER STYLES ===== */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 2000;
+      background: linear-gradient(90deg, rgba(5,75,133,1) 0%, rgba(1,50,100,1) 100%);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      padding: 15px 0;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 2000px;
+      margin: 0 auto;
+      padding: 0 clamp(15px, 3vw, 40px);
+    }
+
+    .brand {
+      background-color: white;
+      width: 180px;
+      height: 90px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .brand img {
+      height: 80px;
+      width: auto;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      margin-left: 30px;
+    }
+
+    .quantumpulse {
+      font-size: 25px;
+      font-weight: 700;
+      color: white;
+      line-height: 1.2;
+    }
+
+    .technologies {
+      font-size: 23px;
+      font-weight: 500;
+      color: white;
+      margin-left: 20px;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .nav-list {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+      gap: 40px;
+      margin-left: 70px;
+    }
+
+    .nav-list li {
+      position: relative;
+    }
+
+    .nav-list > li > a {
+      color: white;
+      font-size: 20px;
+      font-weight: 600;
+      padding: 10px 0;
+      display: inline-flex;
+      gap: 5px;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+
+    .nav-list > li > a:hover {
+      color: #70aae9;
+      transform: translateY(-2px);
+    }
+
+    .nav-list > li > a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #70aae9;
+      transition: width 0.3s ease;
+    }
+
+    .nav-list > li > a:hover::after {
+      width: 100%;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      border-radius: var(--radius);
+      padding: 15px 0;
+      width: 220px;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+      list-style: none;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .dropdown-menu li a {
+      display: flex;
+      align-items: center;
+      padding: 10px 25px;
+      color: var(--text-main);
+      font-size: 15px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .dropdown-menu li a i {
+      margin-right: 10px;
+      width: 18px;
+      text-align: center;
+    }
+
+    .dropdown-menu li a:hover {
+      background: rgba(66, 153, 225, 0.05);
+      color: var(--accent-color);
+      padding-left: 30px;
+    }
+
+    .dropdown > a i.fa-caret-down {
+      margin-left: 5px;
+      transition: transform 0.3s ease;
+      font-size: 14px;
+    }
+
+    .dropdown:hover > a i.fa-caret-down {
+      transform: rotate(180deg);
+    }
+
+    .nav-social {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-left: 50px;
+    }
+
+    .nav-social a {
+      font-size: 18px;
+      transition: transform 0.3s ease, color 0.3s ease;
+      color: white;
+    }
+
+    .nav-social a:hover {
+      color: #70aae9;
+      transform: translateY(-2px);
+    }
+
+    .qp-logo {
+      width: 60px;
+      height: 60px;
+      background: white;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 50px;
+      color: #054b85;
+      font-weight: 800;
+      font-size: 22px;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    /* ===== BANNER SECTION ===== */
+    .page-banner {
+      background: linear-gradient(180deg, #0f2f4a 0%, #16334f 55%, #0d2438 100%);
+      color: #ffffff;
+      padding: 110px 0 70px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-banner .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .page-banner:before {
+      content: "";
+      position: absolute;
+      left: -10%;
+      top: -10%;
+      width: 50%;
+      height: 160%;
+      background: radial-gradient(circle at 20% 20%, rgba(66,153,225,0.08), transparent 20%),
+                  linear-gradient(180deg, rgba(255,255,255,0.02), transparent 40%);
+      transform: rotate(-12deg);
+      z-index: 1;
+    }
+
+    .page-banner h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem;
+      margin-bottom: 12px;
+      letter-spacing: 0.4px;
+      line-height: 1.03;
+    }
+
+    /* ===== LEADERSHIP SECTION ===== */
+    .leadership-section {
+      padding: 80px 0 100px;
+      background: linear-gradient(180deg,#f6f9fc 0%, #ffffff 100%);
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 54px;
+      font-size: 2.2rem;
+      position: relative;
+      padding-bottom: 6px;
+      color: var(--primary-color);
+      font-family: 'Playfair Display', serif;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 86px;
+      height: 4px;
+      background: var(--accent-color);
+      border-radius: 2px;
+    }
+
+    .alternate-leader {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: 48px;
+      align-items: start;
+      margin-bottom: 64px;
+      background: #03163b;
+      padding: 28px;
+      border-radius: 32px;
+      box-shadow: 0 8px 30px rgba(11, 42, 78, 0.04);
+      border: 2px 2px 2px 2px solid rgba(54, 107, 214, 0.03);
+      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+
+    /* Hover Effect */
+      .alternate-leader:hover {
+        transform: translateY(-8px); 
+        box-shadow: 0 12px 36px rgba(66, 153, 225, 0.35); 
+        border-color: rgba(66,153,225,0.4);
+      }
+
+    .alternate-leader.even {
+      grid-template-columns: 1fr 200px;
+      direction: ltr;
+    }
+
+    .leader-photo {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(11, 42, 78, 0.06);
+      height: 100%;
+      background: linear-gradient(180deg,#eef7ff,#ffffff);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .leader-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .leader-info h2 {
+      font-size: 1.7rem;
+      margin-bottom: 10px;
+      color: white;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .leader-role {
+      font-size: 1.05rem;
+      color: #4896f0;
+      font-weight: 600;
+      margin-bottom: 18px;
+      font-style: italic;
+    }
+
+    .leader-bio {
+      color: white;
+      font-size: 0.98rem;
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+
+    .leader-contact {
+      margin-top: 10px;
+      color: #5caff3;
+      font-size: 0.95rem;
+    }
+
+    /* ===== FOOTER STYLES ===== */
+    footer {
+      background: linear-gradient(180deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      color: #ffffff;
+      padding: 10px 0 30px;
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      padding-top: 36px;
+      align-items: start;
+    }
+
+    .footer-about {
+      padding-top: 6px;
+    }
+
+    .footer-about p {
+      color: rgba(255, 255, 255, 0.82);
+      margin: 12px 0 0;
+      line-height: 1.6;
+      font-size: 14px;
+      max-width: 420px;
+    }
+
+    .footer-logo img {
+      display: block;
+      margin-bottom: 12px;
+      height: 50px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .footer-social a {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.25s ease, background 0.25s ease;
+      text-decoration: none;
+    }
+
+    .footer-social a:hover {
+      transform: translateY(-4px) scale(1.05);
+      background: rgba(255, 255, 255, 0.14);
+      color: #fff;
+    }
+
+    .footer-links h3 {
+      color: #ffffff;
+      font-size: 1.1rem;
+      position: relative;
+      padding-bottom: 8px;
+      margin-bottom: 10px;
+    }
+
+    .footer-links h3:after {
+      content: '';
+      position: absolute;
+      width: 44px;
+      height: 3px;
+      background: rgba(255,255,255,0.15);
+      bottom: 0;
+      left: 0;
+      border-radius: 2px;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+      font-size: 15px;
+      line-height: 2rem;
+      margin: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 8px;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.82);
+      display: inline-block;
+      transition: color 0.2s ease, padding-left 0.18s ease;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: #ffffff;
+      padding-left: 8px;
+    }
+
+    .footer-contact h3 {
+      color: #ffffff;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      position: relative;
+      padding-bottom: 8px;
+    }
+
+    .footer-contact h3:after {
+      content: '';
+      position: absolute;
+      width: 44px;
+      height: 3px;
+      background: rgba(255,255,255,0.15);
+      bottom: 0;
+      left: 0;
+      border-radius: 2px;
+    }
+
+    .footer-contact p {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: rgba(255, 255, 255, 0.82);
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    .footer-contact i {
+      font-size: 16px;
+      min-width: 22px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      text-align: center;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+      margin-top: 22px;
+      padding-top: 14px;
+    }
+
+    /* ===== BACK TO TOP BUTTON ===== */
+    #backTop {
+      position: fixed;
+      right: 26px;
+      bottom: 26px;
+      background: var(--accent-color);
+      color: white;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: 0;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(66,153,225,0.22);
+      display: none;
+      z-index: 2000;
+    }
+
+    /* ===== RESPONSIVE STYLES ===== */
+    @media (max-width: 1024px) {
+      .alternate-leader {
+        grid-template-columns: 1fr;
+        padding: 22px;
+      }
+      .alternate-leader.even {
+        grid-template-columns: 1fr;
+      }
+      .leader-photo {
+        height: 320px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .page-banner h1 {
+        font-size: 2.1rem;
+      }
+      .page-banner {
+        padding: 80px 0 50px;
+      }
+      .nav-list {
+        display: none;
+      }
+      .mobile-menu-btn {
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER SECTION -->
+  <header>
+    <div class="nav-container">
+      <div class="brand">
+        <a href="index.html"><img src="images/Quantum-pulse-Technologies-logo.png" alt="QuantumPulse logo"></a>
+      </div>
+      <div class="logo-text">
+        <div class="quantumpulse">QUANTUMPULSE</div>
+        <div class="technologies">TECHNOLOGIES</div>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropdown-toggle">Services <i class="fas fa-caret-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="rpo-services.html"><i class="fas fa-user-tie"></i> RPO Services</a></li>
+              <li><a href="design-services.html"><i class="fas fa-paint-brush"></i> Design Services</a></li>
+              <li><a href="ai-services.html"><i class="fas fa-robot"></i> AI Services</a></li>
+              <li><a href="iot-services.html"><i class="fas fa-wifi"></i> IOT Services</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropdown-toggle">Our Company <i class="fas fa-caret-down"></i></a>
+            <ul class="dropdown-menu">
+                                  <li><a href="about.html"><i class="fas fa-building"></i> About Us</a></li>
+                                  <li><a href="leadership.html"><i class="fas fa-users"></i> Leadership</a></li>
+                                  <li><a href="infra.html"><i class="fas fa-server"></i> Infrastructure</a></li>
+                                  <li><a href="qpcustomers.html"><i class="fas fa-user-tie"></i> QP Customers</a></li>
+                                  <li><a href="life.html"><i class="fas fa-heart"></i> Culture @QP</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="jobopportunities.html" class="dropdown-toggle">Careers <i class="fas fa-caret-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="jobs.html"><i class="fas fa-briefcase"></i> Jobs</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropdown-toggle">Insights <i class="fas fa-caret-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="research.html"><i class="fas fa-search"></i> Research</a></li>
+              <li><a href="case-studies.html"><i class="fas fa-briefcase"></i> Case Studies</a></li>
+              <li><a href="QP- Company Presentation _ V 4 (1).pdf" target="_blank"><i class="fas fa-chalkboard"></i> Corporate Presentation</a></li>
+              <li><a href="digitalbroucher.pdf" target="_blank"><i class="fas fa-book"></i> Digital Brochure</a></li>
+              <li><a href="news.html"><i class="fas fa-newspaper"></i> News</a></li>
+              <li><a href="blogs.html"><i class="fas fa-blog"></i> Blogs</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="enquiry.html" class="quote-btn">Get Quote</a></li>
+        </ul>
+
+        <div class="nav-social">
+          <a href="https://www.linkedin.com/company/quantum-pulse-technologies/" target="_blank" aria-label="QuantumPulse on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://x.com/Qptechy" target="_blank" aria-label="QuantumPulse on X (Twitter)"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.facebook.com/share/16a5NKbh7w/" target="_blank" aria-label="QuantumPulse on Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://web.whatsapp.com/+919176439425" target="_blank" aria-label="Contact via WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://share.google.com/dTzo5yo4z7HFNEscr" target="_blank" aria-label="QuantumPulse on Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <div class="qp-logo" aria-hidden="true"><span class="qp">QP</span></div>
+
+        <button class="mobile-menu-btn" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- BANNER SECTION -->
+  <div class="page-banner" role="banner" aria-label="Leadership banner">
+    <div class="container">
+      <h1>Our Leadership</h1>
+    </div>
+  </div>
+
+  <!-- LEADERSHIP SECTION -->
+  <section class="leadership-section" aria-labelledby="leadership-heading">
+    <div class="container">
+      <h2 id="leadership-heading" class="section-title">Executive Leadership</h2>
+
+      <!-- Mohan Ram -->
+      <div class="alternate-leader reveal">
+        <div class="leader-photo" aria-hidden="true">
+          <img src="images/Mohanram.jpeg" alt="Mr. Mohan Ram — Managing Director & CEO">
+        </div>
+        <div class="leader-info">
+          <h2>Mr. Mohan Ram</h2>
+          <div class="leader-role">Director</div>
+          <div class="leader-bio">
+            <p>Mr. Mohan Ram serves as the Chairman of QuantumPulse Technologies. With his strong technical background and visionary leadership, he has guided the company to achieve excellence in high-performance circuit design, product innovation, and quality engineering. His deep understanding of electronic design processes and commitment to technological advancement have positioned QuantumPulse Technologies as a trusted name in the PCB design and embedded systems industry. He has over 25 years of experience in organization. Under his leadership, QuantumPulse has grown into a trusted partner companies. Prior to founding QuantumPulse, he held senior leadership roles where he developed innovative approaches to talent acquisition and organizational development. Mr. Mohan Ram holds degree in engineering.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Raja Ram -->
+      <div class="alternate-leader even reveal">
+        <div class="leader-info">
+          <h2>Mr. Raja Ram</h2>
+          <div class="leader-role">Managing Director</div>
+          <div class="leader-bio">
+            <p>Mr. Raja Ram leads major operations and service at QuantumPulse, focusing on excellence and client satisfaction. With over 20 years of experience in business operations, he has been instrumental in scaling the company's service delivery capabilities. He specializes in process optimization, quality assurance, and building high-performance teams that consistently exceed client expectations.</p>
+          </div>
+        </div>
+        <div class="leader-photo" aria-hidden="true">
+          <img src="images/Rajaram.jpeg" alt="Mr. Raja Ram — Director - Operations">
+        </div>
+      </div>
+
+      <!-- Eshwar Ram -->
+      <div class="alternate-leader reveal">
+        <div class="leader-photo" aria-hidden="true">
+          <img src="images/eshwaran.jpeg" alt="Mr. Eshwar Ram — Director - Technology">
+        </div>
+        <div class="leader-info">
+          <h2>Mr. Eshwar Ram</h2>
+          <div class="leader-role">Director</div>
+          <div class="leader-bio">
+            <p>Mr. Eshwar Ram holds a degree in Engineering with a specialisation in Robotics and Automation, complemented by a master's from Warwick Business School. This combination of deep technical expertise and strong business acumen enables him to navigate both the engineering and strategic aspects of the electronics industry with ease. As a Director at QuantumPulse Technologies, Eshwar Ram plays a pivotal role in driving innovation and delivering end-to-end electronics design services. With a focus on quality, performance, and client-centric solutions, He works closely with teams and partners to bring complex product ideas to life from concept to final design. His leadership continues to shape the company's growth and its reputation as a trusted technology partner.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sathya Narayanan -->
+      <div class="alternate-leader even reveal">
+        <div class="leader-info">
+          <h2>Mr. Sathya Narayanan</h2>
+          <div class="leader-role">Director</div>
+          <div class="leader-bio">
+            <p>Mr. Sathya Narayanan brings more than a decade of experience in strategic HR leadership and business operations. He leads key initiatives at QuantumPulse, focusing on aligning human capital strategies with business objectives to drive sustainable growth. Earlier in his career, he worked at Syrma Technology, developing expertise in employee relations, recruitment and human resources. At QuantumPulse, he focuses on operational strategy with a people-first approach, cultivating an inclusive culture that prioritizes respect and shared success.</p>
+          </div>
+          <div class="leader-contact"><strong>Email:</strong> <a href="mailto:essn@quantumpulse.ltd">   essn@quantumpulse.ltd</a></div>
+        </div>
+        <div class="leader-photo" aria-hidden="true">
+          <img src="images/Sathya.jpeg" alt="Mr. Sathya Narayanan — Director - Strategy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER SECTION -->
+  <footer role="contentinfo" aria-label="Footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-about">
+          <div class="footer-logo">
+            <a href="index.html" aria-label="QuantumPulse home">
+              <img src="images/Quantum-pulse-Technologies-logo.png" alt="QuantumPulse Technologies" height="50">
+            </a>
+          </div>
+          <p>Unlock Talent, Accelerate Innovation. QuantumPulse Technologies delivers cutting-edge solutions at the intersection of technology and human potential.</p>
+          <div class="footer-social" aria-label="Social links">
+            <a href="https://www.linkedin.com/company/quantum-pulse-technologies/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://x.com/Qptechy" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/share/16a5NKbh7w/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://web.whatsapp.com/+919176439425" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="rpo-services.html">RPO Services</a></li>
+            <li><a href="design-services.html">Design Services</a></li>
+            <li><a href="iot.html">IOT Services</a></li>
+            <li><a href="ai.html">AI Services</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="life.html">Culture @QP</a></li>
+            <li><a href="https://candidateportal.ceipal.com/jobs/job_description/TnlDVWIzemhRdXRHT3ZKN2t4REViUT09" target="_blank" rel="noopener">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 6th &amp; 7th Floor, Kochar Globe, Ambedkar Nagar, SIDCO Industrial Estate, Guindy, Chennai - 600032</p>
+          <p><i class="fas fa-phone" aria-hidden="true"></i> +91 99522 29211</p>
+          <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:info@quantumpulse.ltd">info@quantumpulse.ltd</a></p>
+          <p><i class="fas fa-clock" aria-hidden="true"></i> Mon–Fri: 9AM – 6PM</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Quantum Pulse Technologies Pvt. Ltd. All Rights Reserved. | <a href="/privacy-policy.html">Privacy Policy</a> | <a href="/terms.html">Terms of Service</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button id="backTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // Reveal animation for leadership cards
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(r => observer.observe(r));
+
+    // Header scroll behavior - FIXED: Always keep header visible
+    const header = document.querySelector('header');
+    const backTop = document.getElementById('backTop');
+
+    window.addEventListener('scroll', () => {
+      const st = window.pageYOffset || document.documentElement.scrollTop;
+      
+      // Always keep header visible - remove the hiding logic
+      header.style.transform = 'translateY(0)';
+      
+      // Show back to top button when scrolled down
+      backTop.style.display = (st > 500) ? 'flex' : 'none';
+    });
+
+    // Mobile menu functionality
+    (function() {
+      const btn = document.querySelector('.mobile-menu-btn');
+      const navList = document.querySelector('.nav-list');
+      const dropdowns = document.querySelectorAll('.dropdown');
+      if (!btn || !navList) return;
+
+      btn.addEventListener('click', () => {
+        navList.classList.toggle('active');
+      });
+
+      dropdowns.forEach(dropdown => {
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        toggle.addEventListener('click', (e) => {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            dropdown.classList.toggle('active');
+          }
+        });
+      });
+
+      document.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768 &&
+            !e.target.closest('.nav-list') &&
+            !e.target.closest('.mobile-menu-btn') &&
+            navList.classList.contains('active')) {
+          navList.classList.remove('active');
+        }
+      });
+    })();
+
+    // Back to top functionality
+    backTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>

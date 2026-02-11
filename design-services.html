@@ -1,0 +1,1776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Design Services | QuantumPulse Technologies</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+  
+  <style>
+    /* ===== VARIABLES ===== */
+    :root {
+      --bg-0: #071424;
+      --bg-1: #0a192f;
+      --primary: #0557b6;
+      --accent: #1e90ff;
+      --muted: #8892b0;
+      --text: #e6f1ff;
+      --panel: rgba(255,255,255,0.03);
+      --card-radius: 14px;
+      --container-max: 1200px;
+      --gap: 20px;
+      --transition: 0.28s cubic-bezier(.25,.8,.25,1);
+      --shadow-lg: 0 24px 50px rgba(2,12,27,0.55);
+      --white: #ffffff;
+      --dark-blue: #0b1a3a;
+      --hover-blue: #0056b3;
+      --shadow-md: 0 6px 18px rgba(2,6,23,0.18);
+      --shadow-card: 0 14px 40px rgba(2,12,27,0.22);
+      --header-height: 120px;
+
+      /* Section box system */
+      --section-gap: 42px;            /* spacing between section boxes */
+      --section-pad: 34px;            /* inner padding of boxes (desktop) */
+      --section-border: 1px solid rgba(255,255,255,0.12);
+      --section-bg: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      --section-bg-alt: #ffffff;      /* for light sections */
+      --section-text-dark: #1a1a1a;
+      --section-muted-dark: #555;
+    }
+
+    /* ===== BASE STYLES ===== */
+    * { 
+      box-sizing: border-box; 
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background: linear-gradient(180deg, var(--bg-0) 0%, #043b68 60%);
+      color: var(--text);
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    /* Lock background scroll when mobile nav is open */
+    body.nav-open { 
+      overflow: hidden; 
+    }
+
+    html { 
+      scroll-padding-top: var(--header-height); 
+    }
+    
+    [id] { 
+      scroll-margin-top: calc(var(--header-height) + 12px); 
+    }
+
+    img { 
+      display: block; 
+      max-width: 100%; 
+      height: auto; 
+    }
+    
+    a { 
+      color: inherit; 
+      text-decoration: none; 
+    }
+
+    .container {
+      max-width: 1900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Accessible skip link */
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    
+    .skip-link:focus {
+      left: 12px;
+      top: 12px;
+      width: auto;
+      height: auto;
+      padding: 8px 12px;
+      border-radius: 6px;
+      background: #fff;
+      color: #022;
+      z-index: 9999;
+    }
+
+    /* ===== HEADER & NAVIGATION ===== */
+    .main-header {
+      padding: 15px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 2002;
+      transition: all 0.3s ease;
+      background: linear-gradient(90deg, rgba(5,75,133,1) 0%, rgba(1,50,100,1) 100%);
+      box-shadow: var(--shadow-md);
+    }
+
+    .header-scrolled {
+      padding: 10px 0;
+      box-shadow: var(--shadow-lg);
+      background-color: rgba(255, 255, 255, 0.95);
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      padding: 0 30px;
+      max-width: 1900px;
+      width: 100%;
+    }
+
+    /* Logo Styles */
+    .logo-wrapper {
+      background-color: var(--white);
+      width: 180px;
+      height: 90px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      height: 100px;
+      width: 180px;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+
+    .logo img {
+      height: 90px;
+      width: 140px;
+      object-fit: contain;
+    }
+
+    .logo-text { 
+      display: flex; 
+      flex-direction: column; 
+      margin-left: 10px; 
+    }
+
+    .quantumpulse {
+      font-size: 25px;
+      font-weight: 700;
+      color: white;
+      margin-left: 50px;
+    }
+    
+    .technologies {
+      font-size: 22px;
+      font-weight: 600;
+      color: white;
+      margin-left: 75px;
+    }
+    
+    .quantumpulse, .technologies { 
+      transition: transform 0.3s ease, color 0.3s ease; 
+    }
+    
+    .quantumpulse:hover, .technologies:hover { 
+      color: #edf0f3; 
+      transform: translateY(-1px) scale(1.05); 
+    }
+
+    /* Main Navigation */
+    .main-nav { 
+      display: flex; 
+      align-items: center; 
+      z-index: 2001; 
+    }
+    
+    .main-nav ul {
+      display: flex; 
+      list-style: none; 
+      margin: 0; 
+      padding: 0; 
+      align-items: center;
+      gap: 50px; 
+      margin-left: 250px;
+    }
+    
+    .main-nav ul li { 
+      position:relative; 
+      display: inline-block; 
+    }
+    
+    .main-nav li a i { 
+      line-height: 1; 
+      vertical-align: middle; 
+      font-size: 18px; 
+    }
+
+    .main-nav ul li ul {
+      position: absolute; 
+      top: 100%; 
+      left: 0; 
+      min-width: 200px; 
+      margin: 0; 
+      padding: 0;
+      list-style: none; 
+      display: block; 
+      z-index: 999; 
+      padding: 10px 0;
+    }
+    
+    .main-nav li { 
+      position: relative; 
+    }
+    
+    .main-nav li a {
+      color: white; 
+      text-decoration: none; 
+      font-size: 18px; 
+      font-weight: 600; 
+      display: inline-flex;
+      gap: 5px; 
+      align-items: center; 
+      transition: transform 0.3s ease, color 0.3s ease; 
+      border-radius: 5px;
+    }
+    
+    .main-nav li a i { 
+      line-height: 1; 
+      vertical-align: middle; 
+      font-size: 18px; 
+    }
+    
+    .main-nav li a:hover {
+      color: #70aae9; 
+      transform: translateY(-2px); 
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Dropdown Menu Styles */
+    .dropdown { 
+      position: relative; 
+    }
+    
+    .dropdown-menu {
+      position: absolute; 
+      top: 100%; 
+      left: 0; 
+      background: white; 
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      border-radius: 5px; 
+      padding: 15px 0; 
+      min-width: 220px; 
+      z-index: 1000; 
+      opacity: 0; 
+      visibility: hidden;
+      transform: translateY(10px); 
+      transition: all 0.3s ease; 
+      list-style: none; 
+      display: block; 
+      margin-top: 5px;
+    }
+    
+    .dropdown:hover .dropdown-menu { 
+      opacity: 1; 
+      visibility: visible; 
+      transform: translateY(0); 
+    }
+    
+    .dropdown-menu li { 
+      display: block; 
+      width: 100%; 
+      margin: 0; 
+      padding: 0; 
+    }
+    
+    .dropdown-menu li a {
+      display: flex; 
+      align-items: center; 
+      padding: 10px 25px; 
+      color: #333; 
+      font-size: 16px; 
+      font-weight: 500;
+      transition: all 0.2s ease; 
+      white-space: nowrap; 
+      width: 100%; 
+      box-sizing: border-box;
+    }
+    
+    .dropdown-menu li a:hover { 
+      background: rgba(5, 75, 133, 0.05); 
+      color: #0056b3; 
+      padding-left: 30px; 
+    }
+    
+    .dropdown > a i { 
+      margin-left: 5px; 
+      transition: transform 0.3s ease; 
+    }
+    
+    .dropdown:hover > a i { 
+      transform: rotate(180deg); 
+    }
+    
+    .dropdown > a.dropdown-toggle { 
+      pointer-events: auto; 
+      cursor: pointer; 
+    }
+    
+    .dropdown-menu li a { 
+      pointer-events: auto; 
+      cursor: pointer; 
+    }
+    
+    .dropdown li i { 
+      margin-right: 8px; 
+      width: 16px; 
+      text-align: center; 
+    }
+
+    /* Social Icons in Nav */
+    .nav-social { 
+      display: flex; 
+      align-items: center; 
+      gap: 15px; 
+    }
+    
+    .nav-social a { 
+      font-size: 20px; 
+      transition: transform 0.3s ease, color 0.3s ease; 
+      color: white; 
+    }
+    
+    .nav-social a:hover { 
+      color: #70aae9; 
+      transform: translateY(-3px); 
+    }
+
+    /* Mobile Menu Button */
+    .mobile-menu-btn {
+      display: none; 
+      background: none; 
+      border: none; 
+      font-size: 24px; 
+      color: white; 
+      cursor: pointer; 
+      padding: 10px;
+      transition: all 0.3s ease; 
+      z-index: 2003; 
+      position: relative;
+    }
+
+    /* QP Logo */
+    .qp-logo {
+      width: 50px; 
+      height: 50px; 
+      background: white; 
+      border-radius: 25px; 
+      display: flex; 
+      align-items: center;
+      justify-content: center; 
+      margin-left: 15px;
+    }
+    
+    .qp { 
+      color: var(--primary); 
+      font-weight: 800; 
+      font-size: 18px; 
+      font-family: 'Arial', sans-serif; 
+    }
+
+    /* Spacer for fixed header */
+    .header-spacer { 
+      height: var(--header-height); 
+    }
+
+    /* ===== SECTION BOX SYSTEM ===== */
+    /*
+      We give each major section its own "box" with spacing around it so sections never touch.
+      Apply .section-wrap around the internal content of each section.
+    */
+    .section-outer {
+      padding: 0 16px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .section-wrap {
+      background: var(--section-bg);
+      backdrop-filter: blur(6px);
+      border: var(--section-border);
+      border-radius: var(--card-radius);
+      box-shadow: var(--shadow-card);
+      padding: var(--section-pad);
+    }
+
+    /* vertical gaps between boxes */
+    .section-stack { 
+      display: flex; 
+      flex-direction: column; 
+      gap: var(--section-gap); 
+    }
+
+    /* Light variant box (for your About/Expertise alternation) */
+    .section-wrap.is-light {
+      background: var(--section-bg-alt);
+      color: var(--section-text-dark);
+      border: 1px solid rgba(2,12,27,0.08);
+      box-shadow: 0 14px 40px rgba(2,12,27,0.12);
+    }
+    
+    .section-wrap.is-light .section-title h2 { 
+      color: var(--section-text-dark); 
+    }
+    
+    .section-wrap.is-light .section-title p { 
+      color: var(--section-muted-dark); 
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      position: relative;
+      overflow: visible;
+      display: flex;          
+      align-items: center;   
+      justify-content: center;
+      min-height: 90vh;
+      padding-left: 50px;      
+      text-align: center;  
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 480px;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .hero-left { 
+      text-align: center; 
+    }
+    
+    .hero-left h1 { 
+      font-size: clamp(34px, 5vw, 56px); 
+      line-height: 1.02; 
+      margin: 0 0 12px; 
+    }
+    
+    .hero-left .accent { 
+      color: var(--primary); 
+    }
+    
+    .lead { 
+      color: var(--muted); 
+      font-size: 18px; 
+      max-width: 720px; 
+      margin: 0 auto 18px; 
+    }
+
+    .hero-ctas { 
+      display: flex; 
+      gap: 12px; 
+      flex-wrap: wrap; 
+      justify-content: center; 
+      margin-bottom: 20px; 
+    }
+
+    .hero-info {
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.12);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    
+    .hero-info strong { 
+      display: block; 
+      color: var(--text); 
+      margin-bottom: 6px; 
+    }
+    
+    .hero-info span { 
+      color: var(--muted); 
+      font-size: 14px; 
+    }
+
+    .hero .hero-figure {
+      border-radius: 10px;
+      box-shadow: 0 20px 50px rgba(2,12,27,0.45);
+      overflow: hidden;
+      max-width: 100%;
+      margin: 0;
+    }
+
+    /* Quick Service Cards */
+    .service-quick-wrapper { 
+      display: flex; 
+      justify-content: center; 
+      margin-top: 30px; 
+    }
+    
+    .service-quick {
+      display: flex; 
+      gap: 20px; 
+      width: 100%; 
+      max-width: 1100px; 
+      transform: translateY(0); 
+      transition: var(--transition); 
+      z-index: 40;
+    }
+    
+    .service-quick .quick-card {
+      flex: 1; 
+      min-width: 200px; 
+      background: rgba(255, 255, 255, 0.06); 
+      backdrop-filter: blur(10px); 
+      padding: 20px;
+      border-radius: 12px; 
+      border: 1px solid rgba(255,255,255,0.14); 
+      display: flex; 
+      gap: 12px; 
+      align-items: flex-start; 
+      transition: all 0.3s ease;
+    }
+    
+    .service-quick .quick-card:hover { 
+      transform: translateY(-6px); 
+      box-shadow: var(--shadow-lg); 
+      background: rgba(255,255,255,0.1); 
+    }
+    
+    .quick-icon {
+      width: 56px; 
+      height: 56px; 
+      border-radius: 10px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center;
+      color: #fff; 
+      font-size: 20px; 
+      background: linear-gradient(135deg,#6c5b8b,#8a71c9); 
+      transition: all 0.3s ease;
+    }
+    
+    .quick-card:hover .quick-icon { 
+      transform: scale(1.08); 
+    }
+    
+    .quick-content { 
+      flex: 1; 
+    }
+    
+    .quick-title { 
+      font-weight: 700; 
+      color: var(--text); 
+      margin-bottom: 6px; 
+      font-size: 15px; 
+    }
+    
+    .quick-desc { 
+      color: var(--muted); 
+      font-size: 13px; 
+      line-height: 1.35; 
+      margin-bottom: 10px; 
+    }
+    
+    .quick-action { 
+      align-self: flex-start; 
+    }
+
+    .cards-shadow { 
+      height: 12px; 
+      width: 80%; 
+      margin: 0 auto; 
+      filter: blur(14px); 
+      opacity: .5; 
+      margin-top: 16px; 
+      background: linear-gradient(90deg,rgba(0,0,0,0.35),rgba(0,0,0,0)); 
+      border-radius: 8px; 
+    }
+
+    /* ===== SECTION TITLES ===== */
+    .section-title { 
+      text-align: center; 
+      margin-bottom: 26px; 
+    }
+    
+    .section-title h2 { 
+      font-size: 2.2rem; 
+      margin: 0 0 12px; 
+      color: var(--text); 
+    }
+    
+    .section-title p { 
+      color: var(--muted); 
+      max-width: 760px; 
+      margin: 0 auto; 
+      font-size: 1.05rem; 
+    }
+
+    /* PCB Types Section */
+    .pcb-types .features {
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 24px; 
+      justify-content: center; 
+      align-items: stretch; 
+      box-sizing: border-box;
+    }
+    
+    .feature {
+      background: #fff; 
+      color: #222; 
+      border-radius: 14px; 
+      padding: 22px; 
+      width: 260px; 
+      height: 250px;
+      box-shadow: 0 10px 24px rgba(2,12,27,0.06); 
+      text-align: center; 
+      transition: all 0.3s ease; 
+      box-sizing: border-box;
+      border: 1px solid rgba(2,12,27,0.08);
+    }
+    
+    .feature:hover { 
+      transform: translateY(-8px); 
+      box-shadow: 0 15px 30px rgba(2,12,27,0.12); 
+    }
+    
+    .feature .icon {
+      width: 70px; 
+      height: 70px; 
+      border-radius: 50%; 
+      overflow: hidden; 
+      margin: 0 auto 12px; 
+      background: url("pcb1.jpg") center/cover no-repeat;
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      color: white; 
+      font-size: 24px;
+    }
+    
+    .feature-title { 
+      margin-top: 10px; 
+      font-size: 18px; 
+      font-weight: 600; 
+      margin-bottom: 8px; 
+    }
+    
+    .feature-desc { 
+      font-size: 14px; 
+      line-height: 1.5; 
+      color: #555; 
+    }
+
+    /* About Section (light box variant) */
+    .about-section .about-flex {
+      display: flex; 
+      flex-wrap: wrap; 
+      align-items: center; 
+      gap: 40px; 
+      justify-content: space-between;
+    }
+    
+    .about-text { 
+      flex: 1 1 450px; 
+      text-align: center; 
+    }
+    
+    .about-text .btn { 
+      display: inline-flex; 
+    }
+    
+    .about-text h3 { 
+      font-size: 24px; 
+      margin-bottom: 12px; 
+      color: #111; 
+    }
+    
+    .about-desc { 
+      margin-bottom: 12px; 
+      color: #555; 
+      line-height: 1.7; 
+    }
+    
+    .about-img { 
+      flex: 1 1 450px; 
+      display: flex; 
+      justify-content: center; 
+    }
+    
+    .about-img img { 
+      width: 100%; 
+      max-width: 600px; 
+      border-radius: 12px; 
+      filter: grayscale(100%) contrast(1.1); 
+      transition: all 0.3s ease; 
+    }
+
+    /* Design Expertise Section (light box variant) */
+    .expertise-section .grid-4 {
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+      gap: 24px;
+    }
+    
+    .panel {
+      background: #fff; 
+      border-radius: 12px; 
+      padding: 20px; 
+      border: 1px solid #eee; 
+      transition: 0.3s;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    }
+    
+    .panel:hover { 
+      transform: translateY(-8px); 
+      box-shadow: 0 15px 30px rgba(2, 12, 27, 0.12); 
+    }
+    
+    .panel-icon { 
+      font-size: 32px; 
+      color: #007bff; 
+      margin-bottom: 10px; 
+    }
+    
+    .panel h3 { 
+      margin-bottom: 10px; 
+      color: #111; 
+    }
+    
+    .panel-list { 
+      color: #555; 
+      line-height: 1.7; 
+      list-style-type: disc; 
+      margin-left: 18px; 
+    }
+
+    /* Services Section */
+    .services-grid {
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+      gap: 16px;
+    }
+    
+    .service-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border-radius: 12px; 
+      padding: 18px; 
+      border: 1px solid rgba(255,255,255,0.14); 
+      position: relative; 
+      transition: all 0.3s ease;
+    }
+    
+    .service-card:hover { 
+      transform: translateY(-6px); 
+      background: rgba(255,255,255,0.1); 
+      box-shadow: 0 15px 30px rgba(2,12,27,0.15); 
+    }
+    
+    .service-card .num {
+      position: absolute; 
+      right: 12px; 
+      top: 12px; 
+      font-size: 56px; 
+      color: rgba(100,255,218,0.06); 
+      transition: all 0.3s ease;
+    }
+    
+    .service-card:hover .num { 
+      color: rgba(100,255,218,0.12); 
+      transform: scale(1.06); 
+    }
+    
+    .service-card h4 { 
+      margin: 0 0 8px; 
+      color: var(--text); 
+    }
+    
+    .service-desc { 
+      margin: 0; 
+      color: var(--muted); 
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--dark-blue);
+      color: var(--white);
+      padding: 10px 0 10px;
+      font-family: 'Arial', sans-serif;
+      margin-top: var(--section-gap);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 -8px 30px rgba(2,12,27,0.25) inset;
+    }
+
+    .footer-container { 
+      max-width: 1900px; 
+      margin: 0 auto; 
+      padding: 0 20px; 
+    }
+    
+    .footer-content {
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 100px; 
+      padding-top: 50px;
+    }
+    
+    .footer-about { 
+      padding-top: 10px; 
+    }
+    
+    .footer-about p { 
+      color: rgba(255, 255, 255, 0.7); 
+      margin: 15px 0; 
+      line-height: 1.6; 
+      font-size: 13px; 
+    }
+    
+    .footer-logo img { 
+      display: block; 
+      margin-bottom: 15px; 
+      height: 150px; 
+      margin-left: 30px; 
+    }
+    
+    .footer-social { 
+      display: flex; 
+      gap: 55px; 
+      margin-top: 15px; 
+    }
+    
+    .footer-social a {
+      width: 40px; 
+      height: 40px; 
+      background: rgba(255, 255, 255, 0.1); 
+      color: var(--white);
+      border-radius: 50%; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      transition: all 0.3s ease;
+    }
+    
+    .footer-social a:hover { 
+      transform: translateY(-5px) scale(1.1); 
+      background: var(--primary); 
+    }
+    
+    .footer-links h3 {
+      color: var(--white); 
+      font-size: 1.4rem; 
+      position: relative; 
+      padding-bottom: 10px; 
+      margin-bottom: 15px;
+    }
+    
+    .footer-links h3:after { 
+      content: ''; 
+      position: absolute; 
+      width: 40px; 
+      height: 2px; 
+      background: var(--primary); 
+      bottom: 0; 
+      left: 0; 
+    }
+    
+    .footer-links ul { 
+      list-style: none; 
+      padding: 0; 
+      font-size: 15px; 
+      line-height: 2rem; 
+    }
+    
+    .footer-links li { 
+      margin-bottom: 10px; 
+      position: relative; 
+    }
+    
+    .footer-links a { 
+      color: rgba(255, 255, 255, 0.7); 
+      display: inline-block; 
+      transition: all 0.3s ease-out; 
+      text-decoration: none; 
+    }
+    
+    .footer-links a:hover { 
+      color: var(--white); 
+      padding-left: 8px; 
+    }
+    
+    .footer-contact { 
+      padding-top: 0; 
+    }
+    
+    .footer-contact h3 {
+      color: var(--white); 
+      font-size: 1.4rem; 
+      position: relative; 
+      padding-bottom: 10px; 
+      margin-bottom: 15px;
+    }
+    
+    .footer-contact h3:after { 
+      content: ''; 
+      position: absolute; 
+      width: 40px; 
+      height: 2px; 
+      background: var(--primary); 
+      bottom: 0; 
+      left: 0; 
+    }
+    
+    .footer-contact p { 
+      display: flex; 
+      align-items: flex-start; 
+      gap: 10px; 
+      color: rgba(255, 255, 255, 0.7); 
+      margin-bottom: 12px; 
+      font-size: 14px; 
+    }
+    
+    .footer-contact i { 
+      font-size: 18px; 
+      min-width: 25px; 
+    }
+    
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1); 
+      text-align: center; 
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.85rem; 
+      margin-top: 30px; 
+      padding-top: 15px;
+    }
+
+    /* back-to-top button */
+    .back-top {
+      position: fixed; 
+      right: 18px; 
+      bottom: 18px; 
+      width: 48px; 
+      height: 48px; 
+      border-radius: 50%;
+      background: var(--primary); 
+      color: #fff; 
+      border: 0; 
+      display: none; 
+      align-items: center; 
+      justify-content: center;
+      z-index: 2000; 
+      cursor: pointer; 
+      box-shadow: 0 8px 20px rgba(5,87,182,0.16); 
+      transition: all 0.3s ease;
+    }
+    
+    .back-top:hover { 
+      transform: translateY(-3px); 
+      background: var(--hover-blue); 
+    }
+
+    /* buttons */
+    .btn {
+      display: inline-flex; 
+      align-items: center; 
+      gap: 10px; 
+      padding: 10px 14px; 
+      border-radius: 10px; 
+      font-weight: 700;
+      border: 1px solid transparent; 
+      cursor: pointer; 
+      transition: var(--transition);
+    }
+    
+    .btn-primary { 
+      background: var(--primary); 
+      color: #fff; 
+      box-shadow: 0 10px 30px rgba(5,87,182,0.12); 
+    }
+    
+    .btn-primary:hover { 
+      background: var(--hover-blue); 
+      transform: translateY(-3px); 
+      box-shadow: 0 15px 30px rgba(5,87,182,0.2); 
+    }
+    
+    .btn-ghost {
+      background: transparent; 
+      border: 1px solid rgba(255,255,255,0.14); 
+      color: var(--muted);
+    }
+    
+    .btn-ghost:hover { 
+      background: rgba(255,255,255,0.08); 
+      border-color: rgba(255,255,255,0.22); 
+      transform: translateY(-3px); 
+    }
+
+    /* ===== RESPONSIVE STYLES ===== */
+
+    /* adjust header height variable for responsive breakpoints */
+    @media (max-width: 992px) { 
+      :root { 
+        --header-height: 100px; 
+      } 
+    }
+    
+    @media (max-width: 480px) { 
+      :root { 
+        --header-height: 88px; 
+      } 
+    }
+
+    @media (max-width: 1200px) {
+      :root { 
+        --section-pad: 26px; 
+        --section-gap: 34px; 
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .hero-grid { 
+        grid-template-columns: 1fr; 
+        gap: 22px; 
+      }
+      
+      .service-quick { 
+        transform: translateY(0); 
+        margin-top: 18px; 
+        flex-direction: column; 
+        gap: 12px; 
+      }
+      
+      .service-quick-wrapper { 
+        padding: 0 0; 
+      }
+    }
+
+    /* ===== FIXED MOBILE DROPDOWN STYLES ===== */
+    @media (max-width: 992px) {
+      .header-container { 
+        padding: 0 20px; 
+      }
+      
+      .main-nav {
+        position: fixed; 
+        top: var(--header-height); 
+        left: 0; 
+        width: 100%;
+        height: calc(100dvh - var(--header-height)); 
+        max-height: calc(100dvh - var(--header-height));
+        background: linear-gradient(90deg, rgba(5,75,133,1) 0%, rgba(1,50,100,1) 100%);
+        flex-direction: column; 
+        align-items: flex-start; 
+        padding: 20px; 
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        transform: translateX(-100%); 
+        opacity: 0; 
+        visibility: hidden; 
+        transition: all 0.3s ease; 
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch; 
+        z-index: 2001;
+      }
+      
+      .main-nav.active { 
+        transform: translateX(0); 
+        opacity: 1; 
+        visibility: visible; 
+      }
+      
+      .main-nav ul { 
+        flex-direction: column; 
+        width: 100%; 
+        gap: 0; 
+        margin-left: 0; 
+      }
+      
+      .main-nav ul li { 
+        width: 100%; 
+        margin-bottom: 0; 
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+      }
+      
+      .main-nav li a { 
+        padding: 15px 15px; 
+        width: 100%; 
+        font-size: 18px; 
+        justify-content: space-between; 
+        border-radius: 0; 
+      }
+
+      .dropdown-menu {
+        position: static !important; 
+        box-shadow: none !important; 
+        width: 100% !important; 
+        padding: 0 !important; 
+        margin: 0 !important;
+        opacity: 1 !important; 
+        visibility: visible !important; 
+        transform: none !important; 
+        background: rgba(255, 255, 255, 0.05) !important;
+        border-radius: 0 !important; 
+        max-height: 0 !important; 
+        overflow: hidden !important; 
+        transition: max-height 0.3s ease !important;
+        display: block !important; 
+        min-width: auto !important;
+      }
+      
+      .dropdown.active .dropdown-menu { 
+        max-height: 600px !important; 
+      }
+      
+      .dropdown.active > a i { 
+        transform: rotate(180deg) !important; 
+      }
+      
+      .dropdown-menu li { 
+        border-bottom: none !important; 
+        display: block !important; 
+        width: 100% !important; 
+      }
+      
+      .dropdown-menu li a {
+        padding: 12px 15px 12px 30px !important; 
+        font-size: 16px !important; 
+        color: white !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important; 
+        display: flex !important; 
+        width: 100% !important;
+      }
+      
+      .dropdown-menu li a:hover { 
+        color: #70aae9 !important; 
+        background: rgba(255, 255, 255, 0.1) !important; 
+        padding-left: 35px !important; 
+      }
+      
+      .dropdown-menu li:last-child a { 
+        border-bottom: none !important; 
+      }
+      
+      .mobile-menu-btn { 
+        display: block; 
+        z-index: 2003; 
+      }
+    
+      .nav-social { 
+        display: none; 
+      }
+      
+      .qp-logo { 
+        display: none; 
+      }
+      
+      .logo-wrapper { 
+        width: 150px; 
+        height: 70px; 
+      }
+      
+      .logo { 
+        height: 80px; 
+        width: 150px; 
+        margin-left: 10px; 
+      }
+      
+      .logo img { 
+        height: 70px; 
+        width: 110px; 
+      }
+      
+      .quantumpulse { 
+        font-size: 20px; 
+      }
+      
+      .technologies { 
+        font-size: 15px; 
+      }
+    }
+
+       @media (max-width: 992px) {
+      .dropdown.active .dropdown-menu {
+        max-height: 600px !important;
+        overflow: visible !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .section-title h2 { 
+        font-size: 1.9rem; 
+      }
+      
+      .feature { 
+        width: 100%; 
+        max-width: 420px; 
+      }
+      
+      .hero-left .lead { 
+        font-size: 15px; 
+      }
+      
+      .service-card { 
+        padding: 16px; 
+      }
+      
+      .footer-content { 
+        grid-template-columns: 1fr; 
+        gap: 40px; 
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header-container { 
+        padding: 0 15px; 
+      }
+      
+      .header-spacer { 
+        height: var(--header-height); 
+      }
+      
+      .service-quick { 
+        transform: none; 
+        margin-top: 18px; 
+      }
+      
+      .hero-ctas { 
+        flex-direction: column; 
+        align-items: center; 
+      }
+      
+      .btn { 
+        width: 100%; 
+        justify-content: center; 
+      }
+      
+      :root { 
+        --section-pad: 20px; 
+        --section-gap: 26px; 
+      }
+    }
+
+    /* focus-visible */
+    .nav-links a:focus-visible, .btn:focus-visible, .mobile-toggle:focus-visible {
+      outline: 3px solid rgba(100,180,255,0.18); 
+      outline-offset: 3px;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- ===================== HEADER SECTION ===================== -->
+  <header class="main-header">
+    <div class="header-container">
+      <!-- Logo wrapper -->
+      <div class="logo-wrapper">
+        <a href="index.html" class="logo">
+          <img src="/images/Quantum-pulse-Technologies-logo.png" alt="QuantumPulse Technologies Logo" class="logo-img">
+          <div class="logo-text">
+            <span class="quantumpulse">QUANTUMPULSE</span>
+            <span class="technologies">TECHNOLOGIES</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropdown-toggle">Services <i class="fas fa-caret-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="rpo-services.html"><i class="fas fa-users"></i> RPO Services</a></li>
+              <li><a href="design-services.html" class="active"><i class="fas fa-pencil-ruler"></i> Design Services</a></li>
+              <li><a href="ai-services.html"><i class="fas fa-robot"></i> AI Services</a></li>
+              <li><a href="iot-services.html"><i class="fas fa-wifi"></i> IOT Services</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropdown-toggle">Our Company <i class="fas fa-caret-down"></i></a>
+            <ul class="dropdown-menu">
+               <li><a href="about.html"><i class="fas fa-building"></i> About Us</a></li>
+              <li><a href="leadership.html"><i class="fas fa-users"></i> Leadership</a></li>
+              <li><a href="infra.html"><i class="fas fa-server"></i> Infrastructure</a></li>
+              <li><a href="qpcustomers.html"><i class="fas fa-user-tie"></i> QP Customers</a></li>
+              <li><a href="life.html"><i class="fas fa-heart"></i> Culture @QP</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="jobopportunities.html" class="dropdown-toggle">Careers <i class="fas fa-caret-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="jobs.html"><i class="fas fa-briefcase"></i> Jobs</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropdown-toggle">Insights <i class="fas fa-caret-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="research.html"><i class="fas fa-search"></i> Research</a></li>
+              <li><a href="case-studies.html"><i class="fas fa-briefcase"></i> Case Studies</a></li>
+              <li><a href="QP- Company Presentation _ V 4 (1).pdf" target="_blank"><i class="fas fa-users"></i> Corporate Presentation</a></li>
+              <li><a href="digitalbroucher.pdf" target="_blank"><i class="fas fa-file-alt"></i> Digital Broucher</a></li>
+              <li><a href="news.html"><i class="fas fa-newspaper"></i> News</a></li>
+              <li><a href="blogs.html"><i class="fas fa-newspaper"></i> Blogs</a></li>
+            </ul>
+          </li>
+
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="enquiry.html">Get Quote <i class="fas fa-file-invoice"></i></a></li>
+        </ul>
+      </nav>
+
+      <!-- Social icons -->
+      <div class="nav-social" aria-hidden="false">
+        <a href="https://www.linkedin.com/company/quantum-pulse-technologies/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://x.com/Qptechy" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.facebook.com/share/16a5NKbh7w/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://web.whatsapp.com/+919176439425" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://share.google/dTzo5yo4z7HFNEscr" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+
+      <!-- QP badge -->
+      <div class="qp-logo">
+        <span class="qp">QP</span>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button class="mobile-menu-btn" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===================== SPACER FOR FIXED HEADER ===================== -->
+  <div class="header-spacer"></div>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main id="main" class="section-outer">
+    <div class="section-stack">
+      <!-- ===== HERO SECTION (boxed) ===== -->
+      <section class="hero">
+        <div class="section-wrap">
+          <div class="container hero-grid">
+            <div class="hero-left">
+              <h1 id="hero-heading">Design <span class="accent">Services</span></h1>
+              <p class="lead">We transform ideas into reality with cutting-edge engineering solutions and innovative design services tailored to your needs.</p>
+
+              <div class="hero-ctas">
+                <a class="btn btn-primary" href="#services">Our Services</a>
+                <a class="btn btn-ghost" href="enquiry.html">Request Quote</a>
+              </div>
+
+              <div class="hero-info">
+                <strong>Founded 2024</strong>
+                <span>From Ignite Startup Accelerator to advanced engineering solutions — specializing in PCB design, embedded systems, and IoT.</span>
+              </div>
+            </div>
+
+            <div class="hero-right">
+              <figure class="hero-figure">
+                <img src="https://cdn.pixabay.com/photo/2023/04/03/19/37/soldering-7897827_640.jpg" alt="Team soldering and prototyping" width="720" height="480">
+              </figure>
+            </div>
+          </div>
+
+          <!-- Quick services cards -->
+          <div class="service-quick-wrapper container" aria-hidden="false">
+            <div class="service-quick" role="group" aria-label="Quick services">
+              <div class="quick-card">
+                <div class="quick-icon" aria-hidden="true"><i class="fas fa-drafting-compass"></i></div>
+                <div class="quick-content">
+                  <div class="quick-title">PCB Design</div>
+                  <div class="quick-desc">Professional PCB design services with advanced technology and experienced engineers.</div>
+                </div>
+                <div class="quick-action">
+                  <a class="btn btn-ghost" href="pcb-design.html">Explore</a>
+                </div>
+              </div>
+
+              <div class="quick-card">
+                <div class="quick-icon" style="background:linear-gradient(135deg,#9cc38a,#7ab86d)" aria-hidden="true"><i class="fas fa-cogs"></i></div>
+                <div class="quick-content">
+                  <div class="quick-title">PCB Fabrication</div>
+                  <div class="quick-desc">High-quality PCB manufacturing with precision and quick turnaround times.</div>
+                </div>
+                <div class="quick-action">
+                  <a class="btn btn-ghost" href="pcb-fabrication.html">Explore</a>
+                </div>
+              </div>
+
+              <div class="quick-card">
+                <div class="quick-icon" style="background:linear-gradient(135deg,#f4a261,#e76f51)" aria-hidden="true"><i class="fas fa-microchip"></i></div>
+                <div class="quick-content">
+                  <div class="quick-title">Embedded Development</div>
+                  <div class="quick-desc">Custom firmware & embedded software for your hardware platform and application needs.</div>
+                </div>
+                <div class="quick-action">
+                  <a class="btn btn-ghost" href="#services">Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cards-shadow container" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <!-- ===== PCB TYPES SECTION (boxed) ===== -->
+      <section class="pcb-types" aria-labelledby="pcb-heading">
+        <div class="section-wrap">
+          <div class="container">
+            <div class="section-title">
+              <h2 id="pcb-heading">PCB Design & Manufacturing</h2>
+              <p>Comprehensive PCB solutions from design to manufacturing with precision and expertise</p>
+            </div>
+            <div class="features" aria-hidden="false">
+              <div class="feature">
+                <div class="icon" style="background:#6c5b8b;"><i class="fas fa-building" aria-hidden="true"></i></div>
+                <div class="feature-title">Single Layer PCB</div>
+                <div class="feature-desc">We have professional design & manufacturing staff with more than 10 years of experience.</div>
+              </div>
+
+              <div class="feature">
+                <div class="icon" style="background:#9cc38a;"><i class="fas fa-layer-group" aria-hidden="true"></i></div>
+                <div class="feature-title">Double Layer PCB</div>
+                <div class="feature-desc">We offer a wide range of PCB design to PCB manufacturing services.</div>
+              </div>
+
+              <div class="feature">
+                <div class="icon" style="background:#d76a60;"><i class="fas fa-th" aria-hidden="true"></i></div>
+                <div class="feature-title">Multilayer PCB</div>
+                <div class="feature-desc">In-house PCB manufacturing facility for quick turn prototype & bulk quantity.</div>
+              </div>
+
+              <div class="feature">
+                <div class="icon" style="background:#a9c7e5;"><i class="fas fa-cogs" aria-hidden="true"></i></div>
+                <div class="feature-title">Metal Core PCB</div>
+                <div class="feature-desc">Leading PCB manufacturers in India — based in Gandhinagar, Gujarat.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ABOUT SECTION (boxed, light) ===== -->
+      <section id="about" class="about-section" aria-labelledby="about-heading">
+        <div class="section-wrap is-light">
+          <div class="container">
+            <div class="section-title">
+              <h2 id="about-heading">About Our Design Services</h2>
+              <p>Quantum Pulse Technologies specializes in transforming complex ideas into tangible, high-performance electronic solutions through our comprehensive design services.</p>
+            </div>
+
+            <div class="about-flex">
+              <div class="about-text">
+                <h3>Innovative Engineering Solutions</h3>
+                <p class="about-desc">Founded in 2024 at Ignite Startup Accelerator, QuantumPulse Technologies has rapidly emerged as a leader in Advanced Engineering and Talent Solutions. Our expertise spans across PCB design, embedded systems, and IoT solutions.</p>
+                <p class="about-desc">We combine deep industry knowledge with innovative approaches to deliver customized solutions that meet demanding technical requirements while optimizing manufacturability and cost-effectiveness.</p>
+                <a class="btn btn-primary" href="#services">Our Services</a>
+              </div>
+
+              <div class="about-img">
+                <img src="https://cdn.pixabay.com/photo/2023/04/03/19/37/soldering-7897827_640.jpg" alt="QuantumPulse Team">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== DESIGN EXPERTISE SECTION (boxed, light) ===== -->
+      <section id="expertise" class="expertise-section" aria-labelledby="expertise-heading">
+        <div class="section-wrap is-light">
+          <div class="container">
+            <div class="section-title">
+              <h2 id="expertise-heading">Our Design Expertise</h2>
+              <p>We offer comprehensive design services across multiple engineering disciplines to deliver complete solutions.</p>
+            </div>
+
+            <div class="grid-4">
+              <!-- Electronics -->
+              <div class="panel" role="region" aria-labelledby="electronics-h">
+                <div class="panel-icon"><i class="fas fa-microchip"></i></div>
+                <h3 id="electronics-h">Electronics</h3>
+                <ul class="panel-list">
+                  <li>Concept & Requirement Definition</li>
+                  <li>Schematic Design</li>
+                  <li>PCB Layout & Routing</li>
+                  <li>Prototyping & Testing</li>
+                  <li>Production & Compliance</li>
+                </ul>
+              </div>
+
+              <!-- Electrical -->
+              <div class="panel" role="region" aria-labelledby="electrical-h">
+                <div class="panel-icon"><i class="fas fa-bolt"></i></div>
+                <h3 id="electrical-h">Electrical</h3>
+                <ul class="panel-list">
+                  <li>Schematic Design</li>
+                  <li>Component Selection</li>
+                  <li>Power Distribution</li>
+                  <li>Layout Optimization</li>
+                  <li>Compliance & Standards</li>
+                </ul>
+              </div>
+
+              <!-- Software -->
+              <div class="panel" role="region" aria-labelledby="software-h">
+                <div class="panel-icon"><i class="fas fa-code"></i></div>
+                <h3 id="software-h">Software</h3>
+                <ul class="panel-list">
+                  <li>EDA Tools (Altium, Cadence)</li>
+                  <li>Simulation & Analysis</li>
+                  <li>Firmware Development</li>
+                  <li>DFM Support</li>
+                  <li>3D Integration</li>
+                </ul>
+              </div>
+
+              <!-- Mechanical -->
+              <div class="panel" role="region" aria-labelledby="mechanical-h">
+                <div class="panel-icon"><i class="fas fa-cogs"></i></div>
+                <h3 id="mechanical-h">Mechanical</h3>
+                <ul class="panel-list">
+                  <li>Enclosure & PCB Integration</li>
+                  <li>Thermal Management</li>
+                  <li>Shock & Vibration Analysis</li>
+                  <li>Manufacturing Design</li>
+                  <li>3D Prototyping</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SERVICES SECTION (boxed) ===== -->
+      <section id="services" class="services-section" aria-labelledby="services-heading">
+        <div class="section-wrap">
+          <div class="container">
+            <div class="section-title">
+              <h2 id="services-heading">Our Design Services</h2>
+              <p>Comprehensive solutions tailored to your specific requirements and industry standards.</p>
+            </div>
+
+            <div class="services-grid">
+              <div class="service-card">
+                <div class="num">01</div>
+                <h4>Schematic Design</h4>
+                <p class="service-desc">Professional schematic design using Altium, Cadence, KiCAD — optimized for manufacturability.</p>
+              </div>
+
+              <div class="service-card">
+                <div class="num">02</div>
+                <h4>PCB Layout</h4>
+                <p class="service-desc">Multi-layer designs (up to 16 layers), high-speed routing, and signal integrity optimization.</p>
+              </div>
+
+              <div class="service-card">
+                <div class="num">03</div>
+                <h4>Prototyping & Testing</h4>
+                <p class="service-desc">Rigorous validation to ensure the design meets functional and environmental requirements.</p>
+              </div>
+
+              <div class="service-card">
+                <div class="num">04</div>
+                <h4>Embedded Development</h4>
+                <p class="service-desc">Custom firmware and embedded software for your hardware platform and use case.</p>
+              </div>
+
+              <div class="service-card">
+                <div class="num">05</div>
+                <h4>Mechanical Design</h4>
+                <p class="service-desc">Enclosure design, thermal management, and 3D integration for manufacturable products.</p>
+              </div>
+
+              <div class="service-card">
+                <div class="num">06</div>
+                <h4>Module Development</h4>
+                <p class="service-desc">Complete module development including smart meters, converters and hybrid energy systems.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ===================== FOOTER SECTION ===================== -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-about">
+          <div class="footer-logo">
+            <img src="/images/Quantum-pulse-Technologies-logo.png" alt="QuantumPulse Technologies" height="50">
+          </div>
+          <p>Unlock Talent, Accelerate Innovation. QuantumPulse Technologies delivers cutting-edge solutions at the intersection of technology and human potential.</p>
+          
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/company/quantum-pulse-technologies/"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://x.com/Qptechy"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/share/16a5NKbh7w/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://web.whatsapp.com/+919500124242" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="rpo-services.html">RPO Services</a></li>
+            <li><a href="design-services.html">Design Services</a></li>
+            <li><a href="iot.html">IOT Services</a></li>
+            <li><a href="ai.html">AI Services</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="life.html">Culture @QP</a></li>
+            <li><a href="jobopportunities.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p><i class="fas fa-map-marker-alt"></i> 6th,7th Floor, Kochar Globe, Ambedkar Nagar, SIDCO Industrial Estate, Guindy, Chennai - 600032</p>
+          <p><i class="fas fa-phone"></i>9500124242</p>
+          <p><i class="fas fa-envelope"></i> info@quantumpulse.ltd</p>
+          <p><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Quantum Pulse Technologies Pvt. Ltd. All Rights Reserved. | <a href="/FOOTER/privacypolicy.html">Privacy Policy</a> | <a href="/footer/terms&conditions.html">Terms & Conditions</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== BACK TO TOP BUTTON ===================== -->
+  <button id="backTop" class="back-top" aria-label="Back to top" title="Back to top"><i class="fas fa-arrow-up" aria-hidden="true"></i></button>
+
+  <!-- ===================== JAVASCRIPT ===================== -->
+
+<script>
+  // Simple mobile navigation solution
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileBtn = document.querySelector('.mobile-menu-btn');
+    const mainNav = document.querySelector('.main-nav');
+    
+    // Mobile menu toggle
+    if (mobileBtn && mainNav) {
+      mobileBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        mainNav.classList.toggle('active');
+        document.body.classList.toggle('nav-open');
+        
+        // Change icon
+        if (mainNav.classList.contains('active')) {
+          mobileBtn.innerHTML = '<i class="fas fa-times"></i>';
+        } else {
+          mobileBtn.innerHTML = '<i class="fas fa-bars"></i>';
+          // Close all dropdowns when closing mobile menu
+          document.querySelectorAll('.dropdown.active').forEach(dropdown => {
+            dropdown.classList.remove('active');
+          });
+        }
+      });
+    }
+    
+    // Mobile dropdown functionality
+    document.querySelectorAll('.dropdown > a').forEach(dropdownToggle => {
+      dropdownToggle.addEventListener('click', function(e) {
+        // Only handle on mobile
+        if (window.innerWidth <= 992) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          const dropdown = this.parentElement;
+          const isActive = dropdown.classList.contains('active');
+          
+          // Close all other dropdowns
+          document.querySelectorAll('.dropdown.active').forEach(otherDropdown => {
+            if (otherDropdown !== dropdown) {
+              otherDropdown.classList.remove('active');
+            }
+          });
+          
+          // Toggle current dropdown
+          dropdown.classList.toggle('active');
+        }
+      });
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (window.innerWidth <= 992 && mainNav && mainNav.classList.contains('active')) {
+        if (!mainNav.contains(e.target) && !mobileBtn.contains(e.target)) {
+          mainNav.classList.remove('active');
+          document.body.classList.remove('nav-open');
+          if (mobileBtn) mobileBtn.innerHTML = '<i class="fas fa-bars"></i>';
+          
+          // Close all dropdowns
+          document.querySelectorAll('.dropdown.active').forEach(dropdown => {
+            dropdown.classList.remove('active');
+          });
+        }
+      }
+    });
+    
+    // Sticky header
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('.main-header');
+      if (header) {
+        header.classList.toggle('header-scrolled', window.scrollY > 50);
+      }
+    });
+    
+    // Back to top button
+    const backTopBtn = document.getElementById('backTop');
+    if (backTopBtn) {
+      window.addEventListener('scroll', function() {
+        backTopBtn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+      });
+      
+      backTopBtn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+    
+    // Prevent dropdown menu clicks from closing parent dropdown on mobile
+    document.querySelectorAll('.dropdown-menu a').forEach(menuLink => {
+      menuLink.addEventListener('click', function(e) {
+        if (window.innerWidth <= 992) {
+          e.stopPropagation();
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
